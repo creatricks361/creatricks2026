@@ -1,308 +1,1073 @@
 <!DOCTYPE html>
-
-<html class="dark" lang="en"><head>
+<html class="dark" lang="en">
+<head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
-<title>Creatricks 2026 | Expo</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "primary-fixed": "#ffe08a",
-                    "on-surface-variant": "#a8a8a8",
-                    "secondary-fixed": "#ffe088",
-                    "inverse-surface": "#e2e2e2",
-                    "inverse-on-surface": "#303030",
-                    "surface-container": "#1f1f1f",
-                    "surface-container-low": "#050505",
-                    "on-primary-container": "#6b5500",
-                    "on-primary-fixed": "#241a00",
-                    "primary-fixed-dim": "#eac249",
-                    "on-secondary-fixed": "#241a00",
-                    "on-tertiary-container": "#575858",
-                    "on-secondary-fixed-variant": "#574500",
-                    "on-primary": "#3d2f00",
-                    "on-surface": "#ffffff",
-                    "on-error-container": "#ffdad6",
-                    "on-error": "#690005",
-                    "outline-variant": "#222222",
-                    "on-tertiary-fixed": "#1a1c1c",
-                    "on-secondary-container": "#342800",
-                    "tertiary": "#ebeaea",
-                    "surface-bright": "#393939",
-                    "secondary-fixed-dim": "#e9c349",
-                    "surface-container-lowest": "#0e0e0e",
-                    "primary": "#ffe9b0",
-                    "outline": "#333333",
-                    "primary-container": "#f2ca50",
-                    "surface-variant": "#353535",
-                    "on-background": "#e2e2e2",
-                    "tertiary-fixed-dim": "#c7c6c6",
-                    "background": "#131313",
-                    "tertiary-fixed": "#e3e2e2",
-                    "on-secondary": "#3c2f00",
-                    "inverse-primary": "#745b00",
-                    "on-primary-fixed-variant": "#574400",
-                    "surface-tint": "#eac249",
-                    "on-tertiary": "#2f3131",
-                    "secondary-container": "#af8d11",
-                    "surface-container-high": "#2a2a2a",
-                    "secondary": "#e9c349",
-                    "surface-dim": "#131313",
-                    "error-container": "#93000a",
-                    "on-tertiary-fixed-variant": "#464747",
-                    "surface-container-highest": "#353535",
-                    "surface": "#000000",
-                    "error": "#ffb4ab",
-                    "tertiary-container": "#cecece"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.25rem",
-                    "lg": "0.5rem",
-                    "xl": "0.75rem",
-                    "full": "9999px"
-            },
-            "spacing": {
-                    "section-gap": "120px",
-                    "margin-mobile": "20px",
-                    "gutter": "24px",
-                    "touch-target-min": "48px",
-                    "unit": "4px"
-            },
-            "fontFamily": {
-                    "body-lg": ["Times New Roman"],
-                    "label-caps": ["Times New Roman"],
-                    "headline-sm": ["Abril Fatface"],
-                    "headline-lg": ["Abril Fatface"],
-                    "label-mono": ["Times New Roman"],
-                    "headline-lg-mobile": ["Abril Fatface"],
-                    "display-lg": ["Abril Fatface"],
-                    "headline-md": ["Abril Fatface"],
-                    "body-md": ["Times New Roman"],
-                    "times": ["Times New Roman"]
-            },
-            "fontSize": {
-                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
-                    "label-caps": ["12px", {"lineHeight": "12px", "letterSpacing": "0.15em", "fontWeight": "700"}],
-                    "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
-                    "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
-                    "label-mono": ["11px", {"lineHeight": "14px", "fontWeight": "500"}],
-                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
-                    "display-lg": ["60px", {"lineHeight": "66px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                    "headline-md": ["32px", {"lineHeight": "42px", "fontWeight": "500"}],
-                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
-            }
-          },
-        },
-      }
-    </script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<title>Creatricks 2026 | School Design Expo</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
-            display: inline-block;
-            vertical-align: middle;
-        }
-        body {
-            background-color: #000000;
-            color: #ffffff;
-            -webkit-font-smoothing: antialiased;
-        }
-        .rim-light-top {
-            box-shadow: inset 0 1px 0 0 rgba(242, 202, 80, 0.15);
-        }
-        .glow-gold {
-            filter: drop-shadow(0 0 15px rgba(242, 202, 80, 0.3));
-        }
-        .bento-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 8px;
-        }
-        .snap-container {
-            scroll-snap-type: y mandatory;
-            height: 100vh;
-            overflow-y: scroll;
-        }
-        .snap-section {
-            scroll-snap-align: start;
-            height: 100vh;
-            padding-top: 64px; /* Space for TopAppBar */
-            padding-bottom: 80px; /* Space for BottomNavBar */
-        }
-    </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
-  </head>
-<body class="font-body-md text-on-surface">
-<!-- TopAppBar from JSON -->
-<header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile h-touch-target-min bg-surface border-b border-outline-variant flat no shadows">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-primary scale-95 duration-150 active:scale-95" data-icon="menu">menu</span>
-<span class="font-display-lg text-headline-sm dark:text-primary tracking-tighter">Creatricks</span>
-</div>
-<button class="font-body-md text-body-md text-primary font-bold hover:text-primary transition-colors active:scale-95 duration-150">Register</button>
-</header>
-<main class="snap-container">
-<!-- Hero Section -->
-<section class="snap-section relative flex flex-col justify-center px-margin-mobile overflow-hidden">
-<div class="absolute inset-0 z-0 bg-[radial-gradient(circle_at_50%_50%,_rgba(242,202,80,0.08)_0%,_rgba(0,0,0,1)_70%)]"></div>
-<div class="relative z-10 flex flex-col items-start gap-4">
-<div class="inline-flex items-center gap-2 px-3 py-1 border border-primary/30 bg-surface-container-low">
-<span class="material-symbols-outlined text-primary text-[14px]" data-icon="auto_awesome">auto_awesome</span>
-<span class="font-label-caps text-label-caps text-primary uppercase">2026 Edition</span>
-</div>
-<h1 class="font-display-lg text-headline-lg-mobile text-white leading-tight">
-                    Where Academic Rigor Meets <br/><span class="text-primary italic">Pure Imagination</span>
-</h1>
-<p class="font-body-md text-body-md text-on-surface-variant max-w-[80%] leading-relaxed mt-2">
-                    The premier design expo. A showcase of architectural wonder and interactive speculative futures.
-                </p>
-<div class="flex gap-4 mt-8 w-full">
-<button class="flex-1 h-touch-target-min bg-primary-container text-on-primary font-label-caps text-label-caps tracking-widest active:scale-95 transition-transform">
-                        EXPLORE GALLERY
-                    </button>
-<a href="schedule_mobile.html" class="flex-1 h-touch-target-min border border-outline-variant text-on-surface font-label-caps text-label-caps tracking-widest active:scale-95 transition-transform flex items-center justify-center">
-                        SCHEDULE
-                    </a>
-</div>
-</div>
-<!-- Scroll Indicator -->
-<div class="absolute bottom-24 left-1/2 -translate-x-1/2 animate-bounce opacity-40">
-<span class="material-symbols-outlined" data-icon="keyboard_double_arrow_down">keyboard_double_arrow_down</span>
-</div>
-</section>
-<!-- Bento Grid: Competitions -->
-<section class="snap-section px-margin-mobile flex flex-col justify-center gap-6" id="competitions">
-<div class="flex items-baseline justify-between border-b border-outline-variant pb-2">
-<h2 class="font-headline-sm text-headline-sm text-primary">Competitions</h2>
-<span class="font-label-mono text-label-mono text-on-surface-variant">04 TRACKS</span>
-</div>
-<div class="grid grid-cols-2 grid-rows-3 gap-3 h-[530px]">
-<!-- Urban Alchemy -->
-<a href="comp1_mobile.html" class="col-span-2 row-span-1 border border-outline-variant p-4 flex flex-col justify-end relative group overflow-hidden bg-surface-container-low rim-light-top">
-<div class="absolute inset-0 opacity-40 group-active:scale-105 transition-transform duration-500 bg-cover bg-center" data-alt="An abstract architectural shot showing modular concrete structures and gold metallic pipes intersecting. High-contrast nocturnal lighting with sharp highlights on the gold elements. Minimalist gallery aesthetic with deep black shadows and a sense of industrial alchemy." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBRBTG3SgXK9VA14QA6RgGRF-aLMkfUdrqHOnDSBKUWTzLcrVWhrF1JVgqkZ8k_JRL8ETgezoCXUQ_jqsgzOTg8KgcWOVpg_gOD0WrurgI3Ky1PiRBYyr5ZRf_mT3rV6oNRh5UWmNvYR_HTTZjCO7qVzvLa2bYkpRxnLPbf9CV4x14ZDEFhkLtkrQ8LQqnV1igjgD-q_djbgnUDRLe0GpXhA3VxF0gWklOvsF7VPdvuQdGjI6iqUk9K_xxwbrk2vd9zLJ_amjghoC1x')"></div>
-<div class="relative z-10">
-<span class="font-label-mono text-label-mono text-primary mb-1 block">FASHION</span>
-<h3 class="font-headline-sm text-[20px] text-white">Luminara</h3>
-</div>
-</a>
-<!-- Paper Citadels -->
-<a href="comp2_mobile.html" class="col-span-1 row-span-1 border border-outline-variant p-4 flex flex-col justify-end relative bg-surface-container-low rim-light-top">
-<div class="absolute inset-0 opacity-40 bg-cover bg-center" data-alt="Delicate geometric origami structures made of crisp white paper, illuminated by a warm gold spotlight in a dark, prestigious room. The composition emphasizes the fragility and structural integrity of the paper folds against an absolute black background." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDW5zmB6uPCj5fThmsrvwugSpqFyBUgy9x151NeRO0L0mkhHwBMkEXL2uA2eIw1GIVEX6ehPgovXykbI_PqAapUEMkWrNGFtpl6I8FM87veMdhoc_V1OQgIcUn2Guz6DKGn3XTVizmrWSeN7ViiyfWrlPzbDDAFH3UeFTgI20rl6f2rh2e74--4AvVpWSVFi6YOcWQgxazaAwww50C8vM5ae3qkQV2mJtYiDYUfFL0qgOGUkdQva0_3QvcffltC6X1zlppQd_zQmz7v')"></div>
-<div class="relative z-10">
-<span class="font-label-mono text-label-mono text-primary mb-1 block">Sketching</span>
-<h3 class="font-headline-sm text-[18px] text-white leading-tight">Hue<br/>Nova</h3>
-</div>
-</a>
-<!-- Digital Folklore -->
-<a href="comp3_mobile.html" class="col-span-1 row-span-1 border border-outline-variant p-4 flex flex-col justify-end relative bg-surface-container-low rim-light-top">
-<div class="absolute inset-0 opacity-40 bg-cover bg-center" data-alt="A glowing holographic interface displaying traditional folk patterns in radiant gold light. The digital elements float in a dark room with a soft atmospheric glow. The style is a mix of high-tech projection and ancient storytelling aesthetics." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDSROoxnGe2VoGSicZHm2UL7E1Qn-ozGsWpWCJxgsrwLj4TVdX-ruUaJukKet4oEvq8UxJq2t9X5rovs5vy75d3k6RyPTx-368sInRRjnOMuWyccI3AqJkh6xPhwlMsEOzo2xYR_aymnhj5-EsVncH0ifSQLzvPuZTiFJOzc1Pg-sT7WZ-ASmx9T4s6EGMHebTqJFbssqdoBEwqQateTImGVfMA0gKSyT1W5Zg2k4v-gbA2H_rnglqt6tmnsh6xJvBr06bH14wYVqf9')"></div>
-<div class="relative z-10">
-<span class="font-label-mono text-label-mono text-primary mb-1 block">Product</span>
-<h3 class="font-headline-sm text-[18px] text-white leading-tight">Morphis <br/></h3>
-</div>
-</a>
-<!-- Kinetic Botany -->
-<a href="comp4_mobile.html" class="col-span-2 row-span-1 border border-outline-variant p-4 flex flex-col justify-between relative bg-surface-container-low rim-light-top">
-<div class="absolute inset-0 opacity-40 bg-cover bg-center" data-alt="Bioluminescent mechanical flowers that slowly move, glowing with a soft gold light. The setting is a futuristic garden at night, where nature and technology are seamlessly integrated. Rim lighting defines the edges of the metallic petals against the dark background." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAmhnP7x7MvraGeEvW7KG_hcTI01WQ21IK4GcEWaajyVv1kH3zOCnu2l0X4r7UpBA_-w3chQcXsP-oKkqs7cSfCpHrLaPO5D1upi1og-bjg9wivC7l1tC0fVQ98Gtax4alK22XM5HORw-XP_rPxyGJ_c7xDqln3Clpo-xKxBkj22jznKZDVqaSpXOqHkejvrc5NT0j4E1zjmzvoySAWpPjWcY8wBCJZUNYf-Mn6QFfzBAxxUXqualpnMsFsPVJIkAl9bkX5dVO0zhl3')"></div>
-<div class="relative z-10 flex justify-between items-start w-full">
-<span class="font-label-mono text-label-mono text-primary">Environment</span>
-<span class="material-symbols-outlined text-primary" data-icon="energy_savings_leaf">energy_savings_leaf</span>
-</div>
-<h3 class="relative z-10 font-headline-sm text-[20px] text-white">Envirospark</h3>
-</a>
-</div>
-</section>
-<!-- Newsletter / Archive -->
-<section class="snap-section px-margin-mobile flex flex-col justify-center items-center text-center" id="newsletter">
-<div class="w-20 h-20 border border-primary/20 flex items-center justify-center mb-8 rim-light-top">
-<span class="material-symbols-outlined text-primary text-[32px]" data-icon="inventory_2">inventory_2</span>
-</div>
-<span class="font-label-caps text-label-caps text-primary tracking-[0.3em] mb-4">THE COMPENDIUM</span>
-<h2 class="font-headline-lg-mobile text-white mb-6">Receive the <br/>2026 Archive</h2>
-<p class="font-body-md text-body-md text-on-surface-variant mb-12 max-w-xs">
-                A curated digital collection of this year's most visionary submissions.
-            </p>
-<div class="w-full space-y-4">
-<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 text-center font-label-mono text-label-mono text-white placeholder:text-on-surface-variant/50 pb-4" placeholder="EMAIL ADDRESS" type="email"/>
-<button class="w-full h-touch-target-min bg-white text-black font-label-caps text-label-caps tracking-widest active:scale-95 transition-all">
-                    JOIN ARCHIVE
-                </button>
-</div>
-<footer class="mt-16 pt-8 border-t border-outline-variant w-full opacity-30 text-[10px] font-label-mono tracking-tighter">
-                © 2026 CREATRICKS DESIGN EXPO. ALL RIGHTS RESERVED.
-            </footer>
-</section>
-</main>
-<!-- BottomNavBar from JSON -->
-<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center h-20 pb-safe px-margin-mobile bg-surface/80 dark:bg-surface/80 backdrop-blur-xl border-t border-outline-variant z-50 flat no shadows">
-<!-- Expo (Active) -->
-<a class="flex flex-col items-center justify-center text-primary hover:text-primary-fixed transition-all scale-110 duration-200" href="#">
-<span class="material-symbols-outlined text-[24px]" data-icon="explore">explore</span>
-<span class="font-label-caps text-label-caps mt-1">Expo</span>
-</a>
-<!-- Competitions -->
-<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary-fixed transition-all" href="#competitions">
-<span class="material-symbols-outlined text-[24px]" data-icon="emoji_events">emoji_events</span>
-<span class="font-label-caps text-label-caps mt-1">Competitions</span>
-</a>
-<!-- Schedule -->
-<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary-fixed transition-all" href="schedule_mobile.html">
-<span class="material-symbols-outlined text-[24px]" data-icon="calendar_today">calendar_today</span>
-<span class="font-label-caps text-label-caps mt-1">Schedule</span>
-</a>
-<!-- Archives -->
-<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary-fixed transition-all" href="#newsletter">
-<span class="material-symbols-outlined text-[24px]" data-icon="inventory_2">inventory_2</span>
-<span class="font-label-caps text-label-caps mt-1">Archives</span>
-</a>
-</nav>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --gold: #f2ca50;
+  --gold-dim: #d4af37;
+  --black: #000000;
+  --surface: #080808;
+  --surface-hi: #121212;
+  --border: #222222;
+  --border-thin: #333333;
+  --text: #ffffff;
+  --text-dim: #a8a8a8;
+  --ff-display: 'Playfair Display', serif;
+  --ff-body: 'Hanken Grotesk', sans-serif;
+}
+
+html { background: #000; }
+
+body {
+  background: #000;
+  color: var(--text);
+  font-family: var(--ff-body);
+  font-size: 16px;
+  line-height: 1.5;
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+  font-size: 22px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #000;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  height: 60px;
+}
+
+.logo-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-text {
+  font-family: var(--ff-body);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+
+.hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+}
+
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--text);
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* beautiful... */
+.hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+.nav-drawer {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 28px;
+  gap: 0;
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.77,0,0.175,1);
+  border-top: 1px solid var(--border);
+}
+
+.nav-drawer.open { transform: translateX(0); }
+
+.nav-drawer a {
+  font-family: var(--ff-body);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  padding: 20px 0;
+  border-bottom: 0.5px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: color 0.2s;
+}
+
+.nav-drawer a:first-child { color: var(--gold); }
+.nav-drawer a:hover { color: var(--gold); }
+
+.nav-drawer a::after {
+  content: '→';
+  font-size: 14px;
+  opacity: 0.4;
+}
+
+.nav-register {
+  margin-top: 40px;
+  background: var(--gold);
+  color: #000;
+  font-family: var(--ff-body);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  padding: 18px 24px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  display: block;
+}
+
+.hero {
+  position: relative;
+  padding: 60px 24px 56px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-blob {
+  position: absolute;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  filter: blur(100px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-blob-1 {
+  width: 280px; height: 280px;
+  background: rgba(242,202,80,0.05);
+  top: -60px; left: -80px;
+}
+
+.hero-blob-2 {
+  width: 320px; height: 320px;
+  background: rgba(255,255,255,0.04);
+  bottom: -80px; right: -80px;
+}
+
+.hero-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-logo-box {
+  width: 56px; height: 56px;
+  border: 0.5px solid var(--border-thin);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+}
+
+.hero-logo-box img { width: 100%; height: 100%; object-fit: contain; }
+
+.hero-divider {
+  width: 0.5px;
+  height: 36px;
+  background: var(--border-thin);
+}
+
+.hero-eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-title {
+  font-family: var(--ff-display);
+  font-size: 46px;
+  line-height: 1.06;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-title .brand { display: block; color: var(--gold); text-transform: uppercase; margin-bottom: 12px; }
+.hero-title .italic { font-style: italic; color: #fff; }
+
+.hero-body {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-dim);
+  margin-bottom: 36px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.btn-primary {
+  background: var(--gold);
+  color: #000;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  padding: 18px 24px;
+  border: none;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-outline {
+  border: 1px solid var(--border-thin);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  padding: 18px 24px;
+  text-align: center;
+  transition: border-color 0.2s;
+  display: block;
+}
+
+.glance {
+  border-top: 0.5px solid var(--border);
+  border-bottom: 0.5px solid var(--border);
+  background: #000;
+  padding: 32px 24px;
+}
+
+.glance-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.glance-item {
+  border-left: 0.5px solid var(--gold);
+  padding-left: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.glance-label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.glance-name {
+  font-family: var(--ff-display);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--gold);
+}
+
+.section-header {
+  padding: 52px 24px 32px;
+}
+
+.section-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-family: var(--ff-display);
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+
+.section-body {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-dim);
+  margin-bottom: 24px;
+}
+
+.section-link {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border-bottom: 0.5px solid var(--gold);
+  padding-bottom: 4px;
+  display: inline-block;
+}
+
+#competitions {
+  padding: 0 16px 52px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.comp-card {
+  position: relative;
+  height: 200px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  display: block;
+  background: var(--surface);
+  transition: border-color 0.3s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.comp-card:active { border-color: var(--gold); }
+
+.comp-card-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.comp-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.5) 55%, transparent 100%);
+  z-index: 1;
+}
+
+.comp-card-content {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+.comp-card-tag {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+
+.comp-card-title {
+  font-family: var(--ff-display);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+}
+
+.us-project-wrapper { width:100%; height:100%; position:relative; overflow:hidden; }
+.us-project-wrapper > div { width:100% !important; height:100% !important; position:relative !important; display:block !important; }
+.us-project-wrapper img, .us-project-wrapper canvas { width:100% !important; height:100% !important; object-fit:cover; }
+
+.newsletter {
+  background: var(--gold);
+  color: #000;
+  padding: 56px 24px;
+  text-align: center;
+}
+
+.newsletter-eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: rgba(0,0,0,0.6);
+  margin-bottom: 16px;
+}
+
+.newsletter-title {
+  font-family: var(--ff-display);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 36px;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-bottom: 0.5px solid rgba(0,0,0,0.5);
+  padding-bottom: 16px;
+  max-width: 340px;
+  margin: 0 auto;
+}
+
+.newsletter-form input {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: var(--ff-body);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #000;
+  padding: 12px 0;
+  width: 100%;
+}
+
+.newsletter-form input::placeholder { color: rgba(0,0,0,0.4); }
+
+.newsletter-form button {
+  background: none;
+  border: none;
+  font-family: var(--ff-body);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  padding: 12px 0;
+  text-align: left;
+}
+
+footer {
+  background: #000;
+  border-top: 1px solid var(--border);
+  padding: 52px 24px 32px;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.footer-brand-text {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.footer-icons {
+  display: flex;
+  gap: 28px;
+  margin-bottom: 48px;
+}
+
+.footer-icons .material-symbols-outlined {
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.footer-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 24px;
+  margin-bottom: 40px;
+}
+
+.footer-col-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+.footer-col a {
+  display: block;
+  font-size: 13px;
+  color: var(--text-dim);
+  margin-bottom: 10px;
+  line-height: 1.5;
+  transition: color 0.2s;
+}
+
+.footer-copy {
+  border-top: 0.5px solid var(--border);
+  padding-top: 24px;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: var(--text-dim);
+  opacity: 0.4;
+  text-transform: uppercase;
+  line-height: 1.6;
+}
+
+#eventPage {
+  min-height: 100vh;
+  padding: 40px 24px 80px;
+}
+
+.event-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 40px;
+}
+
+.event-category {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #B026FF;
+  margin-bottom: 16px;
+}
+
+.event-title {
+  font-family: var(--ff-display);
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+
+.event-desc {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-dim);
+  margin-bottom: 40px;
+}
+
+.event-showcase {
+  border: 1px solid var(--border);
+  background: #0a0a0a;
+  padding: 40px 24px;
+  text-align: center;
+}
+
+.event-showcase-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #B026FF;
+  margin-bottom: 16px;
+}
+
+.event-showcase-title {
+  font-family: var(--ff-display);
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.event-photos {
+  margin-bottom: 40px;
+}
+
+.event-photos-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+.event-photos-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.event-photos-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+.fade-page { animation: fade 0.5s ease; }
+@keyframes fade {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 68px;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 0.5px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 200;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.bottom-nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  color: var(--text-dim);
+  text-decoration: none;
+  padding: 8px 16px;
+  transition: color 0.2s, transform 0.2s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.bottom-nav a .material-symbols-outlined {
+  font-size: 24px;
+  transition: color 0.2s;
+}
+
+.bottom-nav a .nav-label {
+  font-family: var(--ff-body);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.bottom-nav a.active {
+  color: var(--gold);
+  transform: scale(1.1);
+}
+
+main { padding-bottom: 80px; }
+footer { padding-bottom: calc(80px + 32px); }
+
+/* bro this scam below is not working */
+a[href*="unicorn.studio"],
+a[href*="unicornstudio"],
+a[href*="unicorn"] { display:none !important; }
+[class*="watermark"], [class*="badge"],
+[id*="watermark"], [id*="badge"] { display:none !important; }
+</style>
+</head>
+<body>
 <script>
-        // Micro-interaction for competition cards
-        document.querySelectorAll('#competitions > div > div').forEach(card => {
-            card.addEventListener('touchstart', () => {
-                card.style.borderColor = '#ffe9b0';
-            });
-            card.addEventListener('touchend', () => {
-                card.style.borderColor = '';
-            });
-        });
+!function(){
+  var u=window.UnicornStudio;
+  if(u&&u.init){
+    if(document.readyState==="loading"){
+      document.addEventListener("DOMContentLoaded",function(){u.init()})
+    }else{u.init()}
+  }else{
+    window.UnicornStudio={isInitialized:!1};
+    var i=document.createElement("script");
+    i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v2.2.1/dist/unicornStudio.umd.js";
+    i.onload=function(){
+      if(document.readyState==="loading"){
+        document.addEventListener("DOMContentLoaded",function(){UnicornStudio.init()})
+      }else{UnicornStudio.init()}
+    };
+    (document.head||document.body).appendChild(i)
+  }
+}();
+setInterval(()=>{
+  document.querySelectorAll("a").forEach(el=>{
+    if(el.textContent.includes("Made with unicorn.studio")) el.style.display="none";
+  });
+},500);
+</script>
 
-        // Simple scroll spy for active tab
-        const sections = document.querySelectorAll('section');
-        const navItems = document.querySelectorAll('nav.fixed.bottom-0 a');
-        
-        const scrollContainer = document.querySelector('.snap-container');
-        scrollContainer.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (scrollContainer.scrollTop >= sectionTop - 100) {
-                    current = section.getAttribute('id') || 'expo';
-                }
-            });
 
-            navItems.forEach(item => {
-                const href = item.getAttribute('href').substring(1);
-                const isMatch = (current === 'expo' && href === '') || (current === href);
-                
-                if (isMatch) {
-                    item.className = "flex flex-col items-center justify-center text-primary scale-110 duration-200 transition-all";
-                } else {
-                    item.className = "flex flex-col items-center justify-center text-on-surface-variant hover:text-primary-fixed transition-all";
-                }
-            });
-        });
-    </script>
-</body></html>
+<header>
+  <div class="logo-row">
+    <img src="C:\creatricks\logo.jpg" alt="Creatricks Logo" style="height:32px; width:auto; object-fit:contain;"/>
+    <span class="logo-text">Creatricks 2026</span>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<nav class="nav-drawer" id="navDrawer">
+  <a href="landing.html">Expo</a>
+  <a href="#competitions" onclick="closeNav()">Competitions</a>
+  <a href="schedule.html">Schedule</a>
+  <a href="#newsletter" onclick="closeNav()">Archives</a>
+  <a href="entryguidelines.html">Entry Guidelines</a>
+  <a href="moreinfo.html">More Info</a>
+  <button class="nav-register">Register</button>
+</nav>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="hero-blob hero-blob-1"></div>
+    <div class="hero-blob hero-blob-2"></div>
+
+    <div class="hero-logos">
+      <div class="hero-logo-box">
+        <img src="C:\creatricks\tcislogo.png" alt="TCIS Logo"/>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="hero-logo-box">
+        <img src="C:\creatricks\logo.jpg" alt="Creatricks Logo"/>
+      </div>
+    </div>
+
+    <p class="hero-eyebrow">Presenting</p>
+
+    <h1 class="hero-title">
+      <span class="brand">Creatricks 2026</span>
+      Where Academic Rigor Meets <span class="italic">Pure Imagination</span>
+    </h1>
+
+    <p class="hero-body">
+      Join us for the premier school design expo. A showcase of architectural wonder, interactive systems, and speculative futures designed by the next generation of visionaries.
+    </p>
+
+    <div class="hero-cta">
+      <button class="btn-primary">Explore Gallery</button>
+      <div style="display:flex; gap:12px;">
+        <a href="schedule.html" class="btn-outline" style="flex:1;">View Schedule</a>
+        <button class="btn-primary" style="flex:1;">Register</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="glance">
+    <div class="glance-grid">
+      <div class="glance-item">
+        <span class="glance-label">01 Category</span>
+        <span class="glance-name">LUMINARA</span>
+      </div>
+      <div class="glance-item">
+        <span class="glance-label">02 Category</span>
+        <span class="glance-name">HUENOVA</span>
+      </div>
+      <div class="glance-item">
+        <span class="glance-label">03 Category</span>
+        <span class="glance-name">ENVIROSPARK</span>
+      </div>
+      <div class="glance-item">
+        <span class="glance-label">04 Category</span>
+        <span class="glance-name">MORPHIS</span>
+      </div>
+      <div class="glance-item">
+        <span class="glance-label">05 Category</span>
+        <span class="glance-name">AMPLIFIRE</span>
+      </div>
+      <div class="glance-item">
+        <span class="glance-label">06 Category</span>
+        <span class="glance-name">PHOENIX ALLEY</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-header">
+    <p class="section-eyebrow">The Arena</p>
+    <h2 class="section-title">The Competitions</h2>
+    <p class="section-body">Six distinct arenas designed to challenge the boundaries of structure and storytelling. Each track follows a unique aesthetic philosophy curated for the 2026 cycle.</p>
+    <a href="entryguidelines.html" class="section-link">View Entry Guidelines</a>
+  </div>
+
+  <div id="competitions">
+
+    <a href="comp1.html" class="comp-card">
+      <div class="comp-card-bg">
+        <div class="us-project-wrapper">
+          <div data-us-project="YH5OQNivB3ZHMz1lBPpQ"></div>
+        </div>
+      </div>
+      <div class="comp-card-overlay"></div>
+      <div class="comp-card-content">
+        <div class="comp-card-tag">Fashion Styling</div>
+        <div class="comp-card-title">Luminara</div>
+      </div>
+    </a>
+
+    <a href="comp2.html" class="comp-card">
+      <div class="comp-card-bg">
+        <div class="us-project-wrapper">
+          <div data-us-project="LdIuPPi57Gs6ZB0EjyT5"></div>
+        </div>
+      </div>
+      <div class="comp-card-overlay"></div>
+      <div class="comp-card-content">
+        <div class="comp-card-tag">Painting</div>
+        <div class="comp-card-title">Huenova</div>
+      </div>
+    </a>
+
+    <a href="comp3.html" class="comp-card">
+      <div class="comp-card-bg">
+        <div class="us-project-wrapper">
+          <div data-us-project="K0K6wgcAiHBKcSztHiRg"></div>
+        </div>
+      </div>
+      <div class="comp-card-overlay"></div>
+      <div class="comp-card-content">
+        <div class="comp-card-tag">Quiz</div>
+        <div class="comp-card-title">Envirospark</div>
+      </div>
+    </a>
+
+    <a href="comp4.html" class="comp-card">
+      <div class="comp-card-bg">
+        <div class="us-project-wrapper">
+          <div data-us-project="lZyPCGIVwUiv2aK2yWsr"></div>
+        </div>
+      </div>
+      <div class="comp-card-overlay"></div>
+      <div class="comp-card-content">
+        <div class="comp-card-tag">Product Design</div>
+        <div class="comp-card-title">Morphis</div>
+      </div>
+    </a>
+
+    <a href="C:\creatricks\comp5.html" class="comp-card" style="background:#000;">
+      <div class="comp-card-bg">
+        <div class="us-project-wrapper">
+          <div data-us-project="VODzO2QZvfiWb8RkVZX9"></div>
+        </div>
+      </div>
+      <div class="comp-card-overlay"></div>
+      <div class="comp-card-content">
+        <div class="comp-card-tag">Music</div>
+        <div class="comp-card-title">Amplifire</div>
+      </div>
+    </a>
+
+    <a href="comp6.html" class="comp-card">
+      <div class="comp-card-bg">
+        <div class="us-project-wrapper">
+          <div data-us-project="K0K6wgcAiHBKcSztHiRg"></div>
+        </div>
+      </div>
+      <div class="comp-card-overlay"></div>
+      <div class="comp-card-content">
+        <div class="comp-card-tag">Marketing</div>
+        <div class="comp-card-title">Phoenix Alley</div>
+      </div>
+    </a>
+
+  </div>
+
+
+  <section id="newsletter" class="newsletter">
+    <p class="newsletter-eyebrow">The Compendium</p>
+    <h2 class="newsletter-title">Receive the 2026 Archive</h2>
+    <div class="newsletter-form">
+      <input type="email" placeholder="YOUR EMAIL ADDRESS"/>
+      <button type="button">Join →</button>
+    </div>
+  </section>
+
+</main>
+
+<div id="eventPage" style="display:none;" class="fade-page">
+  <button class="event-back" onclick="goBack()">← Back to Competitions</button>
+  <div class="event-category" id="eventCategory">Architecture</div>
+  <h1 class="event-title" id="eventTitle">Urban Alchemy</h1>
+  <p class="event-desc" id="eventDescription">Description</p>
+  <div class="event-photos">
+    <div class="event-photos-label">Photos</div>
+    <div class="event-photos-grid" id="eventPhotosGrid"></div>
+  </div>
+  <div class="event-showcase">
+    <div class="event-showcase-label">Creatricks Showcase</div>
+    <h2 class="event-showcase-title">Future Design Systems</h2>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-brand">
+    <img src="C:\creatricks\logo.jpg" alt="Logo" style="height:28px; width:auto; object-fit:contain;"/>
+    <span class="footer-brand-text">Creatricks 2026</span>
+  </div>
+
+  <div class="footer-icons">
+    <span class="material-symbols-outlined">terminal</span>
+    <span class="material-symbols-outlined">brush</span>
+    <span class="material-symbols-outlined">architecture</span>
+  </div>
+
+  <div class="footer-cols">
+    <div>
+      <div class="footer-col-label">Connect</div>
+      <a href="mailto:creatricks361@gmail.com">creatricks361@gmail.com</a>
+      <a href="https://maps.app.goo.gl/bFkyqy5P4bicR2ki6" style="font-size:12px;">TCIS Whitefield, Bengaluru 560087</a>
+    </div>
+    <div>
+      <div class="footer-col-label">Policy</div>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+  </div>
+
+  <div class="footer-copy">© 2026 Creatricks School Design Expo. All rights reserved.</div>
+</footer>
+
+<nav class="bottom-nav" id="bottomNav">
+  <a href="#" id="nav-expo" class="active">
+    <span class="material-symbols-outlined">explore</span>
+    <span class="nav-label">Expo</span>
+  </a>
+  <a href="#competitions" id="nav-competitions">
+    <span class="material-symbols-outlined">emoji_events</span>
+    <span class="nav-label">Compete</span>
+  </a>
+  <a href="schedule.html" id="nav-schedule">
+    <span class="material-symbols-outlined">calendar_today</span>
+    <span class="nav-label">Schedule</span>
+  </a>
+  <a href="#newsletter" id="nav-archives">
+    <span class="material-symbols-outlined">inventory_2</span>
+    <span class="nav-label">Archives</span>
+  </a>
+</nav>
+
+
+<script>
+
+const hamburger = document.getElementById('hamburger');
+const navDrawer = document.getElementById('navDrawer');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  navDrawer.classList.toggle('open');
+  document.body.style.overflow = navDrawer.classList.contains('open') ? 'hidden' : '';
+});
+
+function closeNav() {
+  hamburger.classList.remove('open');
+  navDrawer.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+
+const navLinks = {
+  expo: document.getElementById('nav-expo'),
+  competitions: document.getElementById('nav-competitions'),
+  newsletter: document.getElementById('nav-archives'),
+};
+
+function setActiveNav(id) {
+  Object.values(navLinks).forEach(el => el && el.classList.remove('active'));
+  const scheduleNav = document.getElementById('nav-schedule');
+  if (scheduleNav) scheduleNav.classList.remove('active');
+  if (navLinks[id]) navLinks[id].classList.add('active');
+}
+
+window.addEventListener('scroll', () => {
+  const scrollY = window.scrollY + window.innerHeight * 0.4;
+  const newsletter = document.getElementById('newsletter');
+  const competitions = document.getElementById('competitions');
+
+  if (newsletter && scrollY >= newsletter.offsetTop) {
+    setActiveNav('newsletter');
+  } else if (competitions && scrollY >= competitions.offsetTop) {
+    setActiveNav('competitions');
+  } else {
+    setActiveNav('expo');
+  }
+}, { passive: true });
+
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    const targetId = this.getAttribute('href');
+    if (targetId === '#') return;
+    e.preventDefault();
+    const target = document.querySelector(targetId);
+    if (target) target.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+
+const events = {
+  luminara: { title:"Luminara", category:"Fashion Styling", description:"Transform industrial materials into visionary urban structures." },
+  morphis: { title:"Morphis", category:"Product Design", description:"Experimental product systems shaped through futuristic form exploration." },
+  huenova: { title:"Huenova", category:"Painting", description:"Generative AI and immersive storytelling systems." },
+  envirospark: { title:"Envirospark", category:"Quiz", description:"Biological systems responding to interaction." }
+};
+
+function openEvent(id) {
+  const event = events[id];
+  if (!event) return;
+  document.getElementById('main').style.display = 'none';
+  document.querySelector('footer').style.display = 'none';
+  const ep = document.getElementById('eventPage');
+  ep.style.display = 'block';
+  document.getElementById('eventTitle').innerText = event.title;
+  document.getElementById('eventCategory').innerText = event.category;
+  document.getElementById('eventDescription').innerText = event.description;
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function goBack() {
+  document.getElementById('eventPage').style.display = 'none';
+  document.getElementById('main').style.display = 'block';
+  document.querySelector('footer').style.display = 'block';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+
+</body>
+</html>
