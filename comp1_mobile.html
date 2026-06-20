@@ -1,337 +1,564 @@
 <!DOCTYPE html>
-
-<html class="dark scroll-smooth" lang="en"><head>
+<html class="scroll-smooth dark" lang="en">
+<head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Urban Alchemy | Creatricks 2026</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport"/>
+<title>Creatricks 2026 | Competition Details</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700&amp;family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
 <script>
-   tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "primary": "#d4af37", // Rich Metallic Gold
-                    "on-primary": "#000000",
-                    "background": "#000000", // AMOLED Black
-                    "surface": "#000000",
-                    "surface-container": "#0a0a0a",
-                    "surface-container-low": "#050505",
-                    "surface-container-lowest": "#000000",
-                    "surface-container-high": "#121212",
-                    "surface-container-highest": "#1a1a1a",
-                    "on-background": "#ffffff",
-                    "on-surface": "#ffffff",
-                    "on-surface-variant": "#a8a8a8",
-                    "outline": "#333333",
-                    "outline-variant": "#222222",
-                    "primary-container": "#d4af37",
-                    "on-primary-container": "#000000"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0px",
-                    "lg": "0px",
-                    "xl": "0px",
-                    "full": "0px"
-            },
-            "spacing": {
-                    "margin-mobile": "20px",
-                    "unit": "4px",
-                    "gutter": "24px",
-                    "margin-desktop": "64px",
-                    "container-max": "1280px",
-                    "container-padding": "64px",
-                    "section-gap": "120px"
-            },
-            "fontFamily": {
-                    "headline-lg-mobile": ["Playfair Display"],
-                    "headline-xl": ["Playfair Display"],
-                    "label-caps": ["Hanken Grotesk"],
-                    "body-md": ["Hanken Grotesk"],
-                    "headline-md": ["Playfair Display"],
-                    "headline-lg": ["Playfair Display"],
-                    "body-lg": ["Hanken Grotesk"]
-            },
-            "fontSize": {
-                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
-                    "headline-xl": ["60px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                    "label-caps": ["12px", {"lineHeight": "1.5", "letterSpacing": "0.15em", "fontWeight": "700"}],
-                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
-                    "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
-                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
-            }
-          },
-        },
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "primary": "#d4af37",
+        "on-primary": "#000000",
+        "background": "#000000",
+        "surface": "#000000",
+        "surface-container": "#0a0a0a",
+        "surface-container-low": "#050505",
+        "surface-container-lowest": "#000000",
+        "surface-container-high": "#121212",
+        "surface-container-highest": "#1a1a1a",
+        "on-background": "#ffffff",
+        "on-surface": "#ffffff",
+        "on-surface-variant": "#a8a8a8",
+        "outline": "#333333",
+        "outline-variant": "#222222",
+        "primary-container": "#d4af37",
+        "on-primary-container": "#000000"
+      },
+      borderRadius: { "DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "0px" },
+      fontFamily: {
+        "headline-xl": ["Playfair Display"],
+        "headline-lg": ["Playfair Display"],
+        "headline-md": ["Playfair Display"],
+        "label-caps": ["Hanken Grotesk"],
+        "body-md": ["Hanken Grotesk"],
+        "body-lg": ["Hanken Grotesk"]
+      },
+      fontSize: {
+        "headline-xl": ["36px", { lineHeight: "1.08", letterSpacing: "-0.02em", fontWeight: "700" }],
+        "headline-lg": ["26px", { lineHeight: "1.2", letterSpacing: "-0.01em", fontWeight: "600" }],
+        "headline-md": ["20px", { lineHeight: "1.3", fontWeight: "500" }],
+        "label-caps": ["12px", { lineHeight: "1.5", letterSpacing: "0.15em", fontWeight: "700" }],
+        "body-md": ["15px", { lineHeight: "1.6", fontWeight: "400" }],
+        "body-lg": ["16px", { lineHeight: "1.6", fontWeight: "400" }]
       }
+    }
+  }
+}
 </script>
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
-            vertical-align: middle;
-        }
-        .competition-accent-border {
-            border-top: 1px solid #d4af37;
-        }
-        .custom-cursor {
-            width: 12px;
-            height: 12px;
-            border: 1px solid #d4af37;
-            border-radius: 50%;
-            position: fixed;
-            pointer-events: none;
-            z-index: 9999;
-            transition: transform 0.15s ease-out;
-        }
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .no-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-        ::selection {
-            background-color: #d4af37;
-            color: #000000;
-        }
-    </style>
-  </head>
-<body class="bg-surface text-on-surface selection:bg-primary selection:text-on-primary">
-<!-- Top Navigation Bar (Mobile) -->
-<header class="fixed top-0 w-full z-50 bg-surface flex justify-between items-center px-margin-mobile h-touch-target-min border-b border-outline-variant">
-    <a class="flex items-center gap-3" href="landing_mobile.html">
-        <img alt="Creatricks Logo" class="h-8 w-auto object-contain" src="logoproper.png"/>
-        <span class="font-display-lg text-headline-sm dark:text-primary tracking-tighter">Creatricks</span>
-    </a>
-    <button class="flex items-center gap-2 group active:scale-95 duration-150">
-        <span class="font-body-md text-body-md text-primary font-bold">Register</span>
-        <span class="material-symbols-outlined text-primary" data-icon="menu">menu</span>
-    </button>
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+    vertical-align: middle;
+  }
+  .competition-accent-border { border-top: 1px solid #d4af37; }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  ::selection { background-color: #d4af37; color: #000000; }
+
+  .hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 8px;
+  }
+  .hamburger span {
+    display: block;
+    width: 22px;
+    height: 1.5px;
+    background: #ffffff;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+  .nav-drawer {
+    position: fixed;
+    top: 57px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 28px;
+    transform: translateX(100%);
+    transition: transform 0.35s cubic-bezier(0.77,0,0.175,1);
+    border-top: 1px solid #222222;
+    overflow-y: auto;
+  }
+  .nav-drawer.open { transform: translateX(0); }
+  .nav-drawer a {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #a8a8a8;
+    padding: 20px 0;
+    border-bottom: 0.5px solid #222222;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-drawer a.active-link { color: #d4af37; }
+  .nav-drawer a::after { content: '→'; font-size: 14px; opacity: 0.4; }
+  .nav-register {
+    margin-top: 40px;
+    background: #d4af37;
+    color: #000000;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    padding: 18px 24px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+  }
+
+  .theme-card {
+    width: 78vw;
+    min-width: 260px;
+    max-width: 320px;
+    flex-shrink: 0;
+    white-space: normal;
+    word-wrap: break-word;
+  }
+
+  @keyframes bob-down {
+    0%, 100% { transform: translateY(0); opacity: 0.4; }
+    50% { transform: translateY(5px); opacity: 1; }
+  }
+  @keyframes bob-right {
+    0%, 100% { transform: translateX(0); opacity: 0.4; }
+    50% { transform: translateX(6px); opacity: 1; }
+  }
+  .anim-down { animation: bob-down 1.7s ease-in-out infinite; }
+  .anim-right { animation: bob-right 1.7s ease-in-out infinite; }
+
+  .scroll-hint {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #a8a8a8;
+    transition: opacity 0.5s ease;
+  }
+  .scroll-hint.faded { opacity: 0; pointer-events: none; }
+
+  .round-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+  .round-label-num {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: #d4af37;
+    flex-shrink: 0;
+  }
+  .round-label-line {
+    flex: 1;
+    height: 1px;
+    background: #222222;
+  }
+  .round-title {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 10px;
+  }
+</style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased">
+
+<div id="scroll-down-hint" style="
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+">
+  <span style="
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #a8a8a8;
+    opacity: 0.7;
+  ">Scroll</span>
+  <span class="material-symbols-outlined anim-down" style="
+    font-size: 18px;
+    color: #d4af37;
+    opacity: 0.8;
+    font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+  ">keyboard_arrow_down</span>
+</div>
+
+<header style="position:sticky;top:0;z-index:100;background:#000;border-bottom:1px solid #222222;display:flex;align-items:center;justify-content:space-between;padding:0 20px;height:57px;">
+  <div class="font-headline-md text-primary uppercase tracking-[0.3em] text-[15px]">Creatricks 2026</div>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </header>
-<main class="pt-20 pb-32 overflow-x-hidden">
-<!-- Breadcrumb & Back Action -->
-<nav class="px-margin-mobile mb-8">
-<a class="flex items-center gap-2 group" href="landing_mobile.html">
-<span class="material-symbols-outlined text-primary-fixed text-[20px] group-hover:-translate-x-1 transition-transform" data-icon="arrow_back">arrow_back</span>
-<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Back to Expo</span>
-</a>
+
+<nav class="nav-drawer" id="navDrawer">
+  <a href="landing.html">Expo</a>
+  <a href="landing.html#competitions" class="active-link">Competitions</a>
+  <a href="schedule.html">Schedule</a>
+  <a href="landing.html#newsletter">Archives</a>
+  <a href="entryguidelines.html">Entry Guidelines</a>
+  <a href="moreinfo.html">More Info</a>
+  <button class="nav-register">Register Now</button>
 </nav>
-<!-- Hero Section: Nocturnal Prestige -->
-<section class="px-margin-mobile mb-16">
-<div class="relative w-full aspect-[3/4] bg-surface-container-lowest border border-outline-variant mb-8 overflow-hidden group">
-<img alt="Urban Alchemy Hero" class="w-full h-full object-cover grayscale opacity-60 group-hover:scale-105 group-hover:grayscale-0 transition-all duration-1000" data-alt="A cinematic low-angle photograph of a futuristic architectural structure at night. The building features sharp obsidian angles and glowing gold light strips tracing its edges. The atmosphere is nocturnal and prestigious, with a dark, moody sky and a sense of silent intellectual power. The lighting is high-contrast, emphasizing the metallic textures and architectural precision of the Urban Alchemy theme." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD07_XQG4zRm05dDKFJRfia02aNgmMaYqUL6PAtLoIpAzwaxi_vTdg-D87ChGDJama7_Sw1Immg3gFFhbvN7j0HZVTIHjCIBoD3rm095_IDb2nOD2QKJIjfxikma_0uZ_lhefWBn_b0cLV2K8dj1puk2WIhK2VLvmR7sRHoBSkpa8EfB18FpRngHSpf7iJkZwfncP3Mjoz-SPlCyThm8kjbaM4gmsK5yBR8WDVMOiZTn11sCeuLadaSeKf1odyirQsP2-whfLoVSMqI"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
-<div class="absolute bottom-6 left-6 right-6">
-<span class="font-label-mono text-label-mono bg-primary text-on-primary px-3 py-1 mb-4 inline-block tracking-widest uppercase">Competition CT2026-X04</span>
-<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-white leading-tight">
-                        Lumi <br/><span class="italic font-normal text-primary">Nara</span>
-</h1>
-</div>
-</div>
-<!-- Stats Bar -->
 
-<!-- Overview Section: Tonal Layering -->
-<section class="px-margin-mobile mb-section-gap">
-<div class="mb-10">
-<h2 class="font-headline-md text-headline-md text-on-surface mb-6 rim-light-top pt-4">Competition Overview</h2>
-<div class="space-y-8 font-body-lg text-on-surface-variant leading-relaxed opacity-80">
-  
-  <!-- Round 1 -->
-  <div>
-    <p class="font-bold">Round 1 - The Vision Forge</p>
-    <p>The competition begins online. Teams must conceptualize and submit an original mood board along with fashion sketches inspired by the theme. Creativity, storytelling, innovation, and execution will determine who advances. Only the most striking and well-developed concepts will survive this elimination round and secure a place in the finals.</p>
+<main class="relative">
+
+  <div class="px-5 pt-10 pb-8 flex items-center justify-between">
+    <a class="flex items-center gap-2 font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest" href="landing.html#competitions">
+      <span class="material-symbols-outlined text-sm">arrow_back</span>
+      Back to Competitions
+    </a>
+    <div class="font-label-caps text-[10px] text-outline uppercase tracking-[0.2em] opacity-40">Competition ID: CT2026-X04</div>
   </div>
 
-  <!-- Round 2 -->
-  <div>
-    <p class="font-bold">Round 2 – Runway Reveal</p>
-    <p>Finalists will bring their vision to life on stage through a dynamic presentation of their designed looks. Participants must command the runway with confidence, styling precision, and impactful choreography that enhances the concept behind their creation. This round tests not only fashion sense, but stage presence and performance ability.</p>
-  </div>
+  <section class="px-5 mb-16">
+    <h1 class="font-headline-xl text-headline-xl mb-6 text-on-surface leading-[1.05]">
+      Lumi<span class="italic font-normal text-primary">Nara</span>
+    </h1>
+    <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 leading-relaxed opacity-80">
+      From concept building to final presentation, Luminara celebrates confidence, aesthetics, and the art of storytelling through fashion. Whether your style is bold, elegant, futuristic, vintage, or experimental, this is your chance to bring your vision to life on stage.
+      Step into the spotlight with LUMINARA, the ultimate fashion styling challenge at the Creatricks 2026, where creativity meets individuality.
+    </p>
+    <div class="w-full aspect-[4/5] border border-outline-variant p-3 bg-surface-container-lowest overflow-hidden relative">
+      <img alt="Poster" class="w-full h-full object-cover grayscale brightness-75 transition-all duration-1000" src="luminaramain.jpg"/>
+      <div class="absolute -bottom-3 -right-3 w-full h-full border border-primary/20 -z-10"></div>
+    </div>
+  </section>
 
-  <!-- Round 3 -->
-  <div>
-    <p class="font-bold">Round 3 – The Final Twist</p>
-    <p>In the ultimate challenge, participants will create a unique modification to their outfits, incorporating a show stopper. Teams must think creatively under pressure to elevate and transform their final presentation while maintaining cohesion, originality, and visual impact. This round will test adaptability, innovation, and true styling mastery.</p>
-  </div>
+  <section class="px-5 mb-16">
+    <div class="border border-outline-variant bg-surface-container-lowest competition-accent-border mb-6 overflow-hidden">
 
-  <!-- Judging Criteria -->
-  <div class="pt-4 border-t border-gray-200">
-    <p>Submissions will be judged on three pillars: Aesthetic Cohesion, Mechanical Innovation, and Emotional Resonance. We are looking for designs that feel both inevitable and impossible.</p>
-  </div>
+      <div class="px-6 pt-6 pb-5 border-b border-outline-variant">
+        <p class="font-label-caps text-[9px] text-primary uppercase tracking-[0.28em] mb-3 opacity-60">Luminara</p>
+        <div class="flex items-end justify-between">
+          <h2 class="text-[24px] leading-[1.1] text-on-surface" style="font-family:'Playfair Display';font-weight:600">Competition<br/><em style="font-weight:400;color:#d4af37">Overview</em></h2>
+        </div>
+      </div>
 
-</div>
-</div>
-<!-- Bento-style Technical Requirements -->
-<div class="grid grid-cols-1 gap-4">
-<div class="bg-surface-container-low border border-outline-variant p-6 group hover:border-primary transition-all">
-<h3 class="font-label-caps text-[11px] text-primary mb-8 border-b border-outline-variant pb-4 uppercase tracking-[0.2em]">Themes</h3>
-<ul class="font-body-md text-on-surface-variant space-y-5">
-<li class="flex items-start gap-4">
-<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
-<span class="opacity-80">Winter Solstice
-</p>
-Subtitle: Game of Thrones
-</span>
-</li>
-<li class="flex items-start gap-4">
-<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
-<span class="opacity-80">Echoes of The Cosmos
-  </p>
-Subtitle - Celestial and Spatial Phenomena
-.</span>
-</li>
-<li class="flex items-start gap-4">
-<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
-<span class="opacity-80">3.Drapes of India
-</p>
-Subtitle: Folklore, Heritage, and Traditions
- </span>
-</li>
-</ul>
-</div>
-<div class="bg-surface-container-low border border-outline-variant p-6 group hover:border-primary transition-all">
-<h3 class="font-label-caps text-[11px] text-primary mb-8 border-b border-outline-variant pb-4 uppercase tracking-[0.2em]">Prizes &amp; Recognition</h3>
-<ul class="space-y-5">
-<li class="flex items-center gap-4 group/item">
-<span class="material-symbols-outlined text-primary text-xl" data-icon="workspace_premium">workspace_premium</span>
-<span class="font-body-md text-body-md text-on-surface italic">$15,000 Innovation Grant</span>
-</li>
-<li class="flex items-center gap-4 group/item">
-<span class="material-symbols-outlined text-primary text-xl" data-icon="account_balance">account_balance</span>
-<span class="font-body-md text-body-md text-on-surface italic">Residency at the Design Hub</span>
-</li>
-</ul>
-</div>
-</div>
-</section>
-<!-- Guidelines: Nocturnal Minimalist Grid -->
-<section class="bg-surface-container-lowest py-20 px-margin-mobile border-y border-outline-variant relative overflow-hidden">
-<div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 blur-[100px] -z-10"></div>
-<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-white italic mb-12">Guidelines &amp;<br/>Constraints</h2>
-<div class="space-y-12">
-<div class="flex gap-6 group">
-<span class="font-label-caps text-label-caps text-primary shrink-0 pt-1">01</span>
-<div>
-<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Eligibility</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Open to all students, faculty, and alumni. Teams limited to 4 members.</p>
-</div>
-</div>
-<div class="flex gap-6 group">
-<span class="font-label-caps text-label-caps text-primary shrink-0 pt-1">02</span>
-<div>
-<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Originality</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">All work must be original and created specifically for Creatricks 2026.</p>
-</div>
-</div>
-<div class="flex gap-6 group">
-<span class="font-label-caps text-label-caps text-primary shrink-0 pt-1">03</span>
-<div>
-<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Submission</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Digital portfolios (PDF, A3) and video content max 180 seconds.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Horizontal Gallery Scroll -->
-<section class="py-20">
-<div class="px-margin-mobile flex justify-between items-center mb-8">
-<h2 class="font-label-caps text-label-caps text-primary uppercase tracking-[0.4em]">Past Inspirations</h2>
-<span class="material-symbols-outlined text-on-surface-variant" data-icon="trending_flat">trending_flat</span>
-</div>
-<div class="flex overflow-x-auto gap-6 px-margin-mobile no-scrollbar">
-<!-- Card 1 -->
-<div class="min-w-[280px] group">
-<div class="aspect-[3/4] border border-outline-variant overflow-hidden mb-4">
-<img class="w-full h-full object-cover grayscale brightness-50 group-hover:grayscale-0 group-hover:scale-110 group-hover:brightness-100 transition-all duration-700" data-alt="A stunning piece of architectural artwork featuring intricate patterns of glass and light. The structure appears to be floating in a dark, nocturnal void, with sharp metallic lines and gold-hued reflections. The style is ultra-minimalist and prestigious, emphasizing the geometric complexity and the contrast between the absolute black background and the radiant structural details." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZzJQgr5iftENOvcInXIoh0jCD4j8QZazIAz403eaThyGZm-De61cpAtJc2J7Xj44edIrnCQkIPX0dfU5nGGIPt77efp-4XsJQUESaFNBAHwI7RV1nZsAo9fik3HkZsh9KV9L1v8q4VvVbCjxQUs6U99GL43FOAnHgsPR0OX6F_zgr2HSco772M0_LeTDYlLIRtLGmnIhtwngJjMgXJx-W2h8ZpVq1Q24vBM8Ih_-DHZpnQxNS5kjZGLpNho2CrlJiUH6EyKooCC9F"/>
-</div>
-<div class="flex justify-between items-center">
-<span class="font-headline-sm text-xl italic text-on-surface">Ocular Flux</span>
-<span class="font-label-mono text-[10px] text-on-surface-variant">2024</span>
-</div>
-</div>
-<!-- Card 2 -->
-<div class="min-w-[280px] group">
-<div class="aspect-[3/4] border border-outline-variant overflow-hidden mb-4">
-<img class="w-full h-full object-cover grayscale brightness-50 group-hover:grayscale-0 group-hover:scale-110 group-hover:brightness-100 transition-all duration-700" data-alt="A sculptural installation made of brushed dark metal that resembles a blooming mechanical flower. The lighting is dramatic and moody, focusing on the sharp edges and metallic sheen of the petals. High-contrast nocturnal aesthetic with warm amber light leaks that suggest an elite gallery environment. The focus is on precision engineering and architectural elegance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFlqRMTMYS7LQFfUcikGc4BUKuiAIYgO8ISGmrXJfmL88VT4P-FzXmBoebgohc9981IB3h-RcQ99FQCNaD7Bh-yZotszko949D-nJV7zVNVUKrh9MHDUzBK0i_2RAoYTfvsWw8HS-lVjaYSoYZji3Vd4CwXyDt6Bn6MeMk-TVa-epnr0WJTpjyp-XM-IDP7Du2LwxJKUSntawmW-3zVgqoa6Q6I2Idssckk6HmHZG8WGPDuH9JplpUNlsmzaxgjx0xM6s4x9om9m0Z"/>
-</div>
-<div class="flex justify-between items-center">
-<span class="font-headline-sm text-xl italic text-on-surface">Iron Petal</span>
-<span class="font-label-mono text-[10px] text-on-surface-variant">2022</span>
-</div>
-</div>
-</div>
-</section>
-<!-- Final CTA: Premium Button -->
-<section class="px-margin-mobile mb-20">
-<div class="bg-surface-container-high p-8 border border-outline-variant relative group overflow-hidden">
-<div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-5 transition-opacity duration-500"></div>
-<div class="relative z-10 text-center">
-<span class="material-symbols-outlined text-primary text-5xl mb-6 animate-float" data-icon="ink_pen" style="font-variation-settings: 'wght' 100;">ink_pen</span>
-<h3 class="font-headline-md text-headline-md text-white mb-2">Ready to Transform?</h3>
-<p class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-10 tracking-widest">Final Submission: Dec 15</p>
-<button class="w-full h-touch-target-min bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-[0.2em] active:scale-[0.98] transition-transform">
-                        Register Now
-                    </button>
-</div>
-</div>
-</section>
+      <div class="divide-y divide-outline-variant">
+        <div class="px-6 py-6">
+          <div class="round-label">
+            <span class="round-label-num">01</span>
+            <div class="round-label-line"></div>
+          </div>
+          <p class="round-title">Round 1 - The Vision Forge</p>
+          <p class="font-body-md text-on-surface-variant leading-relaxed opacity-75">The competition begins online. Teams must conceptualize and submit an original mood board along with fashion sketches inspired by the theme. Creativity, storytelling, innovation, and execution will determine who advances. Only the most striking and well-developed concepts will survive this elimination round and secure a place in the finals.</p>
+        </div>
+        <div class="px-6 py-6">
+          <div class="round-label">
+            <span class="round-label-num">02</span>
+            <div class="round-label-line"></div>
+          </div>
+          <p class="round-title">Round 2 – Runway Reveal</p>
+          <p class="font-body-md text-on-surface-variant leading-relaxed opacity-75">Finalists will bring their vision to life on stage through a dynamic presentation of their designed looks. Participants must command the runway with confidence, styling precision, and impactful choreography that enhances the concept behind their creation. This round tests not only fashion sense, but stage presence and performance ability.</p>
+        </div>
+        <div class="px-6 py-6">
+          <div class="round-label">
+            <span class="round-label-num">03</span>
+            <div class="round-label-line"></div>
+          </div>
+          <p class="round-title">Round 3 – The Final Twist</p>
+          <p class="font-body-md text-on-surface-variant leading-relaxed opacity-75">In the ultimate challenge, participants will create a unique modification to their outfits, incorporating a show stopper. Teams must think creatively under pressure to elevate and transform their final presentation while maintaining cohesion, originality, and visual impact. This round will test adaptability, innovation, and true styling mastery.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 border-t border-outline-variant">
+        <div class="px-6 py-6 border-r border-outline-variant">
+          <h3 class="font-label-caps text-[10px] text-primary mb-4 uppercase tracking-[0.2em]">Themes</h3>
+          <ul class="font-body-md text-on-surface-variant space-y-3">
+            <li class="flex items-start gap-2">
+              <span class="material-symbols-outlined text-primary shrink-0" style="font-size:15px;margin-top:1px">check_circle</span>
+              <span class="opacity-80 text-[13px]">Winter Solstice</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="material-symbols-outlined text-primary shrink-0" style="font-size:15px;margin-top:1px">check_circle</span>
+              <span class="opacity-80 text-[13px]">Echoes of The Cosmos</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="material-symbols-outlined text-primary shrink-0" style="font-size:15px;margin-top:1px">check_circle</span>
+              <span class="opacity-80 text-[13px]">Drapes of India</span>
+            </li>
+          </ul>
+        </div>
+        <div class="px-6 py-6">
+          <h3 class="font-label-caps text-[10px] text-primary mb-4 uppercase tracking-[0.2em]">Judging Criteria</h3>
+          <ul class="font-body-md text-on-surface-variant space-y-3">
+            <li class="flex items-start gap-2">
+              <span class="material-symbols-outlined text-primary shrink-0" style="font-size:15px;margin-top:1px">workspace_premium</span>
+              <span class="italic opacity-80 text-[13px]">Creativity &amp; Originality/Theme Interpretation.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="material-symbols-outlined text-primary shrink-0" style="font-size:15px;margin-top:1px">workspace_premium</span>
+              <span class="italic opacity-80 text-[13px]">Teamwork and Overall Impact.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="material-symbols-outlined text-primary shrink-0" style="font-size:15px;margin-top:1px">workspace_premium</span>
+              <span class="italic opacity-80 text-[13px]">Presentation &amp; Confidence.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-primary p-8 text-on-primary flex flex-col items-center text-center mb-6">
+      <span class="material-symbols-outlined text-[52px] mb-6" style="font-variation-settings:'FILL' 0,'wght' 100,'GRAD' 0,'opsz' 48">ink_pen</span>
+      <h3 class="font-headline-md text-2xl mb-3">Final Submission</h3>
+      <p class="font-label-caps text-[10px] opacity-70 mb-8 uppercase tracking-[0.2em]">Deadline: Dec 15, 2025</p>
+      <a class="inline-block border border-on-primary px-10 py-3 font-label-caps text-[11px] uppercase tracking-[0.2em] active:scale-95 transition-all duration-200" href="#">Register Now</a>
+    </div>
+
+    <div class="p-6 border border-outline-variant bg-surface-container-lowest">
+      <h4 class="font-label-caps text-[11px] mb-6 text-primary border-b border-outline-variant pb-3 uppercase tracking-[0.2em]">Inquiries</h4>
+      <div class="space-y-6">
+        <div class="flex items-center gap-4">
+          <div class="w-11 h-11 border border-outline-variant flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-base text-on-surface-variant">call</span>
+          </div>
+          <div>
+            <p class="font-label-caps text-[9px] text-outline uppercase tracking-widest mb-0.5">General</p>
+            <p class="font-body-md font-medium text-on-surface">+1 (800) 455-2026</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="w-11 h-11 border border-outline-variant flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-base text-on-surface-variant">support_agent</span>
+          </div>
+          <div>
+            <p class="font-label-caps text-[9px] text-outline uppercase tracking-widest mb-0.5">Technical</p>
+            <p class="font-body-md font-medium text-on-surface">+1 (800) 455-9988</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="w-11 h-11 border border-outline-variant flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-base text-on-surface-variant">mail</span>
+          </div>
+          <div>
+            <p class="font-label-caps text-[9px] text-outline uppercase tracking-widest mb-0.5">Email</p>
+            <p class="font-body-md font-medium text-on-surface">expo@creatricks.edu</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="px-5 mb-16 border-t border-outline-variant pt-10">
+    <h2 class="font-headline-lg text-[32px] italic text-on-surface leading-tight mb-10">Guidelines &amp;<br/>Constraints</h2>
+    <div class="space-y-10">
+      <div class="flex gap-5">
+        <span class="font-label-caps text-primary text-[14px] tracking-widest shrink-0 pt-0.5">01</span>
+        <div>
+          <h3 class="font-headline-md text-xl text-on-surface mb-3">Team Requirements</h3>
+          <p class="font-body-md text-on-surface-variant leading-relaxed opacity-70">The use of AI-generated styling concepts, AI-designed outifts boards, or AI-assisted submissions are prohibited. All concepts and styling ideas must be created authentically by the participants.</p>
+        </div>
+      </div>
+      <div class="flex gap-5">
+        <span class="font-label-caps text-primary text-[14px] tracking-widest shrink-0 pt-0.5">02</span>
+        <div>
+          <h3 class="font-headline-md text-xl text-on-surface mb-3">Props</h3>
+          <p class="font-body-md text-on-surface-variant leading-relaxed opacity-70">Dangerous props, offensive symbols, or inappropriate contenct are striclty prohibited.</p>
+        </div>
+      </div>
+      <div class="flex gap-5">
+        <span class="font-label-caps text-primary text-[14px] tracking-widest shrink-0 pt-0.5">03</span>
+        <div>
+          <h3 class="font-headline-md text-xl text-on-surface mb-3">Submission</h3>
+          <p class="font-body-md text-on-surface-variant leading-relaxed opacity-70">Digital portfolios must be submitted in PDF format (A3, max 20 pages). Video content should not exceed 180 seconds.</p>
+        </div>
+      </div>
+      <div class="flex gap-5">
+        <span class="font-label-caps text-primary text-[14px] tracking-widest shrink-0 pt-0.5">04</span>
+        <div>
+          <h3 class="font-headline-md text-xl text-on-surface mb-3">IP Rights</h3>
+          <p class="font-body-md text-on-surface-variant leading-relaxed opacity-70">Designers retain full IP rights. Creatricks reserves the right to exhibit and publish works for promotional purposes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-16" id="themes-section">
+    <div class="px-5 mb-6 flex justify-between items-center">
+      <h2 class="font-label-caps text-[11px] uppercase tracking-[0.4em] text-primary">T H E M E S</h2>
+      <div id="scroll-right-hint" class="scroll-hint" style="opacity:0.55">
+        Swipe
+        <span class="material-symbols-outlined anim-right" style="font-size:15px;font-variation-settings:'FILL' 0,'wght' 200,'GRAD' 0,'opsz' 20">keyboard_arrow_right</span>
+      </div>
+    </div>
+    <div id="themes-scroll" class="flex overflow-x-auto gap-5 pb-10 px-5 no-scrollbar">
+
+      <div class="theme-card bg-surface-container-low border border-outline-variant p-4 flex flex-col">
+        <div class="mb-4 border border-outline-variant bg-surface-container-lowest p-5 competition-accent-border">
+          <h3 class="font-headline-md text-lg text-primary mb-1">Winter Solstice</h3>
+          <p class="font-label-caps text-[9px] uppercase tracking-[0.2em] text-on-surface-variant mb-3">Game of Thrones</p>
+          <p class="font-body-md text-on-surface-variant leading-relaxed opacity-80">Step into a high-fantasy, mythical European winter inspired by Nordic folklore and epic sagas. This theme captures the fierce, rugged beauty of a frozen world where clans endure the biting cold, howling winds, and an endless night. But beneath the ice lies a whimsical, ancient magic. The solstice is the ultimate battle between the freezing dark and the birth of a new dawn, celebrating survival, camaraderie, and the return of the sun.</p>
+        </div>
+        <div class="overflow-hidden aspect-[4/5] bg-black">
+          <img alt="Winter Solstice Poster" class="w-full h-full object-cover brightness-75 transition-all duration-1000" src="winters.jpg"/>
+        </div>
+        <div class="pt-6 flex justify-between items-baseline">
+          <span class="font-headline-md text-xl italic text-on-surface">Winter Solstice</span>
+          <span class="font-label-caps text-[10px] text-outline uppercase tracking-widest opacity-60">1</span>
+        </div>
+      </div>
+
+      <div class="theme-card bg-surface-container-low border border-outline-variant p-4 flex flex-col">
+        <div class="mb-4 border border-outline-variant bg-surface-container-lowest p-5 competition-accent-border">
+          <h3 class="font-headline-md text-lg text-primary mb-1">Echoes of The Cosmos</h3>
+          <p class="font-label-caps text-[9px] uppercase tracking-[0.2em] text-on-surface-variant mb-3">Celestial and Spatial Phenomena</p>
+          <p class="font-body-md text-on-surface-variant leading-relaxed opacity-80">A breathtaking odyssey into the deep, mysterious expanse of the universe. This theme explores the magnificent phenomenon of outer space, ranging from the silent birth of a nebula to the blinding light of a supernova. It bridges the gap between hard science and surreal artistry, portraying the universe as a living, glowing entity of infinite wonder.</p>
+        </div>
+        <div class="overflow-hidden aspect-[4/5] bg-black">
+          <img alt="Echoes of The Cosmos Poster" class="w-full h-full object-cover brightness-75 transition-all duration-1000" src="cosmos.jpg"/>
+        </div>
+        <div class="pt-6 flex justify-between items-baseline">
+          <span class="font-headline-md text-xl italic text-on-surface">Echoes of Cosmos</span>
+          <span class="font-label-caps text-[10px] text-outline uppercase tracking-widest opacity-60">2</span>
+        </div>
+      </div>
+
+      <div class="theme-card bg-surface-container-low border border-outline-variant p-4 flex flex-col">
+        <div class="mb-4 border border-outline-variant bg-surface-container-lowest p-5 competition-accent-border">
+          <h3 class="font-headline-md text-lg text-primary mb-1">Drapes of India</h3>
+          <p class="font-label-caps text-[9px] uppercase tracking-[0.2em] text-on-surface-variant mb-3">Folklore, Heritage, and Traditions</p>
+          <p class="font-body-md text-on-surface-variant leading-relaxed opacity-80">A grand, cinematic celebration of India's cultural soul told through its legendary textiles. This theme treats fabrics not just as clothing, but as historical scrolls carrying ancient folklore, regional pride, and unparalleled craftsmanship. It honors the weavers, the storytellers, and the timeless stories of our rich past that make Indian heritage a vibrant, living masterpiece.</p>
+        </div>
+        <div class="overflow-hidden aspect-[4/5] bg-black">
+          <img alt="Drapes of India Poster" class="w-full h-full object-cover brightness-75 transition-all duration-1000" src="drapes.jpg"/>
+        </div>
+        <div class="pt-6 flex justify-between items-baseline">
+          <span class="font-headline-md text-xl italic text-on-surface">Drapes of India</span>
+          <span class="font-label-caps text-[10px] text-outline uppercase tracking-widest opacity-60">3</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
 </main>
-<!-- Bottom Navigation Bar (Mandatory Shell) -->
-<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center h-20 pb-safe px-margin-mobile bg-surface/80 dark:bg-surface/80 backdrop-blur-xl border-t border-outline-variant z-50">
-<a href="landing_mobile.html" class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all">
-<span class="material-symbols-outlined" data-icon="explore">explore</span>
-<span class="font-label-caps text-[10px] uppercase mt-1">Expo</span>
-</a>
-<a href="landing_mobile.html#competitions" class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all">
-<span class="material-symbols-outlined" data-icon="emoji_events">emoji_events</span>
-<span class="font-label-caps text-[10px] uppercase mt-1">Competitions</span>
-</a>
-<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all" href="schedule_mobile.html">
-<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
-<span class="font-label-caps text-[10px] uppercase mt-1">Schedule</span>
-</a>
-<a href="landing_mobile.html#newsletter" class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all">
-<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
-<span class="font-label-caps text-[10px] uppercase mt-1">Archives</span>
-</a>
-</nav>
-</button>
-</nav>
+
+<footer class="w-full bg-black border-t border-primary/20 px-5 py-14 text-on-surface">
+  <div class="flex flex-col gap-10">
+    <div class="flex flex-col gap-5">
+      <div class="font-headline-md text-primary text-2xl uppercase tracking-[0.3em]">Creatricks School</div>
+      <p class="font-body-md text-on-surface-variant opacity-60 leading-relaxed">Elevating the curious mind through structural whimsy and academic precision since 2012.</p>
+    </div>
+    <div class="grid grid-cols-2 gap-8 pb-10 border-b border-outline-variant">
+      <div class="flex flex-col gap-5">
+        <p class="font-label-caps text-primary uppercase tracking-[0.2em] text-[11px]">Resources</p>
+        <div class="flex flex-col gap-4">
+          <a class="text-on-surface-variant text-sm opacity-80" href="#">Contact Us</a>
+          <a class="text-on-surface-variant text-sm opacity-80" href="#">Feedback Portal</a>
+          <a class="text-on-surface-variant text-sm opacity-80" href="#">Newsroom</a>
+        </div>
+      </div>
+      <div class="flex flex-col gap-5">
+        <p class="font-label-caps text-primary uppercase tracking-[0.2em] text-[11px]">Legal</p>
+        <div class="flex flex-col gap-4">
+          <a class="text-on-surface-variant text-sm opacity-80" href="#">Privacy Policy</a>
+          <a class="text-on-surface-variant text-sm opacity-80" href="#">Terms of Service</a>
+          <a class="text-on-surface-variant text-sm opacity-80" href="#">Cookies</a>
+        </div>
+      </div>
+    </div>
+    <div class="flex justify-between items-center">
+      <p class="opacity-40 uppercase font-label-caps text-[9px] tracking-widest">© 2026 Creatricks School Design Expo.</p>
+      <div class="flex gap-3">
+        <a class="w-10 h-10 border border-outline-variant flex items-center justify-center" href="#">
+          <span class="material-symbols-outlined text-base">share</span>
+        </a>
+        <a class="w-10 h-10 border border-outline-variant flex items-center justify-center" href="#">
+          <span class="material-symbols-outlined text-base">language</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
 <script>
-        // Micro-interaction: Scroll reveal for content sections
-        const observerOptions = {
-            threshold: 0.1
-        };
+const hamburger = document.getElementById('hamburger');
+const navDrawer = document.getElementById('navDrawer');
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('opacity-100', 'translate-y-0');
-                    entry.target.classList.remove('opacity-0', 'translate-y-8');
-                }
-            });
-        }, observerOptions);
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  navDrawer.classList.toggle('open');
+  document.body.style.overflow = navDrawer.classList.contains('open') ? 'hidden' : '';
+});
 
-        document.querySelectorAll('section').forEach(section => {
-            section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-8');
-            observer.observe(section);
-        });
+function closeNav() {
+  hamburger.classList.remove('open');
+  navDrawer.classList.remove('open');
+  document.body.style.overflow = '';
+}
 
-        // Register button active state logic
-        const buttons = document.querySelectorAll('button');
-        buttons.forEach(btn => {
-            btn.addEventListener('touchstart', () => {
-                btn.style.transform = 'scale(0.95)';
-            });
-            btn.addEventListener('touchend', () => {
-                btn.style.transform = 'scale(1)';
-            });
-        });
-    </script>
-</body></html>
+(function () {
+  const downHint = document.getElementById('scroll-down-hint');
+  const rightHint = document.getElementById('scroll-right-hint');
+  const themesSection = document.getElementById('themes-section');
+  const themesScroll = document.getElementById('themes-scroll');
+
+  window.addEventListener('scroll', function () {
+    if (!themesSection || !downHint) return;
+    const rect = themesSection.getBoundingClientRect();
+    if (rect.top <= window.innerHeight) {
+      downHint.style.opacity = '0';
+    } else {
+      downHint.style.opacity = '1';
+    }
+  }, { passive: true });
+
+  if (themesScroll) {
+    themesScroll.addEventListener('scroll', function () {
+      if (themesScroll.scrollLeft > 24) {
+        if (rightHint) rightHint.classList.add('faded');
+      } else {
+        if (rightHint) rightHint.classList.remove('faded');
+      }
+    }, { passive: true });
+  }
+})();
+</script>
+</body>
+</html>
