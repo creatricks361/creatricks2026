@@ -68,6 +68,17 @@
                     "body-md": ["Hanken Grotesk"],
                     "label-caps": ["Hanken Grotesk"],
                     "body-lg": ["Hanken Grotesk"]
+                  spacing: {
+    "container-padding": "64px",
+    "gutter": "24px"
+},
+fontSize: {
+    "label-caps": ["12px", {
+        lineHeight: "16px",
+        letterSpacing: "0.15em",
+        fontWeight: "700"
+    }]
+}
             }
           },
         },
@@ -92,36 +103,50 @@
     </style>
 </head>
 <header class="w-full top-0 sticky bg-background border-b-[1.5px] border-outline-variant z-50">
-<div class="flex justify-between items-center px-container-padding py-6 w-full max-w-full mx-auto">
-<div class="flex items-center gap-4">
-<img alt="Creatricks Logo" class="h-10 w-auto object-contain" src="newlogo.png"/>
-<div class="font-headline-sm text-[18px] uppercase tracking-[0.25em] text-primary hidden lg:block text-[#BO26FF]">
+    <div class="flex justify-between items-center px-container-padding py-6 w-full max-w-full mx-auto">
+
+        <div class="flex items-center gap-4">
+            <img alt="Creatricks Logo" class="h-10 w-auto object-contain" src="newlogo.png"/>
+
+            <div class="font-headline-sm text-[18px] uppercase tracking-[0.25em] text-primary hidden lg:block">
                 Creatricks 2026
             </div>
-</div>
-<nav class="hidden md:flex gap-gutter items-center mx-auto">
-    <a class="font-label-caps text-label-caps text-[#f2ca50] border-b border-[#f2ca50] pb-1 transition-colors duration-300" href="landing.html">
-        Expo
-    </a>
-    
-    <a class="font-label-caps text-label-caps text-on-surface-variant border-b border-transparent pb-1 hover:text-[#f2ca50] hover:border-[#f2ca50] transition-colors duration-300" href="#competitions">
-        Competitions
-    </a>
-    
-    <a class="font-label-caps text-label-caps text-on-surface-variant border-b border-transparent pb-1 hover:text-[#f2ca50] hover:border-[#f2ca50] transition-colors duration-300" href="schedule.html">
-        Schedule
-    </a>
-    
-    <a class="font-label-caps text-label-caps text-on-surface-variant border-b border-transparent pb-1 hover:text-[#f2ca50] hover:border-[#f2ca50] transition-colors duration-300" href="archives.html">
-        Archives
-    </a>    
-    
-      <a class="font-label-caps text-label-caps text-on-surface-variant border-b border-transparent pb-1 hover:text-[#f2ca50] hover:border-[#f2ca50] transition-colors duration-300" href="entryguidlines.html">
-        Entry Guidelines
-    </a>   
-    <a class="font-label-caps text-label-caps text-on-surface-variant border-b border-transparent pb-1 hover:text-[#f2ca50] hover:border-[#f2ca50] transition-colors duration-300" href="amenities.html">
-        More Info
-    </a>
+        </div>
+
+        <nav class="hidden md:flex gap-gutter items-center mx-auto">
+            <a class="font-label-caps text-label-caps text-on-surface-variant border-b border-transparent pb-1 hover:text-[#f2ca50] hover:border-[#f2ca50] transition-colors duration-300"
+               href="landing.html">
+                Expo
+            </a>
+
+            <a class="font-label-caps text-label-caps text-on-surface-variant border-b border-transparent pb-1 hover:text-[#f2ca50] hover:border-[#f2ca50] transition-colors duration-300"
+               href="landing.html#competitions">
+                Competitions
+            </a>
+
+            <a class="font-label-caps text-label-caps text-[#f2ca50] border-b border-[#f2ca50] pb-1 transition-colors duration-300"
+               href="schedule.html">
+                Schedule
+            </a>
+
+            <a class="font-label-caps text-label-caps text-on-surface-variant border-b border-transparent pb-1 hover:text-[#f2ca50] hover:border-[#f2ca50] transition-colors duration-300"
+               href="archives.html">
+                Archives
+            </a>
+
+            <a class="font-label-caps text-label-caps text-on-surface-variant border-b border-transparent pb-1 hover:text-[#f2ca50] hover:border-[#f2ca50] transition-colors duration-300"
+               href="entryguidlines.html">
+                Entry Guidelines
+            </a>
+
+            <a class="font-label-caps text-label-caps text-on-surface-variant border-b border-transparent pb-1 hover:text-[#f2ca50] hover:border-[#f2ca50] transition-colors duration-300"
+               href="amenities.html">
+                More Info
+            </a>
+        </nav>
+
+    </div>
+</header>
 </nav>
 </header>
 
