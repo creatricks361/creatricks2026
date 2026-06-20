@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-
-<html class="dark" lang="en"><head>
+<html class="dark" lang="en">
+<head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>The Event Chronology | CREATRICKS 2026</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Hanken+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Hanken+Grotesk:wght=300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">
@@ -61,364 +61,214 @@
                     "on-primary-fixed-variant": "#574500",
                     "on-background": "#e1e2eb"
             },
-            "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
-            },
-            "spacing": {
-                    "container-max": "1280px",
-                    "unit": "4px",
-                    "margin-mobile": "20px",
-                    "margin-desktop": "64px",
-                    "gutter": "24px"
-            },
             "fontFamily": {
                     "headline-xl": ["Playfair Display"],
                     "headline-md": ["Playfair Display"],
                     "headline-lg": ["Playfair Display"],
                     "body-md": ["Hanken Grotesk"],
                     "label-caps": ["Hanken Grotesk"],
-                    "body-lg": ["Hanken Grotesk"],
-                    "headline-lg-mobile": ["Playfair Display"]
-            },
-             "fontSize": {
-                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
-                    "headline-xl": ["60px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                    "label-caps": ["12px", {"lineHeight": "1.5", "letterSpacing": "0.15em", "fontWeight": "700"}],
-                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
-                    "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
-                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
-            },
+                    "body-lg": ["Hanken Grotesk"]
+            }
           },
         },
       }
     </script>
 <style>
-        .nocturnal-gradient {
-            background: radial-gradient(circle at top right, rgba(242, 202, 80, 0.05) 0%, rgba(0, 0, 0, 0) 60%);
-        }
-        .glow-gold {
-            text-shadow: 0 0 15px rgba(242, 202, 80, 0.4);
-        }
-        .rim-light {
-            box-shadow: inset 0 1px 0 0 rgba(242, 202, 80, 0.1);
-        }
-        .active-tab-line {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .day-content {
-            transition: opacity 0.5s ease, transform 0.5s ease;
-        }
-        .fade-out {
-            opacity: 0;
-            transform: translateY(10px);
-        }
-        .fade-in {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        .rim-light { box-shadow: inset 0 1px 0 0 rgba(242, 202, 80, 0.05); }
+        .cgrid { display: flex; position: relative; width: 100%; }
+        .tcol { flex-shrink: 0; width: 70px; position: relative; }
+        .tlbl { position: absolute; right: 12px; font-size: 11px; font-family: 'Hanken Grotesk', sans-serif; font-weight: 700; color: #99907c; text-align: right; white-space: nowrap; transform: translateY(-50%); line-height: 1; user-select: none; }
+        .earea { flex: 1; position: relative; border-left: 1px solid rgba(77, 70, 53, 0.4); }
+        .hln { position: absolute; left: 0; right: 0; border-top: 1px solid rgba(77, 70, 53, 0.4); pointer-events: none; }
+        .hln-h { position: absolute; left: 0; right: 0; border-top: 1px dashed rgba(77, 70, 53, 0.15); pointer-events: none; }
+        
+        .ev { position: absolute; padding: 10px 12px; overflow: hidden; border-radius: 4px; border-left-width: 4px; border-left-style: solid; border-top: 1px solid; border-right: 1px solid; border-bottom: 1px solid; transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); border-left-color: var(--ea); border-top-color: var(--eb); border-right-color: var(--eb); border-bottom-color: var(--eb); background: var(--ebb); backdrop-filter: blur(4px); }
+        .ev:hover { filter: brightness(1.2); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.3); z-index: 30 !important; }
+        
+        .ev-t { font-size: 13px; font-weight: 600; line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: #e1e2eb; }
+        .ev-tm { font-size: 11px; line-height: 1.3; margin-top: 3px; font-weight: 500; color: var(--ea); opacity: 0.9; display: flex; align-items: center; gap: 4px; }
+        .ev-loc { font-size: 11px; line-height: 1.3; margin-top: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: #d0c5af; opacity: 0.8; display: flex; align-items: center; gap: 3px; }
+        .ev-d { font-size: 11px; line-height: 1.4; margin-top: 6px; color: #b9c8de; opacity: 0.85; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
     </style>
 </head>
 <body class="bg-background text-on-background font-body-md selection:bg-primary selection:text-on-primary-fixed min-h-screen flex flex-col overflow-x-hidden">
-<script>
-    const SCHEDULE_DATA = [
-{
-    day: 1,
-    label: "Friday",
-    date: "JULY 24TH",
-    sessions: [
-        {
-            time: "7:50-8:30",
-            period: "AM",
-            title: "Registration & Check-In",
-            description: "Participant registration and welcome.",
-            location: "Main Entrance",
-            type: "standard"
-        },
-        {
-            time: "8:30-9:15",
-            period: "AM",
-            title: "Opening Ceremony",
-            description: "Official inauguration of Creatricks 2026.[All participants except luminara must attend]",
-            location: "Main Auditorium",
-            type: "standard"
-        },
-        {
-            time: "9:20-9:25",
-            period: "AM",
-            title: "Teams escorted to event venues",
-            description: "All event categories begin simultaneously.",
-            location: "Assigned Event Venues",
-            type: "standard"
-        },
-        {
-            time: "9:30",
-            period: "AM",
-            title: "Events begin",
-            description: "Events commence as per schedule. For specific event timings, refer to respective event pages.",
-            location: "Respective venues",
-            type: "standard"
-        },
-        {
-            time: "1:45-3:00",
-            period: "PM",
-            title: "Closing ceremony",
-            description: ".",
-            location: "Event Venues",
-            type: "standard"
-        },
-        {
-            time: "1:45-3:00",
-            period: "PM",
-            title: "Creatricks showcase and awards",
-            description: "Awards ceremony and closing remarks.",
-            type: "gala",
-            badge: "Closing Ceremony",
-            buttonText: "See Results"
-        }
-    ]
-}
-];
-    
-</script>
-<!-- TopNavBar -->  
-<!-- Top Navigation -->
- 
 
-
-
-<header class="w-full top-0 sticky bg-background border-b-[1.5px] border-outline-variant z-50">
-<div class="flex justify-between items-center px-container-padding py-6 w-full max-w-full mx-auto">
+<header class="w-full top-0 sticky bg-background/80 backdrop-blur-md border-b-[1.5px] border-outline-variant z-50">
+<div class="flex justify-between items-center px-6 py-6 w-full max-w-full mx-auto">
 <div class="flex items-center gap-4">
-<img alt="Creatricks Logo" class="h-8 w-auto object-contain " src="newlogo.png"/>
-<div class="font-headline-sm text-[18px] uppercase tracking-[0.25em] text-primary hidden lg:block text-[#792990]">
+<img alt="Creatricks Logo" class="h-8 w-auto object-contain" src="logoproper.png"/>
+<div class="font-label-caps text-[14px] uppercase tracking-[0.25em] text-primary hidden lg:block">
                 Creatricks 2026
             </div>
 </div>
-<nav class="hidden md:flex gap-gutter items-center">
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="landing.html">Expo</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="landing.html#competitions">Competitions</a>
-<a class="font-label-caps text-label-caps text-primary border-b border-primary pb-1 transition-colors duration-300" href="schedule.html">Schedule</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="archives.html">Archives</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="entryguidlines.html">Entry Guidelines</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="moreinfo.html">More Info</a>
+<nav class="hidden md:flex gap-6 items-center">
+<a class="font-label-caps text-[12px] text-on-surface-variant hover:text-primary transition-colors duration-300" href="landing.html">Expo</a>
+<a class="font-label-caps text-[12px] text-on-surface-variant hover:text-primary transition-colors duration-300" href="landing.html#competitions">Competitions</a>
+<a class="font-label-caps text-[12px] text-primary border-b border-primary pb-1 transition-colors duration-300" href="schedule.html">Schedule</a>
+<a class="font-label-caps text-[12px] text-on-surface-variant hover:text-primary transition-colors duration-300" href="#newsletter">Archives</a>
+<a class="font-label-caps text-[12px] text-on-surface-variant hover:text-primary transition-colors duration-300" href="band.html">Amplifier</a>
+<a class="font-label-caps text-[12px] text-on-surface-variant hover:text-primary transition-colors duration-300" href="amenities.html">Amenities</a>
+<a class="font-label-caps text-[12px] text-on-surface-variant hover:text-primary transition-colors duration-300" href="moreinfo.html">More Info</a>
 </nav>
-<button class="bg-primary text-on-primary px-8 py-3 font-label-caps text-label-caps uppercase tracking-widest transition-all hover:bg-white hover:text-black">
+<button class="bg-primary text-on-primary px-8 py-3 font-label-caps text-[12px] uppercase tracking-widest transition-all hover:bg-white hover:text-black">
             Register
         </button>
 </div>
 </header>
-<main>
-<!-- Hero Section -->
-<section class="max-w-container-max mx-auto px-margin-desktop mb-24 text-center">
+
+<main class="flex-grow">
+<section class="max-w-7xl mx-auto px-6 mb-12 text-center mt-12">
 <div class="mb-4 inline-block px-4 py-1 border border-primary/30 bg-primary/5">
-<span class="font-label-caps text-label-caps text-primary uppercase tracking-[0.2em]">24th July, 2026</span>
+<span class="font-label-caps text-[11px] text-primary uppercase tracking-[0.2em]">JANUARY 14-16, 2026</span>
 </div>
-<h1 class="font-headline-xl text-headline-xl text-on-surface mb-8">
+<h1 class="font-headline-xl text-5xl md:text-6xl text-on-surface mb-6">
             The Event <span class="italic text-primary font-normal">Chronology</span>
 </h1>
-<p class="max-w-2xl mx-auto font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
-            An odyssey through the intersections of pedagogy, alchemy, and digital folklore. Explore the meticulously curated three-day immersive experience of Creatricks 2026.
+<p class="max-w-2xl mx-auto font-body-lg text-base md:text-lg text-on-surface-variant leading-relaxed">
+            An interactive multi-track grid architecture mapping validation reviews and spaces seamlessly.
         </p>
 </section>
-<!-- Timeline Section -->
-<section class="max-w-container-max mx-auto px-margin-desktop mb-32">
-<!-- Day Selection Tabs -->
-<div class="flex flex-col md:flex-row justify-center gap-8 mb-20" id="tabs-container">
-<!-- Tabs will be rendered here -->
-</div>
-<!-- Content Container -->
-<div class="relative min-h-[600px]" id="schedule-content">
-<!-- Content will be rendered here -->
-</div>
-</section>
-<!-- CTA Section -->
-<section class="border-t border-outline-variant/10 py-32 bg-surface-container-lowest/50">
-<div class="max-w-container-max mx-auto px-margin-desktop grid md:grid-cols-2 gap-gutter items-center">
+
+<section class="max-w-7xl mx-auto px-6 mb-24">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center pb-4 border-b border-outline-variant/30 mb-8 gap-4">
 <div>
-<h2 class="font-headline-lg text-headline-lg text-on-surface mb-6">Secure Your <span class="italic text-primary font-normal">Placement</span></h2>
-<p class="text-on-surface-variant font-body-lg leading-relaxed mb-8">Access is limited to ensure an atmosphere of focused inquiry and exclusive discourse. Reservations are now open for the 2026 session.</p>
-<div class="flex flex-col sm:flex-row gap-4">
-<button class="bg-primary text-on-primary-fixed px-10 py-4 font-label-caps text-label-caps uppercase tracking-widest">Reserve Portfolio Review</button>
-<button class="border border-outline px-10 py-4 font-label-caps text-label-caps uppercase tracking-widest text-on-surface hover:border-primary hover:text-primary transition-all">Download Prospectus</button>
+<p class="font-headline-md text-2xl text-on-surface flex items-center gap-2">Friday <span class="font-body-md text-sm text-on-surface-variant font-normal">· July 24th</span></p>
+<div class="flex flex-wrap gap-x-4 gap-y-1.5 mt-3" id="lgnd"></div>
 </div>
 </div>
-<div class="relative aspect-square md:aspect-video rounded-lg overflow-hidden border border-outline-variant/20">
-<img alt="A luxurious, dimly lit grand auditorium" class="w-full h-full object-cover grayscale-[0.5] hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBa9f4HO6dtD1TDilQ-YFiugDmq9TfieozlzBkOTvku2opeRwKXR1q6N5X5kwXDcwTolL5MvcGZf2l1NLxkKelVsXgQYiXRTZZtadZ6N5uoyuzrJI9jsmoHQjw_krdsv7048vNMSlRPOz-5d0_e_4qMzRdNP_haj9ryeHpKOXe6PLSuaAR6G9fnXZayrLr3kZGKR_ACNen6Ui57lCDVWullYbpPi0PFnBeTmZHYc5_xC2en9aDpEZvyd8T3ETaCTOCbHfAHTC_MPSR6"/>
-</div>
+
+<div class="bg-surface-container-low/40 border border-outline-variant/30 rounded-xl p-4 md:p-6 overflow-x-auto rim-light">
+<div class="min-w-[850px] cgrid" id="cgrid"></div>
 </div>
 </section>
 </main>
-<!-- Footer -->
-<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant/10">
-<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-desktop py-12 max-w-container-max mx-auto">
-<div class="flex flex-col items-center md:items-start gap-4 mb-8 md:mb-0">
-<a class="font-headline-md text-headline-md text-primary tracking-tighter font-bold" href="{{DATA:SCREEN:SCREEN_12}}">CREATRICKS</a>
-<p class="font-label-caps text-label-caps text-on-surface-variant/60 tracking-widest">© 2026 CREATRICKS EXPO. ALL RIGHTS RESERVED.</p>
-</div>
-<div class="flex flex-col items-center md:items-end gap-6">
-<nav class="flex gap-8">
-<a class="text-on-surface-variant hover:text-primary-fixed transition-all font-label-caps text-label-caps uppercase tracking-widest opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
-<a class="text-on-surface-variant hover:text-primary-fixed transition-all font-label-caps text-label-caps uppercase tracking-widest opacity-80 hover:opacity-100" href="#">Terms of Service</a>
-<a class="text-on-surface-variant hover:text-primary-fixed transition-all font-label-caps text-label-caps uppercase tracking-widest opacity-80 hover:opacity-100" href="#">Contact Secretariat</a>
-</nav>
-<div class="flex gap-4">
-<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary">share</span>
-<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary">mail</span>
-</div>
-</div>
-</div>
-</footer>
+
 <script>
-    let currentDay = 1;
+const EVTS=[
+  {id:1, s:[8,30], e:[10,30], t:"Luminara — Round 1",          desc:"Initial presentations and project validation.",                   loc:"Classrooms assigned", cat:"luminara"},
+  {id:2, s:[9,30], e:[11,0],  t:"Envirospark",                  desc:"Environmental exhibition and active presentation judging rounds.",          loc:"Exhibition Hall",     cat:"envirospark"},
+  {id:3, s:[9,30], e:[12,0],  t:"Huenova",                      desc:"Creative talent showcase and digital folklore displays.",                    loc:"Mezzanine Floor",     cat:"huenova"},
+  {id:4, s:[9,30], e:[12,0],  t:"Live Bands",                   desc:"Live musical battle tracks running simultaneously.",                        loc:"Amphitheatre",        cat:"bands"},
+  {id:5, s:[9,30], e:[14,0],  t:"Phoenix Alley",             desc:"Gaming, snack counters, and custom tech stalls.",                          loc:"Skating Ring",        cat:"stalls"},
+  {id:6, s:[9,45], e:[10,45], t:"Morphis — Session 1",          desc:"Technical design and modular rendering evaluations.",                      loc:"Classrooms",          cat:"morphis"},
+  {id:7, s:[10,30],e:[12,0],  t:"Luminara — Round 2",        desc:"Mid-day performance and primary auditorium track execution.",              loc:"Auditorium",          cat:"luminara"},
+  {id:8, s:[12,0], e:[12,30], t:"Envirospark — Grand Finale",   desc:"Final evaluation and celebratory project presentations on the main stage.",loc:"Main Stage",          cat:"envirospark"},
+  {id:9, s:[12,0], e:[13,0],  t:"Morphis — Session 2",          desc:"Concluding operational block and technical wraps for Morphis.",            loc:"Classrooms",          cat:"morphis"},
+  {id:10,s:[12,45],e:[13,45], t:"Luminara — Round 3",    desc:"Closing showcases, final jury notes, and formal results distribution.",   loc:"Auditorium",          cat:"luminara"},
+];
 
-    function renderTabs() {
-        const container = document.getElementById('tabs-container');
-        container.innerHTML = SCHEDULE_DATA.map((day, index) => `
-            <button class="day-tab group flex flex-col items-center gap-2 cursor-pointer transition-all duration-300 ${currentDay === day.day ? 'active' : ''}" 
-                    onclick="switchDay(${day.day})">
-                <span class="font-label-caps text-[10px] text-primary/60 tracking-widest uppercase">${day.label}</span>
-                <span class="font-headline-md text-headline-md text-on-surface ${currentDay === day.day ? 'text-primary' : 'group-hover:text-primary/70'} transition-colors">${day.date}</span>
-                <div class="h-0.5 ${currentDay === day.day ? 'w-full' : 'w-0'} bg-primary active-tab-line"></div>
-            </button>
-            ${index < SCHEDULE_DATA.length - 1 ? '<div class="hidden md:block h-12 w-px bg-outline-variant/30 self-center"></div>' : ''}
-        `).join('');
-    }
+const CATS={
+  luminara:   {color:"#f2ca50", bg:"rgba(242,202,80,0.06)", border:"rgba(242,202,80,0.25)", label:"Luminara"},
+  envirospark:{color:"#1D9E75", bg:"rgba(29,158,117,0.06)",  border:"rgba(29,158,117,0.25)",  label:"Envirospark"},
+  huenova:    {color:"#b9c8de", bg:"rgba(185,200,222,0.06)", border:"rgba(185,200,222,0.25)", label:"Huenova"},
+  bands:      {color:"#D85A30", bg:"rgba(216,90,48,0.06)",   border:"rgba(216,90,48,0.25)",   label:"Live Bands"},
+  stalls:     {color:"#378ADD", bg:"rgba(55,138,221,0.06)",  border:"rgba(55,138,221,0.25)",  label:"Stalls"},
+  morphis:    {color:"#D4537E", bg:"rgba(212,83,126,0.06)",  border:"rgba(212,83,126,0.25)",  label:"Morphis"},
+};
 
-    function renderSchedule() {
-        const contentContainer = document.getElementById('schedule-content');
-        const dayData = SCHEDULE_DATA.find(d => d.day === currentDay);
+const GS=8*60, GE=14*60+30, PPM=3; 
+const TH=(GE-GS)*PPM;
+
+function m([h,min]){return h*60+min}
+function ft([h,min]){
+  const p=h>=12?"PM":"AM", hr=h>12?h-12:(h===0?12:h);
+  return `${hr}:${min.toString().padStart(2,"0")} ${p}`;
+}
+
+function layout(evts) {
+    const sorted = [...evts].sort((a, b) => m(a.s) - m(b.s) || (m(b.e) - m(a.s)) - (m(a.e) - m(a.s)));
+    const placed = [];
+    
+    sorted.forEach(ev => {
+        const start = m(ev.s);
+        const end = m(ev.e);
         
-        // Preparation for animation
-        contentContainer.classList.add('fade-out');
-
-        setTimeout(() => {
-            let html = `<div class="day-content flex flex-col gap-12">`;
-            
-            dayData.sessions.forEach(session => {
-                html += `<div class="grid md:grid-cols-[180px_1fr] gap-gutter items-start">
-                    <div class="flex items-baseline gap-2">
-                        <span class="font-headline-md text-headline-md text-primary">${session.time}</span>
-                        <span class="font-label-caps text-label-caps text-on-surface-variant">${session.period}</span>
-                    </div>`;
-
-                if (session.type === 'standard') {
-                    html += `
-                    <div class="bg-surface-container/30 border border-outline-variant/20 p-8 rim-light hover:bg-surface-container/50 transition-colors">
-                        <h3 class="font-headline-md text-[24px] text-on-surface mb-2">${session.title}</h3>
-                        <p class="text-on-surface-variant mb-6 font-body-md">${session.description}</p>
-                        <div class="flex items-center gap-4">
-                            <span class="material-symbols-outlined text-primary text-sm">location_on</span>
-                            <span class="font-label-caps text-label-caps text-on-surface uppercase tracking-wider">${session.location}</span>
-                        </div>
-                    </div>`;
-                } else if (session.type === 'keynote') {
-                    html += `
-                    <div class="bg-surface-container/30 border border-outline-variant/20 p-8 rim-light hover:bg-surface-container/50 transition-colors">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="font-headline-md text-[24px] text-on-surface">${session.title}</h3>
-                            <span class="bg-primary/10 text-primary px-3 py-1 font-label-caps text-[10px] tracking-widest">${session.badge}</span>
-                        </div>
-                        <p class="text-on-surface-variant mb-6 font-body-md italic text-lg">${session.description}</p>
-                        <div class="flex items-center gap-6">
-                            <div class="flex items-center gap-3">
-                                <span class="material-symbols-outlined text-primary text-sm">person</span>
-                                <span class="font-label-caps text-label-caps text-on-surface uppercase">${session.speaker}</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <span class="material-symbols-outlined text-primary text-sm">location_on</span>
-                                <span class="font-label-caps text-label-caps text-on-surface uppercase">${session.location}</span>
-                            </div>
-                        </div>
-                    </div>`;
-                } else if (session.type === 'tracks') {
-                    html += `<div class="grid md:grid-cols-2 gap-6">`;
-                    session.tracks.forEach(track => {
-                        html += `
-                        <div class="bg-surface-container/30 border border-outline-variant/20 p-8 rim-light hover:bg-surface-container/50 transition-colors">
-                            <h4 class="font-label-caps text-label-caps text-primary uppercase mb-2">${track.label}</h4>
-                            <h3 class="font-headline-md text-[20px] text-on-surface mb-4">${track.title}</h3>
-                            <p class="text-on-surface-variant font-body-md text-sm">${track.description}</p>
-                        </div>`;
-                    });
-                    html += `</div>`;
-                } else if (session.type === 'grid') {
-                    html += `
-                    <div class="bg-surface-container/30 border border-outline-variant/20 p-8 rim-light hover:bg-surface-container/50 transition-colors">
-                        <h3 class="font-headline-md text-[24px] text-on-surface mb-4 italic">${session.title}</h3>
-                        <div class="grid md:grid-cols-2 gap-12">
-                            ${session.items.map(item => `
-                                <div>
-                                    <h4 class="font-label-caps text-label-caps text-primary uppercase mb-2">${item.label}</h4>
-                                    <p class="text-on-surface-variant text-sm">${item.content}</p>
-                                </div>
-                            `).join('')}
-                        </div>
-                    </div>`;
-                } else if (session.type === 'highlight') {
-                    html += `
-                    <div class="bg-primary text-on-primary-fixed p-8 flex justify-between items-center">
-                        <div>
-                            <h3 class="font-headline-md text-[24px] mb-2 font-bold uppercase tracking-tight">${session.title}</h3>
-                            <p class="font-label-caps text-label-caps opacity-80 uppercase">${session.description}</p>
-                        </div>
-                        <span class="material-symbols-outlined text-[48px]">${session.icon}</span>
-                    </div>`;
-                } else if (session.type === 'grid-border') {
-                    html += `
-                    <div class="bg-surface-container/30 border border-outline-variant/20 p-8 rim-light hover:bg-surface-container/50 transition-colors">
-                        <h3 class="font-headline-md text-[24px] text-on-surface mb-6">${session.title}</h3>
-                        <div class="grid md:grid-cols-2 gap-8">
-                            ${session.items.map(item => `
-                                <div class="border-l border-primary/40 pl-6">
-                                    <h4 class="font-label-caps text-label-caps text-primary uppercase mb-2">${item.label}</h4>
-                                    <p class="text-on-surface-variant text-sm">${item.content}</p>
-                                </div>
-                            `).join('')}
-                        </div>
-                    </div>`;
-                } else if (session.type === 'gala') {
-                    html += `
-                    <div class="relative overflow-hidden p-12 border-2 border-primary group w-full">
-                        <div class="absolute inset-0 bg-primary opacity-5 group-hover:opacity-10 transition-opacity"></div>
-                        <div class="relative z-10 text-center">
-                            <h4 class="font-label-caps text-label-caps text-primary uppercase mb-4 tracking-[0.3em]">${session.badge}</h4>
-                            <h3 class="font-headline-xl text-[48px] text-on-surface italic mb-4 glow-gold">${session.title}</h3>
-                            <p class="font-body-lg text-on-surface-variant max-w-lg mx-auto mb-8">${session.description}</p>
-                            <button class="px-12 py-4 border border-primary text-primary font-label-caps text-label-caps uppercase tracking-widest hover:bg-primary hover:text-on-primary-fixed transition-all">${session.buttonText}</button>
-                        </div>
-                    </div>`;
-                }
-
-                html += `</div>`; // Close grid
+        let targetCol = 0;
+        while (true) {
+            const hasOverlap = placed.some(p => {
+                return p.col === targetCol && !(end <= m(p.s) || start >= m(p.e));
             });
-
-            html += `</div>`; // Close day-content
-            contentContainer.innerHTML = html;
-            
-            // Trigger entry animation
-            contentContainer.classList.remove('fade-out');
-            contentContainer.classList.add('fade-in');
-        }, 200);
-    }
-
-    function switchDay(day) {
-        if (day === currentDay) return;
-        currentDay = day;
-        renderTabs();
-        renderSchedule();
-
-        if (window.innerWidth < 768) {
-            document.getElementById('tabs-container').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            if (!hasOverlap) break;
+            targetCol++;
         }
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-        renderTabs();
-        renderSchedule();
+        placed.push({ ...ev, col: targetCol });
     });
+
+    placed.forEach(ev => {
+        const start = m(ev.s);
+        const end = m(ev.e);
+        
+        let overlappingEvents = placed.filter(other => {
+            return !(end <= m(other.s) || start >= m(other.e));
+        });
+        
+        let maxColIndexInCluster = Math.max(...overlappingEvents.map(o => o.col));
+        ev.nc = maxColIndexInCluster + 1;
+    });
+    
+    return placed;
+}
+
+// Generate Legends
+const lgndEl = document.getElementById('lgnd');
+Object.values(CATS).forEach(c => {
+  const d = document.createElement('div');
+  d.className = 'flex items-center gap-2';
+  d.innerHTML = `<div class="w-2.5 h-2.5 rounded-sm" style="background:${c.color}"></div><span class="text-xs font-label-caps text-on-surface-variant">${c.label}</span>`;
+  lgndEl.appendChild(d);
+});
+
+// Setup Matrix Grid Rows
+const grid = document.getElementById('cgrid');
+const tcol = document.createElement('div');
+tcol.className = 'tcol';
+tcol.style.height = TH + 'px';
+const ea = document.createElement('div');
+ea.className = 'earea';
+ea.style.height = TH + 'px';
+
+let tHTML = '', eHTML = '';
+for (let t = GS; t <= GE; t += 60) {
+  const top = (t - GS) * PPM;
+  const h = Math.floor(t / 60);
+  const lbl = h === 12 ? '12 PM' : h > 12 ? `${h - 12} PM` : `${h} AM`;
+  tHTML += `<div class="tlbl" style="top:${top}px">${lbl}</div>`;
+  eHTML += `<div class="hln" style="top:${top}px"></div>`;
+  if (t + 30 <= GE) eHTML += `<div class="hln-h" style="top:${top + 30 * PPM}px"></div>`;
+}
+tcol.innerHTML = tHTML;
+ea.innerHTML = eHTML;
+grid.appendChild(tcol);
+grid.appendChild(ea);
+
+const laid = layout(EVTS);
+
+function render() {
+  ea.querySelectorAll('.ev').forEach(e => e.remove());
+  laid.forEach(ev => {
+    const c = CATS[ev.cat];
+    const top = (m(ev.s) - GS) * PPM + 2;
+    const h = Math.max((m(ev.e) - m(ev.s)) * PPM - 4, 24);
+    const nc = ev.nc, col = ev.col;
+    const el = document.createElement('div');
+    el.className = 'ev';
+    
+    const pctWidth = 100 / nc;
+    const leftPos = col * pctWidth;
+    
+    el.style.cssText = `top:${top}px;height:${h}px;left:calc(${leftPos}% + 4px);width:calc(${pctWidth}% - 8px);--ea:${c.color};--eb:${c.border};--ebb:${c.bg};z-index:${10 + col};`;
+    
+    let html = `<div class="ev-t">${ev.t}</div>`;
+    if (h > 35) html += `<div class="ev-tm"><span class="material-symbols-outlined" style="font-size:12px">schedule</span>${ft(ev.s)} – ${ft(ev.e)}</div>`;
+    if (h > 65) html += `<div class="ev-loc"><span class="material-symbols-outlined" style="font-size:12px">location_on</span>${ev.loc}</div>`;
+    if (h > 110) html += `<div class="ev-d">${ev.desc}</div>`;
+    
+    el.innerHTML = html;
+    ea.appendChild(el);
+  });
+}
+
+render();
 </script>
-</body></html>
+</body>
+</html>
