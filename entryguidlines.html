@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+
+<html lang="en" class="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creatricks 2026 | Entry Guidelines</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary": "#1a1a1a",
+                        "on-error-container": "#ffdad6",
+                        "on-surface": "#ffffff",
+                        "error-container": "#93000a",
+                        "on-secondary-fixed": "#000000",
+                        "on-primary": "#000000",
+                        "surface-container-high": "#121212",
+                        "surface-container-highest": "#1a1a1a",
+                        "on-tertiary": "#000000",
+                        "on-error": "#690005",
+                        "on-primary-container": "#000000",
+                        "surface-dim": "#000000",
+                        "error": "#ffb4ab",
+                        "surface-container": "#080808",
+                        "on-surface-variant": "#a8a8a8",
+                        "on-primary-fixed": "#000000",
+                        "background": "#000000",
+                        "primary-container": "#d4af37",
+                        "surface-bright": "#1a1a1a",
+                        "on-tertiary-fixed": "#000000",
+                        "secondary-fixed": "#d4e4fa",
+                        "on-secondary-fixed-variant": "#39485a",
+                        "tertiary-container": "#a8b3ca",
+                        "primary-fixed": "#f2ca50",
+                        "on-secondary-container": "#ffffff",
+                        "tertiary": "#c3cee6",
+                        "surface": "#000000",
+                        "surface-container-lowest": "#000000",
+                        "secondary-container": "#1a1a1a",
+                        "outline": "#333333",
+                        "secondary-fixed-dim": "#b9c8de",
+                        "on-tertiary-container": "#ffffff",
+                        "surface-variant": "#0a0a0a",
+                        "on-primary-fixed-variant": "#000000",
+                        "tertiary-fixed": "#d8e3fb",
+                        "primary": "#f2ca50",
+                        "outline-variant": "#222222",
+                        "surface-tint": "#f2ca50",
+                        "primary-fixed-dim": "#f2ca50",
+                        "secondary": "#b9c8de",
+                        "inverse-primary": "#735c00",
+                        "surface-container-low": "#050505",
+                        "inverse-surface": "#ffffff",
+                        "inverse-on-surface": "#000000",
+                        "on-tertiary-fixed-variant": "#000000",
+                        "tertiary-fixed-dim": "#bcc7de",
+                        "on-background": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0rem",
+                        "lg": "0rem",
+                        "xl": "0rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "container-padding": "64px",
+                        "margin-mobile": "20px",
+                        "section-gap": "120px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-sm": ["Playfair Display"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "label-caps": ["Hanken Grotesk"],
+                        "headline-md": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "mono-label": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "700" }],
+                        "headline-md": ["42px", { "lineHeight": "48px", "fontWeight": "600" }],
+                        "display-lg": ["84px", { "lineHeight": "92px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "display-lg-mobile": ["48px", { "lineHeight": "52px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "mono-label": ["11px", { "lineHeight": "14px", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+
+body{
+    background:#000;
+    color:white;
+    font-family:'Hanken Grotesk',sans-serif;
+}
+
+.playfair{
+    font-family:'Playfair Display',serif;
+}
+
+.gold{
+    color:#f2ca50;
+}
+
+.card{
+    background:rgba(255,255,255,.03);
+    border:1px solid rgba(242,202,80,.12);
+    backdrop-filter:blur(12px);
+    transition:.3s ease;
+}
+
+.card:hover{
+    border-color:rgba(242,202,80,.4);
+    transform:translateY(-4px);
+}
+
+.blueprint{
+    position:absolute;
+    inset:0;
+    opacity:.08;
+    background-image:
+    linear-gradient(#f2ca50 1px, transparent 1px),
+    linear-gradient(90deg,#f2ca50 1px, transparent 1px);
+    background-size:120px 120px;
+}
+
+.glow{
+    text-shadow:0 0 20px rgba(242,202,80,.35);
+}
+
+</style>
+
+</head>
+
+<header class="w-full top-0 sticky bg-background border-b-[1.5px] border-outline-variant z-50">
+<div class="flex justify-between items-center px-container-padding py-6 w-full max-w-full mx-auto">
+
+<div class="flex items-center gap-4">
+
+<img
+ alt="Creatricks Logo"
+ class="h-10 w-auto object-contain"
+ src="logo.jpg"
+/>
+
+<div class="font-headline-sm text-[18px] uppercase tracking-[0.25em] text-primary hidden lg:block">
+    Creatricks 2026
+</div>
+
+</div>
+
+<nav class="hidden md:flex gap-gutter items-center">
+
+
+<a class="font-label-caps text-label-caps text-on-surface-variant border-b border-transparent pb-1 hover:text-[#f2ca50] hover:border-[#f2ca50] transition-colors duration-300"
+   href="landing.html">
+    Expo
+</a>
+
+<a class="font-label-caps text-label-caps text-on-surface-variant border-b border-transparent pb-1 hover:text-[#f2ca50] hover:border-[#f2ca50] transition-colors duration-300"
+   href="landing.html#competitions">
+    Competitions
+</a>
+
+<a class="font-label-caps text-label-caps text-on-surface-variant border-b border-transparent pb-1 hover:text-[#f2ca50] hover:border-[#f2ca50] transition-colors duration-300"
+   href="schedule.html">
+    Schedule
+</a>
+
+<a class="font-label-caps text-label-caps text-on-surface-variant border-b border-transparent pb-1 hover:text-[#f2ca50] hover:border-[#f2ca50] transition-colors duration-300"
+   href="archives.html">
+    Archives
+</a>
+
+
+<a class="font-label-caps text-label-caps text-[#f2ca50] border-b border-[#f2ca50] pb-1 transition-colors duration-300"
+   href="entryguidelines.html">
+    Entry Guidelines
+</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant border-b border-transparent pb-1 hover:text-[#f2ca50] hover:border-[#f2ca50] transition-colors duration-300"
+   href="moreinfo.html">
+    More Info
+</a>
+
+</nav>
+
+<button class="bg-primary text-on-primary px-8 py-3 font-label-caps text-label-caps uppercase tracking-widest transition-all hover:bg-white hover:text-black">
+    Register
+</button>
+
+</div>
+</header>
+
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="relative overflow-hidden py-36 px-8">
+
+<div class="blueprint"></div>
+
+<div class="relative z-10 max-w-6xl mx-auto text-center">
+
+<p class="uppercase tracking-[0.4em] text-[#f2ca50] text-sm mb-6">
+Official Participation Handbook
+</p>
+
+<h1 class="playfair text-7xl md:text-8xl glow mb-8">
+Entry Guidelines
+</h1>
+
+<p class="max-w-3xl mx-auto text-zinc-400 text-lg">
+Please read these guidelines carefully before arriving at Creatricks 2026.
+Following the instructions below will ensure a smooth registration,
+verification and participation experience.
+</p>
+
+</div>
+
+</section>
+
+<!-- REQUIREMENTS -->
+
+<section class="max-w-6xl mx-auto px-8 py-24">
+
+<h2 class="playfair text-5xl mb-14">
+Registration <span class="gold italic">Requirements</span>
+</h2>
+
+<div class="grid md:grid-cols-3 gap-8">
+
+<div class="card p-8">
+<h3 class="gold mb-4 uppercase tracking-widest">
+School ID
+</h3>
+<p class="text-zinc-400">
+Every participant must carry a valid school ID card.
+</p>
+</div>
+
+<div class="card p-8">
+<h3 class="gold mb-4 uppercase tracking-widest">
+Registration Proof
+</h3>
+<p class="text-zinc-400">
+Carry your confirmation email or registration screenshot.
+</p>
+</div>
+
+<div class="card p-8">
+<h3 class="gold mb-4 uppercase tracking-widest">
+Payment Receipt
+</h3>
+<p class="text-zinc-400">
+Keep a copy of your payment confirmation available.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- REPORTING -->
+
+<section class="max-w-6xl mx-auto px-8 py-24">
+
+<h2 class="playfair text-5xl mb-14">
+Reporting <span class="gold italic">Instructions</span>
+</h2>
+
+<div class="space-y-6">
+
+<div class="card p-8">
+<h3 class="text-2xl mb-3">Arrival Time</h3>
+<p class="text-zinc-400">
+Participants should report at least 30 minutes before their event begins.
+</p>
+</div>
+
+<div class="card p-8">
+<h3 class="text-2xl mb-3">Verification Desk</h3>
+<p class="text-zinc-400">
+All participants must complete verification before entering competition zones.
+</p>
+</div>
+
+<div class="card p-8">
+<h3 class="text-2xl mb-3">Late Entry</h3>
+<p class="text-zinc-400">
+Late arrivals may not be allowed to participate once judging or activities have started.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- WHAT TO BRING -->
+
+<section class="max-w-6xl mx-auto px-8 py-24">
+
+<h2 class="playfair text-5xl mb-14">
+What To <span class="gold italic">Bring</span>
+</h2>
+
+<div class="grid md:grid-cols-2 gap-8">
+
+<div class="card p-8">
+<ul class="space-y-4 text-zinc-400">
+<li>✓ School ID Card</li>
+<li>✓ Registration Confirmation</li>
+<li>✓ Payment Receipt [screenshot]</li>
+<li>✓ Required Event Materials</li>
+<li>✓ Water Bottle</li>
+</ul>
+</div>
+
+<div class="card p-8">
+<ul class="space-y-4 text-zinc-400">
+<li>✓ Notebook & Stationery</li>
+<li>✓ Charged Laptop [if needed]</li>
+<li>✓ Event-Specific Equipment</li>
+<li>✓ Positive Competitive Spirit</li>
+</ul>
+</div>
+
+</div>
+
+</section>
+
+<!-- CAMPUS RULES -->
+
+<section class="max-w-6xl mx-auto px-8 py-24">
+
+<h2 class="playfair text-5xl mb-14">
+Campus <span class="gold italic">Rules</span>
+</h2>
+
+<div class="grid md:grid-cols-2 gap-8">
+
+<div class="card p-8">
+<h3 class="text-2xl mb-4 gold">Discipline</h3>
+<p class="text-zinc-400">
+Participants must follow all instructions from volunteers, heads and the organizing committee. Failure to comply may lead to disqualification.
+</p>
+</div>
+
+<div class="card p-8">
+<h3 class="text-2xl mb-4 gold">Respect Property</h3>
+<p class="text-zinc-400">
+Any damage to school property may result in disqualification.
+</p>
+</div>
+
+<div class="card p-8">
+<h3 class="text-2xl mb-4 gold">Restricted Areas</h3>
+<p class="text-zinc-400">
+Entry is permitted only in designated competition and visitor areas.
+</p>
+</div>
+
+<div class="card p-8">
+<h3 class="text-2xl mb-4 gold">No Misconduct</h3>
+<p class="text-zinc-400">
+Misconduct, including cheating, harassment or vandalism, will lead to immediate disqualification and can result in being removed from the event venue.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- FAQ -->
+
+<section class="max-w-5xl mx-auto px-8 py-24">
+
+<h2 class="playfair text-5xl text-center mb-16">
+Frequently Asked <span class="gold italic">Questions</span>
+</h2>
+
+<div class="space-y-5">
+
+<details class="card p-6">
+<summary class="cursor-pointer font-semibold">
+Can I participate in multiple events?
+</summary>
+<p class="mt-4 text-zinc-400">
+
+</p>
+</details>
+
+<details class="card p-6">
+<summary class="cursor-pointer font-semibold">
+Will certificates be provided?
+</summary>
+<p class="mt-4 text-zinc-400">
+Yes. Participation and winner certificates and awards will be distributed.
+</p>
+</details>
+
+<details class="card p-6">
+<summary class="cursor-pointer font-semibold">
+Can teachers accompany students?
+</summary>
+<p class="mt-4 text-zinc-400">
+Yes. Teachers may accompany participants according to event policy.
+</p>
+</details>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="max-w-5xl mx-auto px-8 py-24">
+
+<div class="card p-12 text-center">
+
+<h2 class="playfair text-5xl mb-6">
+Need <span class="gold italic">Help?</span>
+</h2>
+
+<p class="text-zinc-400 mb-8">
+For registration or entry-related queries, contact the Creatricks team.
+</p>
+
+<div class="space-y-2">
+<p>creatricks361@gmail.com</p>
+<p>+91 XXXXX XXXXX</p>
+</div>
+
+</div>
+
+</section>
+
+</body>
+</html>
