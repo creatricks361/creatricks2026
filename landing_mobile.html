@@ -415,6 +415,13 @@ header {
   line-height: 1;
   color: #fff;
 }
+.comp-card-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 .us-project-wrapper { width:100%; height:100%; position:relative; overflow:hidden; }
 .us-project-wrapper > div { width:100% !important; height:100% !important; position:relative !important; display:block !important; }
@@ -803,88 +810,97 @@ a[href*="unicorn"] { display:none !important; }
     <a href="entryguidelines.html" class="section-link">View Entry Guidelines</a>
   </div>
 
-  <div id="competitions">
+ <div id="competitions">
 
-    <a href="comp1_mobile.html" class="comp-card">
-      <div class="comp-card-bg">
-        <div class="us-project-wrapper">
-          <div data-us-project="YH5OQNivB3ZHMz1lBPpQ"></div>
-        </div>
+  <!-- LUMINARA (Unicorn Embed) -->
+  <a href="comp1_mobile.html" class="comp-card">
+    <div class="comp-card-bg">
+      <div class="us-project-wrapper">
+        <div data-us-project="YH5OQNivB3ZHMz1lBPpQ"></div>
       </div>
-      <div class="comp-card-overlay"></div>
-      <div class="comp-card-content">
-        <div class="comp-card-tag">Fashion Styling</div>
-        <div class="comp-card-title">Luminara</div>
-      </div>
-    </a>
+    </div>
+    <div class="comp-card-overlay"></div>
+    <div class="comp-card-content">
+      <div class="comp-card-tag">Fashion Styling</div>
+      <div class="comp-card-title">Luminara</div>
+    </div>
+  </a>
 
-    <a href="comp2_mobile.html" class="comp-card">
-      <div class="comp-card-bg">
-        <div class="us-project-wrapper">
-          <div data-us-project=""></div>
-        </div>
-      </div>
-      <div class="comp-card-overlay"></div>
-      <div class="comp-card-content">
-        <div class="comp-card-tag">Painting</div>
-        <div class="comp-card-title">Huenova</div>
-      </div>
-    </a>
+  <!-- HUENOVA (Video) -->
+  <a href="comp2_mobile.html" class="comp-card">
+    <div class="comp-card-bg">
+      <video class="comp-card-video" autoplay muted loop playsinline preload="metadata">
+        <source src="shadows_remix_scene (1).webm" type="video/webm">
+       
+      </video>
+    </div>
+    <div class="comp-card-overlay"></div>
+    <div class="comp-card-content">
+      <div class="comp-card-tag">Painting</div>
+      <div class="comp-card-title">Huenova</div>
+    </div>
+  </a>
 
-    <a href="comp3_mobile.html" class="comp-card">
-      <div class="comp-card-bg">
-        <div class="us-project-wrapper">
-          <div data-us-project="7AVSw5hRO4fWMTSW8UpZ"></div>
-        </div>
-      </div>
-      <div class="comp-card-overlay"></div>
-      <div class="comp-card-content">
-        <div class="comp-card-tag">Quiz</div>
-        <div class="comp-card-title">Envirospark</div>
-      </div>
-    </a>
+  <!-- ENVIROSPARK (Video) -->
+  <a href="comp3_mobile.html" class="comp-card">
+    <div class="comp-card-bg">
+      <video class="comp-card-video" autoplay muted loop playsinline preload="metadata">
+        <source src="exosphere_remix_scene.webm" type="video/webm">
+  
+      </video>
+    </div>
+    <div class="comp-card-overlay"></div>
+    <div class="comp-card-content">
+      <div class="comp-card-tag">Quiz</div>
+      <div class="comp-card-title">Envirospark</div>
+    </div>
+  </a>
 
-    <a href="comp4_mobile.html" class="comp-card">
-      <div class="comp-card-bg">
-        <div class="us-project-wrapper">
-          <div data-us-project="mC5MFfQ2Vd8PBWyeEByJ"></div>
-        </div>
+  <!-- MORPHIS (Unicorn Embed) -->
+  <a href="comp4_mobile.html" class="comp-card">
+    <div class="comp-card-bg">
+      <div class="us-project-wrapper">
+        <div data-us-project="mC5MFfQ2Vd8PBWyeEByJ"></div>
       </div>
-      <div class="comp-card-overlay"></div>
-      <div class="comp-card-content">
-        <div class="comp-card-tag">Product Design</div>
-        <div class="comp-card-title">Morphis</div>
-      </div>
-    </a>
+    </div>
+    <div class="comp-card-overlay"></div>
+    <div class="comp-card-content">
+      <div class="comp-card-tag">Product Design</div>
+      <div class="comp-card-title">Morphis</div>
+    </div>
+  </a>
 
-    <a href="comp5_mobile.html" class="comp-card" style="background:#000;">
-      <div class="comp-card-bg">
-        <div class="us-project-wrapper">
-          <div data-us-project="rPv3LimsVJShpmvOnDMK"></div>
-        </div>
-      </div>
-      <div class="comp-card-overlay"></div>
-      <div class="comp-card-content">
-        <div class="comp-card-tag">Music</div>
-        <div class="comp-card-title">Amplifire</div>
-      </div>
-    </a>
+  <!-- AMPLIFIRE (Video) -->
+  <a href="comp5_mobile.html" class="comp-card">
+    <div class="comp-card-bg">
+      <video class="comp-card-video" autoplay muted loop playsinline preload="metadata">
+        <source src="copy_of_scene_1_remix_scene_1.webm" type="video/webm">
+   
+      </video>
+    </div>
+    <div class="comp-card-overlay"></div>
+    <div class="comp-card-content">
+      <div class="comp-card-tag">Music</div>
+      <div class="comp-card-title">Amplifire</div>
+    </div>
+  </a>
 
-    <a href="comp6_mobile.html" class="comp-card">
-      <div class="comp-card-bg">
-        <div class="us-project-wrapper">
-          <div data-us-project="Y6CJi5Ji5Qwb7WaL7Qhx"></div>
-        </div>
-      </div>
-      <div class="comp-card-overlay"></div>
-      <div class="comp-card-content">
-        <div class="comp-card-tag">Marketing</div>
-        <div class="comp-card-title">Phoenix Alley</div>
-      </div>
-    </a>
+  <!-- PHOENIX ALLEY (Video) -->
+  <a href="comp6_mobile.html" class="comp-card">
+    <div class="comp-card-bg">
+      <video class="comp-card-video" autoplay muted loop playsinline preload="metadata">
+        <source src="pheonix_alley_scene.webm" type="video/webm">
+        <source src="phoenix-alley.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="comp-card-overlay"></div>
+    <div class="comp-card-content">
+      <div class="comp-card-tag">Marketing</div>
+      <div class="comp-card-title">Phoenix Alley</div>
+    </div>
+  </a>
 
-  </div>
-
+</div>
 
  
 
