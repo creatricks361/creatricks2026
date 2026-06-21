@@ -708,31 +708,7 @@ a[href*="unicorn"] { display:none !important; }
 </style>
 </head>
 <body>
-<script>
-!function(){
-  var u=window.UnicornStudio;
-  if(u&&u.init){
-    if(document.readyState==="loading"){
-      document.addEventListener("DOMContentLoaded",function(){u.init()})
-    }else{u.init()}
-  }else{
-    window.UnicornStudio={isInitialized:!1};
-    var i=document.createElement("script");
-    i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v2.2.1/dist/unicornStudio.umd.js";
-    i.onload=function(){
-      if(document.readyState==="loading"){
-        document.addEventListener("DOMContentLoaded",function(){UnicornStudio.init()})
-      }else{UnicornStudio.init()}
-    };
-    (document.head||document.body).appendChild(i)
-  }
-}();
-setInterval(()=>{
-  document.querySelectorAll("a").forEach(el=>{
-    if(el.textContent.includes("Made with unicorn.studio")) el.style.display="none";
-  });
-},500);
-</script>
+
 
 
 <header>
@@ -845,7 +821,7 @@ setInterval(()=>{
     <a href="comp2_mobile.html" class="comp-card">
       <div class="comp-card-bg">
         <div class="us-project-wrapper">
-          <div data-us-project="LdIuPPi57Gs6ZB0EjyT5"></div>
+          <div data-us-project=""></div>
         </div>
       </div>
       <div class="comp-card-overlay"></div>
@@ -1065,6 +1041,18 @@ function goBack() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 </script>
+<script src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v2.2.1/dist/unicornStudio.umd.js"></script>
 
+<script>
+window.addEventListener('load', () => {
+  UnicornStudio.init();
+
+  document.querySelectorAll("a").forEach(el => {
+    if (el.textContent.includes("Made with unicorn.studio")) {
+      el.style.display = "none";
+    }
+  });
+});
+</script>
 </body>
 </html>
