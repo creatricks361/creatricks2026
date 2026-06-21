@@ -44,7 +44,32 @@ img { display: block; max-width: 100%; }
   font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
   font-size: 22px;
 }
+.hero-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 32px;
+}
 
+.small-logo {
+  width: 42px;
+  height: 42px;
+  padding: 4px;
+  border: none;
+}
+
+.small-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.hero-divider {
+  width: 1px;
+  height: 28px;
+  background: var(--border-thin);
+}
 header {
   position: sticky;
   top: 0;
@@ -743,25 +768,17 @@ a[href*="unicorn"] { display:none !important; }
   <section class="hero">
     <div class="hero-blob hero-blob-1"></div>
     <div class="hero-blob hero-blob-2"></div>
-    <div class="flex gap-gutter mb-12 justify-center items-center">
 
-    <div class="w-10 h-10  flex items-center justify-center p-3">
-        <img
-            src="tcislogoproper.png"
-            alt="School Logo"
-            class="w-full h-full object-contain"
-        />
-    </div>
+    <div class="hero-logos">
+        <div class="hero-logo-box small-logo">
+            <img src="tcislogoproper.png" alt="School Logo">
+        </div>
 
-    <div class="w-[0.5px] h-12 bg-outline-variant"></div>
+        <div class="hero-divider"></div>
 
-    <div class="w-10 h-10  flex items-center justify-center p-3">
-        <img
-            src="newlogo.png"
-            alt="Creatricks Logo"
-            class=" w-full h-full object-contain"
-
-        />
+        <div class="hero-logo-box small-logo">
+            <img src="newlogo.png" alt="Creatricks Logo">
+        </div>
     </div>
 
 </div>
