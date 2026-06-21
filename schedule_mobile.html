@@ -86,6 +86,70 @@
     /* Hide scrollbar rendering across modern touch browsers */
     .no-scrollbar::-webkit-scrollbar { display: none; }
     .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+    /* Custom Hamburger Menu & Drawer Styles */
+    .hamburger {
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 8px;
+        z-index: 1001;
+        position: relative;
+    }
+
+    .hamburger span {
+        width: 24px;
+        height: 2px;
+        background: #f2ca50; /* Matched theme primary color */
+        display: block;
+        transition: all 0.3s ease;
+    }
+
+    .hamburger.open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .hamburger.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .nav-drawer {
+        position: fixed;
+        inset: 0;
+        background: #000;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        transform: translateX(100%);
+        transition: transform 0.35s cubic-bezier(0.77,0,0.175,1);
+        z-index: 1000;
+    }
+
+    .nav-drawer.open {
+        transform: translateX(0);
+    }
+
+    .nav-drawer a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.2rem;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        transition: color 0.2s;
+    }
+
+    .nav-drawer a:hover {
+        color: #f2ca50;
+    }
 </style>
 </head>
 <body class="text-on-background min-h-screen antialiased">
@@ -100,11 +164,21 @@
                     Creatricks 2026
                 </span>
             </div>
-            <button class="w-10 h-10 -mr-2 flex items-center justify-center text-primary active:scale-95 transition-transform" aria-label="Menu">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            <button class="hamburger -mr-2" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
         </div>
     </header>
+
+    <nav class="nav-drawer" id="navDrawer">
+        <a href="#">Home</a>
+        <a href="#">Competitions</a>
+        <a href="#">Schedule</a>
+        <a href="#">Archives</a>
+        <a href="#">Contact</a>
+    </nav>
 
     <main class="flex-grow px-4 pt-6">
         <section class="text-center mb-6">
@@ -136,7 +210,7 @@ const EVTS=[
   {id:4, s:[9,30], e:[12,0],  t:"Live Bands",                   desc:"Live musical battle tracks running simultaneously.",                        loc:"Amphitheatre",         cat:"bands"},
   {id:5, s:[9,30], e:[14,0],  t:"Phoenix Alley",              desc:"Gaming, snack counters, and custom tech stalls.",                          loc:"Skating Ring",         cat:"stalls"},
   {id:6, s:[9,45], e:[10,45], t:"Morphis — Session 1",           desc:"Technical design and modular rendering evaluations.",                        loc:"Classrooms",          cat:"morphis"},
-  {id:7, s:[10,30],e:[12,0],  t:"Luminara — Round 2",        desc:"Mid-day performance and primary auditorium track execution.",               loc:"Auditorium",          cat:"luminara"},
+  {id:7, s:[10,30],e:[12,0],  t:"Luminara — Round 2",        desc:"Mid-day performance and primary auditorium track execution.",                loc:"Auditorium",          cat:"luminara"},
   {id:8, s:[12,0], e:[12,30], t:"Envirospark — Grand Finale",   desc:"Final evaluation and celebratory project presentations on the main stage.",loc:"Main Stage",           cat:"envirospark"},
   {id:9, s:[12,0], e:[13,0],  t:"Morphis — Session 2",           desc:"Concluding operational block and technical wraps for Morphis.",            loc:"Classrooms",          cat:"morphis"},
   {id:10,s:[12,45],e:[13,45], t:"Luminara — Round 3",    desc:"Closing showcases, final jury notes, and formal results distribution.",    loc:"Auditorium",          cat:"luminara"},
@@ -227,6 +301,28 @@ function renderMobileTimeline() {
         container.appendChild(card);
     });
 }
+
+// Hamburger Toggle Logic Execution Engine
+const hamburger = document.getElementById('hamburger');
+const navDrawer = document.getElementById('navDrawer');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    navDrawer.classList.toggle('open');
+
+    document.body.style.overflow =
+    navDrawer.classList.contains('open')
+        ? 'hidden'
+        : '';
+});
+
+document.querySelectorAll('.nav-drawer a').forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        navDrawer.classList.remove('open');
+        document.body.style.overflow = '';
+    });
+});
 
 // Runtime Initialization execution entrypoint
 renderMobileTimeline();
