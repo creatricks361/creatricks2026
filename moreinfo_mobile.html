@@ -116,6 +116,33 @@ tailwind.config = {
     display: block;
     width: 100%;
   }
+   <script>
+  !function(){
+ var u=window.UnicornStudio;
+if(u&&u.init){
+ if(document.readyState==="loading"){
+document.addEventListener("DOMContentLoaded",function(){u.init()})
+ }else{
+ u.init()
+ }
+ }else{
+ window.UnicornStudio={isInitialized:!1};
+ var i=document.createElement("script"); 
+ i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v2.2.1/dist/unicornStudio.umd.js";
+i.onload=function(){
+if(document.readyState==="loading"){
+document.addEventListener("DOMContentLoaded",function(){
+UnicornStudio.init()
+})
+}else{
+UnicornStudio.init()
+}
+};
+(document.head||document.body).appendChild(i)
+}
+}();
+
+
 
   details summary { list-style: none; }
   details summary::-webkit-details-marker { display: none; }
@@ -144,7 +171,14 @@ tailwind.config = {
   <a href="moreinfo.html" class="active-link">More Info</a>
   <button class="nav-register">Register</button>
 </nav>
+<section class="relative overflow-hidden min-h-[700px] flex items-center justify-center">
 
+    <!-- Unicorn Background -->
+    <div class="absolute inset-0 z-0 pointer-events-none">
+        <div class="us-project-wrapper w-full h-full">
+            <div data-us-project="uaBh2qBzCqWO3cwLygrn"></div>
+        </div>
+</section>
 <main>
 
   <section class="px-5 py-14 text-center">
