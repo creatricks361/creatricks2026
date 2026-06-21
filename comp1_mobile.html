@@ -492,36 +492,52 @@ tailwind.config = {
 
 </main>
 
-<footer>
-  <div class="footer-brand">
-    <img src="newlogo.png" alt="Logo" style="height:28px; width:auto; object-fit:contain;"/>
-    <span class="footer-brand-text">Creatricks 2026</span>
-  </div>
-
-  <div class="footer-icons">
-    <span class="material-symbols-outlined">terminal</span>
-    <span class="material-symbols-outlined">brush</span>
-    <span class="material-symbols-outlined">architecture</span>
-  </div>
-
-  <div class="footer-cols">
-    <div>
-      <div class="footer-col-label">Connect</div>
-      <a href="mailto:creatricks361@gmail.com">creatricks361@gmail.com</a>
-      <a href="https://maps.app.goo.gl/bFkyqy5P4bicR2ki6" style="font-size:12px;">TCIS Whitefield, Bengaluru 560087</a>
+<footer class="bg-[#050505] border-t border-outline-variant px-6 py-12 text-left">
+  <div class="flex flex-col gap-6 pb-8 border-b border-outline-variant mb-8">
+    <div class="flex items-center gap-3">
+      <img src="newlogo.png" alt="Logo" class="h-7 w-auto object-contain" />
+      <span class="font-headline-md text-lg tracking-wider text-on-surface">Creatricks 2026</span>
     </div>
-    <div>
-      <div class="footer-col-label">Rules</div>
-      <a href="rulesandregs_mobile.html">Rules and Regulations</a>
-    </div>
-    <div>
-      <div class="footer-col-label">Policy</div>
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Service</a>
+    
+    <div class="flex gap-4 text-primary">
+      <span class="material-symbols-outlined text-xl">terminal</span>
+      <span class="material-symbols-outlined text-xl">brush</span>
+      <span class="material-symbols-outlined text-xl">architecture</span>
     </div>
   </div>
 
-  <div class="footer-copy">© 2026 Creatricks School Design Expo. All rights reserved.</div>
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-12">
+    <div class="flex flex-col gap-2">
+      <div class="font-label-caps text-[10px] text-primary uppercase tracking-[0.2em] mb-1 font-bold">Connect</div>
+      <a href="mailto:creatricks361@gmail.com" class="font-body-md text-sm text-on-surface-variant hover:text-primary transition-colors break-all">
+        creatricks361@gmail.com
+      </a>
+      <a href="https://maps.app.goo.gl/bFkyqy5P4bicR2ki6" class="font-body-md text-xs text-on-surface-variant opacity-70 leading-relaxed mt-1">
+        TCIS Whitefield, Bengaluru 560087
+      </a>
+    </div>
+
+    <div class="flex flex-col gap-2">
+      <div class="font-label-caps text-[10px] text-primary uppercase tracking-[0.2em] mb-1 font-bold">Rules</div>
+      <a href="rulesandregs_mobile.html" class="font-body-md text-sm text-on-surface-variant hover:text-primary transition-colors">
+        Rules and Regulations
+      </a>
+    </div>
+
+    <div class="flex flex-col gap-2">
+      <div class="font-label-caps text-[10px] text-primary uppercase tracking-[0.2em] mb-1 font-bold">Policy</div>
+      <a href="#" class="font-body-md text-sm text-on-surface-variant hover:text-primary transition-colors">
+        Privacy Policy
+      </a>
+      <a href="#" class="font-body-md text-sm text-on-surface-variant hover:text-primary transition-colors">
+        Terms of Service
+      </a>
+    </div>
+  </div>
+
+  <div class="font-label-caps text-[9px] text-outline uppercase tracking-widest opacity-50 border-t border-outline-variant/30 pt-6">
+    © 2026 Creatricks School Design Expo. All rights reserved.
+  </div>
 </footer>
 
 <script>
