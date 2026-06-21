@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport"/>
+<title>Creatricks 2026 | More Info</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "background": "#000000",
+        "primary": "#f2ca50",
+        "on-primary": "#000000",
+        "outline": "#333333",
+        "outline-variant": "#222222"
+      },
+      borderRadius: { "DEFAULT": "0rem", "lg": "0rem", "xl": "0rem" }
+    }
+  }
+}
+</script>
+<style>
+  body {
+    font-family: 'Hanken Grotesk', sans-serif;
+    background: #000;
+    color: #e1e2eb;
+  }
+  .playfair { font-family: 'Playfair Display', serif; }
+  .gold { color: #f2ca50; }
+  .border-gold { border-color: rgba(242,202,80,.25); }
+  .card {
+    background: rgba(255,255,255,.02);
+    border: 1px solid rgba(242,202,80,.12);
+    transition: .35s ease;
+    backdrop-filter: blur(10px);
+  }
+  .card:active { border-color: rgba(242,202,80,.4); }
+  .glow { text-shadow: 0 0 18px rgba(242,202,80,.3); }
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+    vertical-align: middle;
+  }
+
+  .hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 8px;
+  }
+  .hamburger span {
+    display: block;
+    width: 22px;
+    height: 1.5px;
+    background: #ffffff;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+  .nav-drawer {
+    position: fixed;
+    top: 57px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 28px;
+    transform: translateX(100%);
+    transition: transform 0.35s cubic-bezier(0.77,0,0.175,1);
+    border-top: 1px solid #222222;
+    overflow-y: auto;
+  }
+  .nav-drawer.open { transform: translateX(0); }
+  .nav-drawer a {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #a8a8a8;
+    padding: 20px 0;
+    border-bottom: 0.5px solid #222222;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-drawer a.active-link { color: #f2ca50; }
+  .nav-drawer a::after { content: '→'; font-size: 14px; opacity: 0.4; }
+  .nav-register {
+    margin-top: 40px;
+    background: #f2ca50;
+    color: #000000;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    padding: 18px 24px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+  }
+
+  details summary { list-style: none; }
+  details summary::-webkit-details-marker { display: none; }
+  details summary .q-icon { transition: transform 0.25s ease; }
+  details[open] summary .q-icon { transform: rotate(45deg); }
+</style>
+</head>
+
+<body>
+
+<header class="w-full top-0 sticky bg-background border-b-[1.5px] border-outline-variant z-50" style="height:57px;">
+  <div class="flex justify-between items-center px-5 h-full">
+    <div class="playfair text-[15px] uppercase tracking-[0.25em] text-primary">Creatricks 2026</div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="nav-drawer" id="navDrawer">
+  <a href="landing.html">Expo</a>
+  <a href="landing.html#competitions">Competitions</a>
+  <a href="schedule.html">Schedule</a>
+  <a href="archives.html">Archives</a>
+  <a href="entryguidelines.html">Entry Guidelines</a>
+  <a href="moreinfo.html" class="active-link">More Info</a>
+  <button class="nav-register">Register</button>
+</nav>
+
+<main>
+
+  <section class="px-5 py-14 text-center">
+    <p class="text-[10px] uppercase tracking-[0.3em] gold opacity-70 mb-4">Event Overview & Details</p>
+    <h1 class="playfair text-[42px] leading-[1.1]">More <span class="gold italic">Info</span></h1>
+  </section>
+
+  <section class="px-5 pb-16">
+    <h2 class="playfair text-[34px] mb-6">About <span class="gold italic">Creatricks</span></h2>
+    <div class="space-y-6">
+      <p class="text-gray-400 leading-relaxed text-[15px]">
+        Creatricks is a celebration of creativity, design thinking, innovation and student talent. Participants compete, collaborate and showcase their ideas through immersive challenges and exhibitions.
+      </p>
+      
+      <div class="card p-6">
+        <div class="text-4xl gold mb-3">01</div>
+        <h3 class="playfair text-xl mb-2">A Platform For Innovation</h3>
+        <p class="text-gray-400 text-[14px] leading-relaxed">
+          Designed to encourage imagination, experimentation and interdisciplinary learning.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="px-5 pb-16">
+    <h2 class="playfair text-[34px] mb-8">Essential <span class="gold italic">Details</span></h2>
+    <div class="space-y-5">
+      <div class="card p-6">
+        <h3 class="gold uppercase tracking-widest text-[12px] font-bold mb-2">Date</h3>
+        <p class="text-[15px]">24 July 2026</p>
+      </div>
+
+      <div class="card p-6">
+        <h3 class="gold uppercase tracking-widest text-[12px] font-bold mb-2">Venue</h3>
+        <p class="text-[15px]">The Cambridge International School, Whitefield</p>
+      </div>
+
+      <div class="card p-6">
+        <h3 class="gold uppercase tracking-widest text-[12px] font-bold mb-2">Timings</h3>
+        <p class="text-[15px]">7:30 AM - 3:15 PM</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="px-5 pb-16">
+    <h2 class="playfair text-[34px] mb-8">Rules & <span class="gold italic">Guidelines</span></h2>
+    <div class="space-y-5">
+      <div class="card p-6">
+        <h3 class="text-lg mb-2"><span class="gold italic">Registration</span></h3>
+        <p class="text-gray-400 text-[14px] leading-relaxed">
+          All participants must complete registration before entering the campus and carry their school IDs and a screenshot of payment confirmation for verification.
+        </p>
+      </div>
+
+      <div class="card p-6">
+        <h3 class="text-lg mb-2"><span class="gold italic">Reporting Time</span></h3>
+        <p class="text-gray-400 text-[14px] leading-relaxed">
+          Participants should arrive at least 30 minutes before their event begins to allow for registration and verification. Late entries may not be permitted once proceedings have started.
+        </p>
+      </div>
+
+      <div class="card p-6">
+        <h3 class="text-lg mb-2"><span class="gold italic">Discipline</span></h3>
+        <p class="text-gray-400 text-[14px] leading-relaxed">
+          Maintain decorum and follow instructions from volunteers and the event heads.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="px-5 pb-16">
+    <h2 class="playfair text-[34px] text-center mb-10">Frequently Asked <span class="gold italic">Questions</span></h2>
+    <div class="space-y-4">
+      <details class="card p-5">
+        <summary class="cursor-pointer font-semibold flex items-center justify-between gap-3">
+          <span class="text-[15px]">Can I participate in multiple events?</span>
+          <span class="material-symbols-outlined gold q-icon shrink-0" style="font-size:20px">add</span>
+        </summary>
+        <p class="mt-4 text-gray-400 text-[14px] leading-relaxed">
+          Participants may register for only one event to ensure fair competition, as multiple events run simultaneously.
+        </p>
+      </details>
+
+      <details class="card p-5">
+        <summary class="cursor-pointer font-semibold flex items-center justify-between gap-3">
+          <span class="text-[15px]">Will certificates be provided?</span>
+          <span class="material-symbols-outlined gold q-icon shrink-0" style="font-size:20px">add</span>
+        </summary>
+        <p class="mt-4 text-gray-400 text-[14px] leading-relaxed">
+          Yes. Participation and winner certificates and awards will be distributed.
+        </p>
+      </details>
+
+      <details class="card p-5">
+        <summary class="cursor-pointer font-semibold flex items-center justify-between gap-3">
+          <span class="text-[15px]">Can parents attend?</span>
+          <span class="material-symbols-outlined gold q-icon shrink-0" style="font-size:20px">add</span>
+        </summary>
+        <p class="mt-4 text-gray-400 text-[14px] leading-relaxed">
+          Please follow the visitor policy released by the organizers.
+        </p>
+      </details>
+    </div>
+  </section>
+
+  <section class="px-5 pb-16">
+    <div class="card p-8 text-center">
+      <h2 class="playfair text-[30px] mb-4">Need <span class="gold italic">Assistance?</span></h2>
+      <p class="text-gray-400 text-[14px] mb-6 leading-relaxed">
+        Contact the Creatricks team with any questions regarding registration, events, or logistics.
+      </p>
+      <div class="space-y-1 text-[14px]">
+        <p>creatricks361@gmail.com</p>
+        <p>+91 XXXXX XXXXX</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 text-center px-5">
+    <h2 class="playfair text-[36px] mb-8 glow">Join The Experience</h2>
+    <button class="px-8 py-4 bg-primary text-on-primary uppercase tracking-[0.2em] text-[12px] font-semibold">
+      Register Now
+    </button>
+  </section>
+
+</main>
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const navDrawer = document.getElementById('navDrawer');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  navDrawer.classList.toggle('open');
+  document.body.style.overflow = navDrawer.classList.contains('open') ? 'hidden' : '';
+});
+</script>
+</body>
+</html>
