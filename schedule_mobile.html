@@ -1,352 +1,235 @@
 <!DOCTYPE html>
 <html class="dark" lang="en">
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
-    <title>Schedule | Creatricks 2026</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    
-    <script id="tailwind-config">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>The Event Chronology | CREATRICKS 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&amp;family=Hanken+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
         theme: {
           extend: {
-            colors: {
-                "primary-fixed": "#ffe08a",
-                "on-surface-variant": "#a8a8a8",
-                "secondary-fixed": "#ffe088",
-                "inverse-surface": "#e2e2e2",
-                "inverse-on-surface": "#303030",
-                "surface-container": "#1f1f1f",
-                "surface-container-low": "#050505",
-                "on-primary-container": "#6b5500",
-                "on-primary-fixed": "#241a00",
-                "primary-fixed-dim": "#eac249",
-                "on-secondary-fixed": "#241a00",
-                "on-tertiary-container": "#575858",
-                "on-secondary-fixed-variant": "#574500",
-                "on-primary": "#3d2f00",
-                "on-surface": "#ffffff",
-                "on-error-container": "#ffdad6",
-                "on-error": "#690005",
-                "outline-variant": "#222222",
-                "on-tertiary-fixed": "#1a1c1c",
-                "on-secondary-container": "#342800",
-                "tertiary": "#ebeaea",
-                "surface-bright": "#393939",
-                "secondary-fixed-dim": "#e9c349",
-                "surface-container-lowest": "#0e0e0e",
-                "primary": "#ffe9b0",
-                "outline": "#333333",
-                "primary-container": "#f2ca50",
-                "surface-variant": "#353535",
-                "on-background": "#e2e2e2",
-                "tertiary-fixed-dim": "#c7c6c6",
-                "background": "#131313",
-                "tertiary-fixed": "#e3e2e2",
-                "on-secondary": "#3c2f00",
-                "inverse-primary": "#745b00",
-                "on-primary-fixed-variant": "#574400",
-                "surface-tint": "#eac249",
-                "on-tertiary": "#2f3131",
-                "secondary-container": "#af8d11",
-                "surface-container-high": "#2a2a2a",
-                "secondary": "#e9c349",
-                "surface-dim": "#131313",
-                "error-container": "#93000a",
-                "on-tertiary-fixed-variant": "#464747",
-                "surface-container-highest": "#353535",
-                "surface": "#000000",
-                "error": "#ffb4ab",
-                "tertiary-container": "#cecece"
+            "colors": {
+                    "surface-variant": "#32353c",
+                    "surface-container-high": "#272a31",
+                    "on-tertiary-container": "#3a4559",
+                    "on-tertiary-fixed": "#111c2d",
+                    "secondary": "#b9c8de",
+                    "primary": "#f2ca50",
+                    "on-secondary-fixed-variant": "#39485a",
+                    "on-error-container": "#ffdad6",
+                    "on-secondary-fixed": "#0d1c2d",
+                    "surface-tint": "#e9c349",
+                    "on-primary-container": "#554300",
+                    "tertiary-container": "#a8b3ca",
+                    "tertiary-fixed-dim": "#bcc7de",
+                    "primary-container": "#d4af37",
+                    "tertiary": "#c3cee6",
+                    "primary-fixed-dim": "#e9c349",
+                    "background": "#000000",
+                    "surface-dim": "#10131a",
+                    "outline-variant": "#4d4635",
+                    "on-surface": "#e1e2eb",
+                    "on-secondary-container": "#a7b6cc",
+                    "secondary-fixed": "#d4e4fa",
+                    "surface-container-highest": "#32353c",
+                    "primary-fixed": "#ffe088",
+                    "secondary-container": "#39485a",
+                    "on-surface-variant": "#d0c5af",
+                    "surface-container": "#1d2026",
+                    "secondary-fixed-dim": "#b9c8de",
+                    "on-tertiary": "#263143",
+                    "error-container": "#93000a",
+                    "error": "#ffb4ab",
+                    "on-primary-fixed": "#241a00",
+                    "inverse-on-surface": "#2e3037",
+                    "surface-bright": "#363940",
+                    "surface-container-lowest": "#0b0e14",
+                    "on-secondary": "#233143",
+                    "inverse-surface": "#e1e2eb",
+                    "surface-container-low": "#191c22",
+                    "surface": "#10131a",
+                    "tertiary-fixed": "#d8e3fb",
+                    "on-primary": "#3c2f00",
+                    "outline": "#99907c",
+                    "on-tertiary-fixed-variant": "#3c475a",
+                    "inverse-primary": "#735c00",
+                    "on-error": "#690005",
+                    "on-primary-fixed-variant": "#574500",
+                    "on-background": "#e1e2eb"
             },
-            borderRadius: {
-                "DEFAULT": "0.25rem",
-                "lg": "0.5rem",
-                "xl": "0.75rem",
-                "full": "9999px"
-            },
-            fontFamily: {
-                "body-lg": ["Hanken Grotesk"],
-                "label-caps": ["Hanken Grotesk"],
-                "headline-sm": ["Playfair Display"],
-                "headline-lg": ["Playfair Display"],
-                "label-mono": ["Hanken Grotesk"],
-                "headline-lg-mobile": ["Playfair Display"],
-                "display-lg": ["Playfair Display"],
-                "headline-md": ["Playfair Display"],
-                "body-md": ["Hanken Grotesk"]
+            "fontFamily": {
+                    "headline-xl": ["Playfair Display"],
+                    "headline-md": ["Playfair Display"],
+                    "headline-lg": ["Playfair Display"],
+                    "body-md": ["Hanken Grotesk"],
+                    "label-caps": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"]
             }
           },
         },
       }
     </script>
-    <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
-        }
-        .rim-light {
-            border: 0.5px solid #222222;
-            box-shadow: inset 0 1px 0 0 rgba(242, 202, 80, 0.05);
-        }
-        .atmospheric-glow {
-            box-shadow: 0 0 40px rgba(242, 202, 80, 0.1);
-        }
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        
-        .tab-active { color: #ffe9b0; }
-        .tab-active::after {
-            content: '';
-            position: absolute;
-            bottom: 0px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 4px;
-            height: 4px;
-            background: #f2ca50;
-            border-radius: 50%;
-        }
-        body {
-            min-height: 100dvh;
-            -webkit-tap-highlight-color: transparent;
-        }
-    </style>
+<style>
+    body {
+        background: #000;
+        -webkit-tap-highlight-color: transparent;
+    }
+    .active-chip {
+        background-color: #f2ca50 !important;
+        color: #000000 !important;
+        border-color: #f2ca50 !important;
+    }
+    /* Hide scrollbar rendering across modern touch browsers */
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+</style>
 </head>
-<body class="bg-surface text-on-surface font-body-md selection:bg-primary selection:text-on-primary antialiased">
+<body class="text-on-background min-h-screen antialiased">
 
-    <div class="max-w-md mx-auto min-h-screen flex flex-col relative bg-background shadow-2xl pb-24">
-        
-        <header class="sticky top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant flex justify-between items-center px-4 h-14">
+<div class="max-w-md mx-auto min-h-screen flex flex-col bg-background shadow-xl relative pb-12">
+    
+    <header class="w-full sticky top-0 bg-background/90 backdrop-blur-md border-b border-outline-variant/60 z-50">
+        <div class="flex justify-between items-center px-4 h-14 w-full">
             <div class="flex items-center gap-3">
-                <button class="flex items-center justify-center w-10 h-10 -ml-2 text-primary active:scale-95 transition-transform" aria-label="Menu">
-                    <span class="material-symbols-outlined" data-icon="menu">menu</span>
-                </button>
-                <span class="font-display-lg text-xl text-primary tracking-tighter font-bold">Creatricks</span>
+                <img alt="Creatricks Logo" class="h-8 w-auto object-contain" src="newlogo.png"/>
+                <span class="font-headline-sm text-sm uppercase tracking-[0.2em] text-primary font-bold">
+                    Creatricks 2026
+                </span>
             </div>
-            <button class="h-9 px-4 rounded-full bg-primary text-on-primary font-body-md text-sm font-bold shadow-md hover:bg-primary-fixed-dim active:scale-95 transition-all duration-150">
-                Register
+            <button class="w-10 h-10 -mr-2 flex items-center justify-center text-primary active:scale-95 transition-transform" aria-label="Menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
             </button>
-        </header>
+        </div>
+    </header>
 
-        <main class="flex-1 pt-6 px-4">
-            <section class="mb-8">
-                <div class="inline-block border border-primary/20 px-2.5 py-0.5 rounded mb-3">
-                    <span class="font-label-caps text-[10px] tracking-widest font-bold text-primary">2026 CHRONOLOGY</span>
-                </div>
-                <h1 class="font-headline-lg-mobile text-3xl leading-tight mb-2">The Event <span class="italic text-primary-fixed-dim">Chronology</span></h1>
-                <p class="font-body-md text-sm text-on-surface-variant max-w-xs leading-relaxed">A nocturnal odyssey through alchemy, pedagogy, and digital folklore.</p>
+    <main class="flex-grow px-4 pt-6">
+        <section class="text-center mb-6">
+            <div class="mb-2 inline-block px-3 py-0.5 border border-primary/30 bg-primary/5 rounded-full">
+                <span class="font-label-caps text-[10px] text-primary uppercase tracking-[0.15em]">JULY 24TH, 2026</span>
+            </div>
+            <h1 class="font-headline-xl text-3xl text-on-surface font-bold">
+                Event <span class="italic text-primary font-normal">Chronology</span>
+            </h1>
+            <p class="text-xs text-on-surface-variant mt-1.5">Friday Timeline Block Agenda</p>
+        </section>
+
+        <section class="mb-6 -mx-4 px-4 overflow-x-auto no-scrollbar flex items-center gap-2" id="filter-bar">
+            <button onclick="filterCategory('all')" id="chip-all" class="active-chip shrink-0 px-3 py-1.5 rounded-full border border-outline/40 text-xs font-semibold bg-surface-container transition-all">
+                All Tracks
+            </button>
+        </section>
+
+        <section class="relative border-l border-outline-variant/40 ml-3 pl-5 space-y-6" id="timeline-stack">
             </section>
+    </main>
+</div>
 
-            <div class="sticky top-14 z-40 bg-background/95 backdrop-blur-md border-b border-outline-variant -mx-4 px-4 mb-8">
-                <div class="flex justify-between items-center h-12 gap-2">
-                    <button class="tab-btn relative flex-1 text-center h-full flex items-center justify-center font-label-caps text-xs tracking-widest font-bold tab-active" id="tab-1" onclick="switchTab(1)">
-                        JAN 14
-                    </button>
-                    <button class="tab-btn relative flex-1 text-center h-full flex items-center justify-center font-label-caps text-xs tracking-widest font-bold text-on-surface-variant" id="tab-2" onclick="switchTab(2)">
-                        JAN 15
-                    </button>
-                    <button class="tab-btn relative flex-1 text-center h-full flex items-center justify-center font-label-caps text-xs tracking-widest font-bold text-on-surface-variant" id="tab-3" onclick="switchTab(3)">
-                        JAN 16
-                    </button>
-                </div>
-            </div>
+<script>
+const EVTS=[
+  {id:1, s:[8,30], e:[10,30], t:"Luminara — Round 1",      desc:"Initial presentations and project validation.",                  loc:"Classrooms assigned", cat:"luminara"},
+  {id:2, s:[9,30], e:[11,0],  t:"Envirospark",                   desc:"Environmental exhibition and active presentation judging rounds.",          loc:"Exhibition Hall",     cat:"envirospark"},
+  {id:3, s:[9,30], e:[12,0],  t:"Huenova",                       desc:"Creative talent showcase and digital folklore displays.",                    loc:"Mezzanine Floor",     cat:"huenova"},
+  {id:4, s:[9,30], e:[12,0],  t:"Live Bands",                   desc:"Live musical battle tracks running simultaneously.",                        loc:"Amphitheatre",         cat:"bands"},
+  {id:5, s:[9,30], e:[14,0],  t:"Phoenix Alley",              desc:"Gaming, snack counters, and custom tech stalls.",                          loc:"Skating Ring",         cat:"stalls"},
+  {id:6, s:[9,45], e:[10,45], t:"Morphis — Session 1",           desc:"Technical design and modular rendering evaluations.",                        loc:"Classrooms",          cat:"morphis"},
+  {id:7, s:[10,30],e:[12,0],  t:"Luminara — Round 2",        desc:"Mid-day performance and primary auditorium track execution.",               loc:"Auditorium",          cat:"luminara"},
+  {id:8, s:[12,0], e:[12,30], t:"Envirospark — Grand Finale",   desc:"Final evaluation and celebratory project presentations on the main stage.",loc:"Main Stage",           cat:"envirospark"},
+  {id:9, s:[12,0], e:[13,0],  t:"Morphis — Session 2",           desc:"Concluding operational block and technical wraps for Morphis.",            loc:"Classrooms",          cat:"morphis"},
+  {id:10,s:[12,45],e:[13,45], t:"Luminara — Round 3",    desc:"Closing showcases, final jury notes, and formal results distribution.",    loc:"Auditorium",          cat:"luminara"},
+];
 
-            <div class="space-y-10" id="schedule-content">
-                <div class="schedule-day space-y-8" id="day-1">
-                    <div class="relative pl-6 border-l border-outline-variant group">
-                        <div class="absolute -left-[4.5px] top-1.5 w-2 h-2 rounded-full bg-primary ring-4 ring-background"></div>
-                        <div class="mb-1.5">
-                            <span class="font-label-mono text-[10px] font-bold text-primary bg-primary/10 px-2 py-0.5 rounded">09:00 AM</span>
-                        </div>
-                        <h3 class="font-headline-sm text-lg mb-1 font-bold group-hover:text-primary transition-colors">Grand Inauguration</h3>
-                        <p class="font-body-md text-xs text-on-surface-variant mb-3 leading-relaxed">Opening ceremony at the Imperial Hall. A welcome into the nocturnal world of Creatricks.</p>
-                        <div class="flex items-center gap-1.5 text-on-surface-variant">
-                            <span class="material-symbols-outlined text-sm text-primary" data-icon="location_on">location_on</span>
-                            <span class="font-label-caps text-[10px] uppercase tracking-wider font-semibold">The Great Rotunda</span>
-                        </div>
-                    </div>
+const CATS={
+  luminara:    {color:"#f2ca50", bg:"rgba(242,202,80,0.08)", border:"rgba(242,202,80,0.3)", label:"Luminara"},
+  envirospark:{color:"#1D9E75", bg:"rgba(29,158,117,0.08)",  border:"rgba(29,158,117,0.3)",  label:"Envirospark"},
+  huenova:     {color:"#b9c8de", bg:"rgba(185,200,222,0.08)", border:"rgba(185,200,222,0.3)", label:"Huenova"},
+  bands:       {color:"#D85A30", bg:"rgba(216,90,48,0.08)",   border:"rgba(216,90,48,0.3)",   label:"Live Bands"},
+  stalls:      {color:"#378ADD", bg:"rgba(55,138,221,0.08)",  border:"rgba(55,138,221,0.3)",  label:"Stalls"},
+  morphis:     {color:"#D4537E", bg:"rgba(212,83,126,0.08)",  border:"rgba(212,83,126,0.3)",  label:"Morphis"},
+};
 
-                    <div class="relative pl-6 border-l border-outline-variant group">
-                        <div class="absolute -left-[4.5px] top-1.5 w-2 h-2 rounded-full bg-outline ring-4 ring-background group-hover:bg-primary transition-colors"></div>
-                        <div class="mb-2">
-                            <span class="font-label-mono text-[10px] font-bold text-primary bg-primary/10 px-2 py-0.5 rounded">11:30 AM</span>
-                        </div>
-                        <div class="rim-light p-4 rounded-lg bg-surface-container-low atmospheric-glow">
-                            <div class="flex items-center gap-2 mb-2">
-                                <span class="font-label-caps text-[9px] font-bold border border-primary-container text-primary-container px-1.5 py-0.5 rounded-sm">MAJOR KEYNOTE</span>
-                            </div>
-                            <h3 class="font-headline-sm text-lg mb-1 font-bold">The Future of Pedagogy</h3>
-                            <p class="font-body-md text-xs text-on-surface-variant italic mb-4 leading-relaxed">"Redefining the classroom as a living artifact in the age of generative intelligence."</p>
-                            <div class="flex items-center gap-2.5 pt-2 border-t border-outline-variant/50">
-                                <div class="w-7 h-7 rounded-full bg-outline-variant flex items-center justify-center">
-                                    <span class="material-symbols-outlined text-sm text-primary" data-icon="person">person</span>
-                                </div>
-                                <span class="font-label-caps text-[10px] font-bold tracking-wide">Dr. Alistair Thorne</span>
-                            </div>
-                        </div>
-                    </div>
+let activeCategory = 'all';
 
-                    <div class="relative pl-6 border-l border-outline-variant group">
-                        <div class="absolute -left-[4.5px] top-1.5 w-2 h-2 rounded-full bg-outline ring-4 ring-background"></div>
-                        <div class="mb-2">
-                            <span class="font-label-mono text-[10px] font-bold text-primary bg-primary/10 px-2 py-0.5 rounded">02:30 PM</span>
-                        </div>
-                        <h3 class="font-headline-sm text-lg mb-3 font-bold">Concurrent Tracks</h3>
-                        <div class="grid grid-cols-1 gap-3">
-                            <div class="rim-light p-3 rounded-lg bg-surface-container-low">
-                                <span class="font-label-caps text-[9px] font-bold text-primary mb-0.5 block tracking-wider">TRACK A</span>
-                                <h4 class="font-body-lg text-sm font-bold">Tactile Epistemology</h4>
-                            </div>
-                            <div class="rim-light p-3 rounded-lg bg-surface-container-low">
-                                <span class="font-label-caps text-[9px] font-bold text-primary mb-0.5 block tracking-wider">TRACK B</span>
-                                <h4 class="font-body-lg text-sm font-bold">The Designer's Lexicon</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+function ft([h,min]){
+  const p=h>=12?"PM":"AM", hr=h>12?h-12:(h===0?12:h);
+  return `${hr}:${min.toString().padStart(2,"0")} ${p}`;
+}
 
-                <div class="schedule-day space-y-8 hidden" id="day-2">
-                    <div class="relative pl-6 border-l border-outline-variant group">
-                        <div class="absolute -left-[4.5px] top-1.5 w-2 h-2 rounded-full bg-primary ring-4 ring-background"></div>
-                        <div class="mb-1.5">
-                            <span class="font-label-mono text-[10px] font-bold text-primary bg-primary/10 px-2 py-0.5 rounded">10:00 AM</span>
-                        </div>
-                        <h3 class="font-headline-sm text-lg mb-1 font-bold italic">Intensive Workshop Series</h3>
-                        <p class="font-body-md text-xs text-on-surface-variant mb-4">Concurrent deep-dives into advanced design methodologies.</p>
-                        <div class="grid grid-cols-1 gap-3.5">
-                            <div class="border-l-2 border-primary-fixed pl-3 py-0.5">
-                                <h4 class="font-label-caps text-xs font-bold tracking-wider mb-0.5">URBAN ALCHEMY</h4>
-                                <p class="text-xs text-on-surface-variant">Sustainable transmutation of urban waste.</p>
-                            </div>
-                            <div class="border-l-2 border-primary-fixed pl-3 py-0.5">
-                                <h4 class="font-label-caps text-xs font-bold tracking-wider mb-0.5">PAPER CITADELS</h4>
-                                <p class="text-xs text-on-surface-variant">Advanced origami engineering.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="relative pl-6 border-l border-outline-variant group">
-                        <div class="absolute -left-[4.5px] top-1.5 w-2 h-2 rounded-full bg-outline ring-4 ring-background"></div>
-                        <div class="mb-1.5">
-                            <span class="font-label-mono text-[10px] font-bold text-primary bg-primary/10 px-2 py-0.5 rounded">03:00 PM</span>
-                        </div>
-                        <h3 class="font-headline-sm text-lg mb-1 font-bold">Guest Critiques</h3>
-                        <p class="font-body-md text-xs text-on-surface-variant leading-relaxed">One-on-one portfolio evaluations with industry luminaries from the European Guild of Design.</p>
-                    </div>
+// Build interactive touch chip triggers
+const filterBar = document.getElementById('filter-bar');
+Object.keys(CATS).forEach(key => {
+    const c = CATS[key];
+    const btn = document.createElement('button');
+    btn.id = `chip-${key}`;
+    btn.className = `shrink-0 px-3 py-1.5 rounded-full border border-outline/30 text-xs font-medium text-on-surface-variant bg-surface-container-low transition-all`;
+    btn.style.borderColor = `${c.color}25`;
+    btn.textContent = c.label;
+    btn.onclick = () => filterCategory(key);
+    filterBar.appendChild(btn);
+});
 
-                    <div class="relative p-5 bg-primary text-on-primary-fixed rounded-xl shadow-lg rim-light">
-                        <div class="flex justify-between items-start gap-4">
-                            <div>
-                                <span class="font-label-mono text-[10px] font-bold bg-on-primary-fixed/10 text-on-primary-fixed px-2 py-0.5 rounded block w-fit mb-2">07:00 PM</span>
-                                <h3 class="font-headline-sm text-lg font-black uppercase tracking-tight mb-0.5">The Mid-Point Review</h3>
-                                <p class="font-label-caps text-[9px] tracking-widest font-bold opacity-75">COCKTAIL RECEPTION &amp; NETWORKING</p>
-                            </div>
-                            <span class="material-symbols-outlined text-2xl text-on-primary-fixed" data-icon="local_bar">local_bar</span>
-                        </div>
-                    </div>
-                </div>
+function filterCategory(catKey) {
+    activeCategory = catKey;
+    document.querySelectorAll('#filter-bar button').forEach(b => b.classList.remove('active-chip'));
+    document.getElementById(`chip-${catKey}`).classList.add('active-chip');
+    renderMobileTimeline();
+}
 
-                <div class="schedule-day space-y-8 hidden" id="day-3">
-                    <div class="relative pl-6 border-l border-outline-variant group">
-                        <div class="absolute -left-[4.5px] top-1.5 w-2 h-2 rounded-full bg-primary ring-4 ring-background"></div>
-                        <div class="mb-2">
-                            <span class="font-label-mono text-[10px] font-bold text-primary bg-primary/10 px-2 py-0.5 rounded">09:30 AM</span>
-                        </div>
-                        <h3 class="font-headline-sm text-lg mb-3 font-bold">Final Presentations</h3>
-                        <div class="rim-light bg-surface-container-low rounded-lg divide-y divide-outline-variant/60 overflow-hidden">
-                            <div class="p-3.5">
-                                <h4 class="font-label-caps text-xs font-bold text-primary mb-0.5 tracking-wide">DIGITAL FOLKLORE</h4>
-                                <p class="text-xs text-on-surface-variant">Interactive narratives exploring modern myths.</p>
-                            </div>
-                            <div class="p-3.5">
-                                <h4 class="font-label-caps text-xs font-bold text-primary mb-0.5 tracking-wide">KINETIC BOTANY</h4>
-                                <p class="text-xs text-on-surface-variant">Robotic installations mimicking plant patterns.</p>
-                            </div>
-                        </div>
-                    </div>
+function renderMobileTimeline() {
+    const container = document.getElementById('timeline-stack');
+    container.innerHTML = '';
+    
+    // Sorted chronological representation layout placement
+    const filtered = EVTS.filter(e => activeCategory === 'all' || e.cat === activeCategory)
+                         .sort((a,b) => (a.s[0]*60+a.s[1]) - (b.s[0]*60+b.s[1]));
+                         
+    if(filtered.length === 0) {
+        container.innerHTML = `<p class="text-zinc-500 text-xs text-center py-8">No scheduled slots match this filter.</p>`;
+        return;
+    }
 
-                    <div class="relative pl-6 border-l border-outline-variant group">
-                        <div class="absolute -left-[4.5px] top-1.5 w-2 h-2 rounded-full bg-outline ring-4 ring-background"></div>
-                        <div class="mb-1.5">
-                            <span class="font-label-mono text-[10px] font-bold text-primary bg-primary/10 px-2 py-0.5 rounded">01:00 PM</span>
-                        </div>
-                        <h3 class="font-headline-sm text-lg mb-1 font-bold">Grand Jury Deliberation</h3>
-                        <p class="font-body-md text-xs text-on-surface-variant leading-relaxed">Closed-door assessment of the year's most provocative submissions.</p>
-                    </div>
-
-                    <div class="relative overflow-hidden rounded-xl border border-primary/40 group">
-                        <div class="absolute inset-0 z-0">
-                            <div class="w-full h-full bg-gradient-to-br from-surface-container-high to-surface-container-lowest"></div>
-                            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#f2ca50_1px,transparent_1px)] [background-size:16px_16px]"></div>
-                        </div>
-                        <div class="relative z-10 p-6 text-center">
-                            <span class="font-label-mono text-[11px] font-bold text-primary bg-primary/10 px-2.5 py-0.5 rounded inline-block mb-3">08:00 PM</span>
-                            <span class="font-label-caps text-[9px] font-bold text-primary tracking-[0.25em] block mb-1">THE FINALE EVENT</span>
-                            <h3 class="font-display-lg text-2xl italic text-primary font-bold mb-2">Nocturnal Gala</h3>
-                            <p class="font-body-md text-xs text-on-surface-variant mb-5 max-w-xs mx-auto leading-relaxed">Awards ceremony and black-tie celebration of creative excellence.</p>
-                            <button class="w-full h-11 border border-primary text-primary font-label-caps text-xs font-bold uppercase tracking-widest rounded active:bg-primary active:text-on-primary transition-all">
-                                Formal Attire Required
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
-
-        <nav class="fixed bottom-0 left-0 right-0 max-w-md mx-auto flex justify-around items-center h-16 bg-surface/90 backdrop-blur-lg border-t border-outline-variant z-50 px-2 shadow-xl">
-            <a class="flex flex-col items-center justify-center flex-1 h-full text-on-surface-variant active:text-primary transition-colors duration-150" href="landing_mobile.html">
-                <span class="material-symbols-outlined text-xl mb-0.5" data-icon="explore">explore</span>
-                <span class="font-label-caps text-[9px] font-bold tracking-wider">Expo</span>
-            </a>
-            <a class="flex flex-col items-center justify-center flex-1 h-full text-on-surface-variant active:text-primary transition-colors duration-150" href="landing_mobile.html#competitions">
-                <span class="material-symbols-outlined text-xl mb-0.5" data-icon="emoji_events">emoji_events</span>
-                <span class="font-label-caps text-[9px] font-bold tracking-wider">Awards</span>
-            </a>
-            <a class="flex flex-col items-center justify-center flex-1 h-full text-primary transition-colors duration-150" href="schedule_mobile.html">
-                <span class="material-symbols-outlined text-xl mb-0.5" data-icon="calendar_today" style="font-variation-settings: 'FILL' 1;">calendar_today</span>
-                <span class="font-label-caps text-[9px] font-bold tracking-wider">Schedule</span>
-            </a>
-            <a class="flex flex-col items-center justify-center flex-1 h-full text-on-surface-variant active:text-primary transition-colors duration-150" href="landing_mobile.html#newsletter">
-                <span class="material-symbols-outlined text-xl mb-0.5" data-icon="inventory_2">inventory_2</span>
-                <span class="font-label-caps text-[9px] font-bold tracking-wider">Archives</span>
-            </a>
-        </nav>
+    filtered.forEach(ev => {
+        const c = CATS[ev.cat];
         
-    </div>
+        const card = document.createElement('div');
+        card.className = "relative bg-surface-container-low border rounded-lg p-4 transition-all duration-200 active:scale-[0.99]";
+        card.style.backgroundColor = c.bg;
+        card.style.borderColor = c.border;
+        
+        // Custom left timing pin dot attachment
+        const indicator = document.createElement('div');
+        indicator.className = "absolute w-3 h-3 rounded-full -left-[26px] top-5 border border-black";
+        indicator.style.backgroundColor = c.color;
+        card.appendChild(indicator);
 
-    <script>
-        function switchTab(day) {
-            // Update Tab Styling
-            document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.classList.remove('tab-active', 'text-primary');
-                btn.classList.add('text-on-surface-variant');
-            });
-            const activeTab = document.getElementById('tab-' + day);
-            activeTab.classList.add('tab-active', 'text-primary');
-            activeTab.classList.remove('text-on-surface-variant');
+        card.innerHTML += `
+            <div class="flex items-start justify-between gap-2 mb-1.5">
+                <h3 class="font-semibold text-sm text-on-surface leading-tight">${ev.t}</h3>
+                <span class="text-[10px] font-bold uppercase px-2 py-0.5 rounded tracking-wide shrink-0" style="background:${c.color}20; color:${c.color}">
+                    ${c.label}
+                </span>
+            </div>
+            <div class="flex flex-col gap-1 text-xs text-on-surface-variant mb-2">
+                <span class="flex items-center gap-1 font-medium" style="color: ${c.color}">
+                    <span class="material-symbols-outlined text-[14px]">schedule</span>
+                    ${ft(ev.s)} – ${ft(ev.e)}
+                </span>
+                <span class="flex items-center gap-1 opacity-90">
+                    <span class="material-symbols-outlined text-[14px]">location_on</span>
+                    ${ev.loc}
+                </span>
+            </div>
+            <p class="text-zinc-400 text-xs leading-relaxed border-t border-outline-variant/30 pt-2">${ev.desc}</p>
+        `;
+        container.appendChild(card);
+    });
+}
 
-            // Update Schedule Content
-            document.querySelectorAll('.schedule-day').forEach(content => {
-                content.classList.add('hidden');
-            });
-            document.getElementById('day-' + day).classList.remove('hidden');
-
-            // Native Touch Feedback Emulation
-            if (window.navigator.vibrate) {
-                window.navigator.vibrate(12);
-            }
-            
-            // Smooth Target Alignment
-            const container = document.getElementById('schedule-content');
-            window.scrollTo({
-                top: container.getBoundingClientRect().top + window.scrollY - 120,
-                behavior: 'smooth'
-            });
-        }
-    </script>
+// Runtime Initialization execution entrypoint
+renderMobileTimeline();
+</script>
 </body>
 </html>
