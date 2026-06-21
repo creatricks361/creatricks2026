@@ -47,78 +47,106 @@
       vertical-align: middle;
     }
 
-    .hamburger {
-      background: none;
-      border: none;
-      cursor: pointer;
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-      padding: 8px;
-    }
-    .hamburger span {
-      display: block;
-      width: 22px;
-      height: 1.5px;
-      background: #ffffff;
-      transition: transform 0.3s, opacity 0.3s;
-    }
-    .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
-    .hamburger.open span:nth-child(2) { opacity: 0; }
-    .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+   header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #000;
+  border-bottom: 1px solid #222;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  height: 60px;
+}
 
-    .nav-drawer {
-      position: fixed;
-      top: 57px;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: #000;
-      z-index: 99;
-      display: flex;
-      flex-direction: column;
-      padding: 40px 28px;
-      transform: translateX(100%);
-      transition: transform 0.35s cubic-bezier(0.77,0,0.175,1);
-      border-top: 1px solid #222222;
-      overflow-y: auto;
-    }
-    .nav-drawer.open { transform: translateX(0); }
-    .nav-drawer a {
-      font-family: 'Hanken Grotesk', sans-serif;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: #a8a8a8;
-      padding: 20px 0;
-      border-bottom: 0.5px solid #222222;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .nav-drawer a.active-link { color: #f2ca50; }
-    .nav-drawer a::after { content: '→'; font-size: 14px; opacity: 0.4; }
-    .nav-register {
-      margin-top: 40px;
-      background: #f2ca50;
-      color: #000000;
-      font-family: 'Hanken Grotesk', sans-serif;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      padding: 18px 24px;
-      text-align: center;
-      border: none;
-      cursor: pointer;
-      display: block;
-      width: 100%;
-      transition: background 0.2s, transform 0.1s;
-    }
-    .nav-register:active { transform: scale(0.98); }
+.logo-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-text {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #f2ca50;
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+}
+
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: white;
+  transition: transform .3s, opacity .3s;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
+.nav-drawer {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 28px;
+  gap: 0;
+  transform: translateX(100%);
+  transition: transform .35s cubic-bezier(0.77,0,0.175,1);
+  border-top: 1px solid #222;
+}
+
+.nav-drawer.open {
+  transform: translateX(0);
+}
+
+.nav-drawer a {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: #a8a8a8;
+  padding: 20px 0;
+  border-bottom: .5px solid #222;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-drawer a:first-child {
+  color: #f2ca50;
+}
+
+.nav-drawer a::after {
+  content: "→";
+  font-size: 14px;
+  opacity: .4;
+}
     
     details summary { list-style: none; }
     details summary::-webkit-details-marker { display: none; }
@@ -129,23 +157,25 @@
 
 <body>
 
-<header class="w-full top-0 sticky bg-background border-b-[1.5px] border-outline-variant z-50" style="height:57px;">
-  <div class="flex justify-between items-center px-5 h-full">
-    <div class="playfair text-[15px] uppercase tracking-[0.25em] text-primary">Creatricks 2026</div>
-    <button class="hamburger" id="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
+    
+   <header>
+  <div class="logo-row">
+    <img src="newlogo.png" alt="Creatricks Logo"
+         style="height:32px;width:auto;object-fit:contain;">
+    <span class="logo-text">Creatricks 2026</span>
   </div>
+
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </header>
 
 <nav class="nav-drawer" id="navDrawer">
   <a href="landing.html">Expo</a>
-  <a href="landing.html#competitions">Competitions</a>
-  <a href="schedule.html">Schedule</a>
+  <a href="landing_mobile.html">Competitions</a>
+  <a href="schedule_mobile.html">Schedule</a>
   <a href="archives.html">Archives</a>
-  <a href="entryguidelines.html">Entry Guidelines</a>
-  <a href="moreinfo_mobile.html" class="active-link">More Info</a>
-
+  <a href="mailto:creatricks361@gmail.com">Contact</a>
 </nav>
 
     <!-- Unicorn Background -->
@@ -308,23 +338,24 @@
 }();
 
 // Drawer Logic
+
+</script>
+<script>
 const hamburger = document.getElementById('hamburger');
 const navDrawer = document.getElementById('navDrawer');
 
-function toggleMenu() {
+hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('open');
   navDrawer.classList.toggle('open');
-  document.body.style.overflow = navDrawer.classList.contains('open') ? 'hidden' : '';
-}
-
-hamburger.addEventListener('click', toggleMenu);
-
-// Close navigation menu automatically on click interaction (mobile friendly approach)
-navDrawer.querySelectorAll('a, button').forEach(link => {
-  link.addEventListener('click', () => {
-    if(navDrawer.classList.contains('open')) toggleMenu();
-  });
+  document.body.style.overflow =
+    navDrawer.classList.contains('open') ? 'hidden' : '';
 });
+
+function closeNav() {
+  hamburger.classList.remove('open');
+  navDrawer.classList.remove('open');
+  document.body.style.overflow = '';
+}
 </script>
 </body>
 </html>
