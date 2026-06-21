@@ -97,12 +97,49 @@
   padding: 8px;
 }
 
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #000;
+  border-bottom: 1px solid #222;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  height: 60px;
+}
+
+.logo-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-text {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #f2ca50;
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+}
+
 .hamburger span {
   display: block;
   width: 22px;
   height: 1.5px;
   background: white;
-  transition: transform 0.3s, opacity 0.3s;
+  transition: transform .3s, opacity .3s;
 }
 
 .hamburger.open span:nth-child(1) {
@@ -119,7 +156,7 @@
 
 .nav-drawer {
   position: fixed;
-  top: 56px; /* matches your header height */
+  top: 60px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -130,8 +167,8 @@
   padding: 40px 28px;
   gap: 0;
   transform: translateX(100%);
-  transition: transform 0.35s cubic-bezier(0.77,0,0.175,1);
-  border-top: 1px solid rgba(255,255,255,0.1);
+  transition: transform .35s cubic-bezier(0.77,0,0.175,1);
+  border-top: 1px solid #222;
 }
 
 .nav-drawer.open {
@@ -141,25 +178,24 @@
 .nav-drawer a {
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.3em;
+  letter-spacing: .3em;
   text-transform: uppercase;
   color: #a8a8a8;
   padding: 20px 0;
-  border-bottom: 0.5px solid rgba(255,255,255,0.1);
+  border-bottom: .5px solid #222;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  transition: color 0.2s;
 }
 
-.nav-drawer a:hover {
+.nav-drawer a:first-child {
   color: #f2ca50;
 }
 
 .nav-drawer a::after {
-  content: '→';
+  content: "→";
   font-size: 14px;
-  opacity: 0.4;
+  opacity: .4;
 }
 </style>
 </head>
@@ -167,30 +203,24 @@
 
 <div class="max-w-md mx-auto min-h-screen flex flex-col bg-background shadow-xl relative pb-12">
     
-    <header class="w-full sticky top-0 bg-background/90 backdrop-blur-md border-b border-outline-variant/60 z-50">
-        <div class="flex justify-between items-center px-4 h-14 w-full">
-            <div class="flex items-center gap-3">
-                <img alt="Creatricks Logo" class="h-8 w-auto object-contain" src="newlogo.png"/>
-                <span class="font-headline-sm text-sm uppercase tracking-[0.2em] text-primary font-bold">
-                    Creatricks 2026
-                </span>
-            </div>
-            <button class="hamburger -mr-2" id="hamburger" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </header>
+   <header>
+  <div class="logo-row">
+    <img src="newlogo.png" alt="Creatricks Logo"
+         style="height:32px;width:auto;object-fit:contain;">
+    <span class="logo-text">Creatricks 2026</span>
+  </div>
 
-    <nav class="nav-drawer" id="navDrawer">
-        <a href="landing.html">Home</a>
-        <a href="landing_mobile.html">Competitions</a>
-        <a href="schedule_mobile.html">Schedule</a>
-        <a href="archives.html">Archives</a>
-        <a href="mailto:creatricks361@gmail.com">Contact</a>
-    </nav>
-
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+<nav class="nav-drawer" id="navDrawer">
+  <a href="landing.html">Expo</a>
+  <a href="landing_mobile.html">Competitions</a>
+  <a href="schedule_mobile.html">Schedule</a>
+  <a href="archives.html">Archives</a>
+  <a href="mailto:creatricks361@gmail.com">Contact</a>
+</nav>
     <main class="flex-grow px-4 pt-6">
         <section class="text-center mb-6">
             <div class="mb-2 inline-block px-3 py-0.5 border border-primary/30 bg-primary/5 rounded-full">
