@@ -126,7 +126,7 @@
     </style>
 </head>
 <body class="bg-background text-on-background font-body-md antialiased">
-<div id="splash-container" class="fixed inset-0 z-0 pointer-events-none overfxlow-hidden bg-black"></div>
+<div id="splash-container" class="fixed inset-0 z-0 pointer-events-none overflow-hidden bg-black"></div>
 <div class="custom-cursor hidden md:block"></div>
 <!-- Top Navigation Bar -->
 <nav class="w-full top-0 sticky bg-black/80 backdrop-blur-xl z-50 border-b border-outline-variant flex justify-between items-center px-container-padding py-8 max-w-full mx-auto">
@@ -145,7 +145,7 @@
 <a href="https://forms.gle/myJahZhf1NXPcmvE6" class="bg-primary text-on-primary font-label-caps text-[11px] px-10 py-3 transition-all hover:brightness-110 active:scale-95 duration-300 uppercase tracking-widest inline block">
         Register for Huenova
 </a>
-</nav> </a>
+</nav>
 <main class="relative z-10">
 <!-- Back Navigation & Breadcrumb -->
 <div class="px-container-padding pt-16 pb-12 flex items-center justify-between">
@@ -365,42 +365,61 @@ Participants will receive the competition themes before the event for preparatio
 </div>
 </div>
 </section>
+
 </main>
 <!-- Footer -->
-<footer class="w-full border-t border-outline-variant bg-black">
-<div class="flex flex-col md:flex-row justify-between items-start px-container-padding py-section-gap gap-gutter max-w-[1440px] mx-auto">
-<div class="flex flex-col gap-10">
-<div class="flex items-center gap-3">
-<img alt="Logo" class="h-7 w-auto object-contain" src="newlogo.png"/>
-<div class="font-headline-sm text-[18px] text-primary uppercase tracking-[0.25em]">Creatricks 2026</div>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant max-w-xs leading-relaxed">
+</main>
+
+</main>
+
+<footer class="relative z-10 w-full border-t border-outline-variant bg-black">
+    <div class="flex flex-col md:flex-row justify-between items-start px-container-padding py-section-gap gap-gutter max-w-[1440px] mx-auto">
+        <div class="flex flex-col gap-10">
+            <div class="flex items-center gap-3">
+                <img alt="Logo" class="h-7 w-auto object-contain" src="newlogo.png"/>
+                <div class="font-headline-sm text-[18px] text-primary uppercase tracking-[0.25em]">
+                    Creatricks 2026
+                </div>
+            </div>
+
+            <p class="font-body-md text-body-md text-on-surface-variant max-w-xs leading-relaxed">
                 Celebrating the intersection of technical excellence and creative magic in global design pedagogy.
             </p>
-<div class="flex gap-8">
-<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors text-on-surface-variant" data-icon="terminal">terminal</span>
-<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors text-on-surface-variant" data-icon="brush">brush</span>
-<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors text-on-surface-variant" data-icon="architecture">architecture</span>
-</div>
-</div>
-<div class="grid grid-cols-2 lg:grid-cols-3 gap-x-24 gap-y-12">
-<div class="flex flex-col gap-5">
-<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest">Connect</span>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-white transition-all" href="mailto:creatricks361@gmail.com">creatricks361@gmail.com</a>
-</a>
 
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-white transition-all" href="https://maps.app.goo.gl/qQENvNnkRzJqfP1h7">TCIS Whitefield</a>
-</div>
+            <div class="flex gap-8">
+                <span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors text-on-surface-variant">terminal</span>
+                <span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors text-on-surface-variant">brush</span>
+                <span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors text-on-surface-variant">architecture</span>
+            </div>
+        </div>
 
-<div class="flex flex-col gap-5">
-<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest">Policy</span>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-white transition-all" href="#">Privacy Policy</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-white transition-all" href="#">Terms of Service</a>
-</div>
-</div>
-</div>
-<div class="px-container-padding py-10 border-t border-outline-variant text-center md:text-left font-body-md text-body-md text-on-surface-variant opacity-40 max-w-[1440px] mx-auto tracking-widest">
-      2026 CREATRICKS SCHOOL DESIGN EXPO
+        <div class="grid grid-cols-2 lg:grid-cols-3 gap-x-24 gap-y-12">
+            <div class="flex flex-col gap-5">
+                <span class="font-label-caps text-label-caps text-primary uppercase tracking-widest">Connect</span>
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-white transition-all"
+                   href="mailto:creatricks361@gmail.com">creatricks361@gmail.com</a>
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-white transition-all"
+                   href="https://maps.app.goo.gl/qQENvNnkRzJqfP1h7">TCIS Whitefield</a>
+            </div>
+
+            <div class="flex flex-col gap-5">
+                <span class="font-label-caps text-label-caps text-primary uppercase tracking-widest">Rules</span>
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-white transition-all"
+                   href="rulesandregs.html">Rules and Regulations</a>
+            </div>
+
+            <div class="flex flex-col gap-5">
+                <span class="font-label-caps text-label-caps text-primary uppercase tracking-widest">Policy</span>
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-white transition-all"
+                   href="#">Privacy Policy</a>
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-white transition-all"
+                   href="#">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="px-container-padding py-10 border-t border-outline-variant text-center md:text-left font-body-md text-body-md text-on-surface-variant opacity-40 max-w-[1440px] mx-auto tracking-widest">
+        2026 CREATRICKS SCHOOL DESIGN EXPO
     </div>
 </footer>
 <script>
@@ -470,4 +489,5 @@ Participants will receive the competition themes before the event for preparatio
         });
     });
 </script>
+
 </body></html>
