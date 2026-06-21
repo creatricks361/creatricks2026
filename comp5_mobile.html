@@ -117,100 +117,19 @@ tailwind.config = {
   }
   .nav-drawer a.active-link { color: #d4af37; }
   .nav-drawer a::after { content: '→'; font-size: 14px; opacity: 0.4; }
-  .nav-register {
-    margin-top: 40px;
-    background: #d4af37;
-    color: #000000;
-    font-family: 'Hanken Grotesk', sans-serif;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    padding: 18px 24px;
-    text-align: center;
-    border: none;
-    cursor: pointer;
-    display: block;
-    width: 100%;
-  }
 
   @keyframes bob-down {
     0%, 100% { transform: translateY(0); opacity: 0.4; }
     50% { transform: translateY(5px); opacity: 1; }
   }
   .anim-down { animation: bob-down 1.7s ease-in-out infinite; }
-
-  .scroll-hint {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-family: 'Hanken Grotesk', sans-serif;
-    font-size: 9px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: #a8a8a8;
-    transition: opacity 0.5s ease;
-  }
-
-  .round-label {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 8px;
-  }
-  .round-label-num {
-    font-family: 'Hanken Grotesk', sans-serif;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.2em;
-    color: #d4af37;
-    flex-shrink: 0;
-  }
-  .round-label-line {
-    flex: 1;
-    height: 1px;
-    background: #222222;
-  }
-  .round-title {
-    font-family: 'Hanken Grotesk', sans-serif;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: #ffffff;
-    margin-bottom: 10px;
-  }
 </style>
 </head>
 <body class="bg-background text-on-background font-body-md antialiased">
 
-<div id="scroll-down-hint" style="
-  position: fixed;
-  bottom: 28px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 40;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  transition: opacity 0.5s ease;
-  pointer-events: none;
-">
-  <span style="
-    font-family: 'Hanken Grotesk', sans-serif;
-    font-size: 9px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: #a8a8a8;
-    opacity: 0.7;
-  ">Scroll</span>
-  <span class="material-symbols-outlined anim-down" style="
-    font-size: 18px;
-    color: #d4af37;
-    opacity: 0.8;
-    font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
-  ">keyboard_arrow_down</span>
+<div id="scroll-down-hint" style="position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%); z-index: 40; display: flex; flex-direction: column; align-items: center; gap: 4px; transition: opacity 0.5s ease; pointer-events: none;">
+  <span style="font-family: 'Hanken Grotesk', sans-serif; font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: #a8a8a8; opacity: 0.7;">Scroll</span>
+  <span class="material-symbols-outlined anim-down" style="font-size: 18px; color: #d4af37; opacity: 0.8;">keyboard_arrow_down</span>
 </div>
 
 <header style="position:sticky;top:0;z-index:100;background:#000;border-bottom:1px solid #222222;display:flex;align-items:center;justify-content:space-between;padding:0 20px;height:57px;">
@@ -231,161 +150,156 @@ tailwind.config = {
 
 <main class="relative" id="main-end-marker">
 
-  <div class="px-5 pt-10 pb-8 flex items-center justify-between">
+  <div class="px-5 pt-8 pb-4 flex flex-col gap-2 xs:flex-row xs:items-center justify-between">
     <a class="flex items-center gap-2 font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest" href="landing.html#competitions">
       <span class="material-symbols-outlined text-sm">arrow_back</span>
       Back to Competitions
     </a>
-    <div class="font-label-caps text-[10px] text-outline uppercase tracking-[0.2em] opacity-40">Competition ID: CT2026-X04</div>
+    <div class="font-label-caps text-[10px] text-outline uppercase tracking-[0.15em] opacity-60 mt-1 xs:mt-0">ID: CT2026-X04</div>
   </div>
-<!-- Dedicated Button Block Section -->
-<div class="w-full my-12 flex justify-center items-center px-5">
-  <a href="https://forms.gle/Gpum4AGUfBq2bJiF7" 
-     class="inline-block bg-[#d4af37] text-black font-['Hanken_Grotesk',sans-serif] text-[11px] font-bold uppercase tracking-[0.3em] px-10 py-5 transition-transform duration-200 active:scale-98 hover:brightness-110 [border-radius:0px] text-center min-w-[200px]">
-    Register Now
-  </a>
-</div>
-  <section class="px-5 mb-16">
-    <h1 class="font-headline-xl text-headline-xl mb-6 text-on-surface leading-[1.05]">
+
+  <section class="px-5 mb-10">
+    <h1 class="font-headline-xl text-headline-xl mb-4 text-on-surface leading-[1.05]">
       Ampli<span class="italic font-normal text-primary">fire</span>
     </h1>
-    <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 leading-relaxed opacity-80">
+    <p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed opacity-80 text-justify">
       In a classic battle of the bands, young performers take the stage and bring their passion to life through music. From energetic performances to heartfelt melodies, participants showcase originality, confidence, and the power to connect with the audience. This competition celebrates creativity, teamwork, and the excitement of live performance.
     </p>
-    <div class="w-full aspect-[4/5] border border-outline-variant p-3 bg-surface-container-lowest overflow-hidden relative">
-      <img alt="The Kinetic Dreamscape Hero" class="w-full h-full  transition-all duration-1000" src="amplifirenew.jpg"/>
-      <div class="absolute -bottom-3 -right-3 w-full h-full border border-primary/20 -z-10"></div>
+    <div class="w-full aspect-[4/5] border border-outline-variant p-2 bg-surface-container-lowest overflow-hidden relative">
+      <img alt="Amplifire Cover Art" class="w-full h-full object-cover" src="amplifirenew.jpg"/>
     </div>
   </section>
 
-  <section class="px-5 mb-16">
-    <div class="border border-outline-variant bg-surface-container-lowest competition-accent-border mb-6 overflow-hidden">
+  <div class="w-full mb-12 flex justify-center items-center px-5">
+    <a href="https://forms.gle/Gpum4AGUfBq2bJiF7" 
+       class="inline-block bg-[#d4af37] text-black font-['Hanken_Grotesk',sans-serif] text-[11px] font-bold uppercase tracking-[0.3em] px-10 py-5 transition-transform duration-200 active:scale-95 hover:brightness-110 text-center w-full sm:w-auto sm:min-w-[240px]">
+      Register Now
+    </a>
+  </div>
 
-      <div class="px-6 pt-6 pb-5 border-b border-outline-variant">
-        <p class="font-label-caps text-[9px] text-primary uppercase tracking-[0.28em] mb-3 opacity-60">Amplifire</p>
-        <div class="flex items-end justify-between">
-          <h2 class="text-[24px] leading-[1.1] text-on-surface" style="font-family:'Playfair Display';font-weight:600">Competition<br/><em style="font-weight:400;color:#d4af37">Overview</em></h2>
+  <section class="px-5 mb-12">
+    <div class="border border-outline-variant bg-surface-container-lowest competition-accent-border mb-6">
+      
+      <div class="p-5 border-b border-outline-variant">
+        <p class="font-label-caps text-[9px] text-primary uppercase tracking-[0.28em] mb-2 opacity-60">Amplifire</p>
+        <h2 class="text-[22px] leading-[1.2] text-on-surface mb-3 font-semibold font-headline-md">
+          Competition <em class="font-normal text-primary italic">Overview</em>
+        </h2>
+        <div class="space-y-4 font-body-md text-on-surface-variant leading-relaxed opacity-80 text-justify">
+          <p>
+            Participants must bring their own instruments and perform a song based on the theme announced before the event. Only songs originally performed by bands are permitted; Bollywood tracks and other non-band genres are not allowed. Each team will have two minutes to showcase their talent, and performances will be judged on originality, execution, and overall impact.
+          </p>
+          <p>
+            Amplifire celebrates the energy, passion, and collaboration of live music, giving bands the perfect platform to take the stage and make their mark.
+          </p>
         </div>
       </div>
 
-      <div class="divide-y divide-outline-variant">
-        <p class="font-body-md text-on-surface-variant leading-relaxed opacity-75">
-          Participants must bring their own instruments and perform a song based on the theme announced before the event. Only songs originally performed by bands are permitted; Bollywood tracks and other non-band genres are not allowed. Each team will have two minutes to showcase their talent, and performances will be judged on originality, execution, and overall impact.
-        </p>
-        <p class="font-body-md text-on-surface-variant leading-relaxed opacity-75">
-          Amplifire celebrates the energy, passion, and collaboration of live music, giving bands the perfect platform to take the stage and make their mark.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-2 border-t border-outline-variant">
-        <div class="px-6 py-6 border-r border-outline-variant">
+      <div class="flex flex-col divide-y divide-outline-variant">
+        <div class="p-5">
           <h3 class="font-label-caps text-[10px] text-primary mb-4 uppercase tracking-[0.2em]">Themes – Grade 7-9</h3>
-          <ul class="font-body-md text-on-surface-variant space-y-3">
-           <li class="flex items-start gap-4">
-    <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
-    <span class="opacity-80">Ignite the stage</span>
-    </li>
-    <li class="flex items-start gap-4">
-    <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
-    <span class="opacity-80">Voices Unheard</span>
-    </li>
-    <li class="flex items-start gap-4">
-    <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
-    <span class="opacity-80">Vintage Vibes</span>
-    </li>
-    </ul>
-    </div>
-    <div>
-    <h3 class="font-label-caps text-[11px] text-primary mb-8 border-b border-outline-variant pb-4 uppercase tracking-[0.2em]">Judging Criteria</h3>
-    <ul class="font-body-md text-on-surface-variant space-y-5">
-    <li class="flex items-start gap-4">
-    <span class="material-symbols-outlined text-primary text-lg">workspace_premium</span>
-    <span class="italic opacity-80">Musical Coordination </span>
-    </li>
-    <li class="flex items-start gap-4">
-    <span class="material-symbols-outlined text-primary text-lg">workspace_premium</span>
-    <span class="italic opacity-80">Theme Relevance</span>
-    </li>
-    <li class="flex items-start gap-4">
-    <span class="material-symbols-outlined text-primary text-lg">workspace_premium</span>
-    <span class="italic opacity-80">Stage Presence</span>
-    </li>   
-    <li class="flex items-start gap-4">
-    <span class="material-symbols-outlined text-primary text-lg">workspace_premium</span>
-    <span class="italic opacity-80">Creativity & Interpretation </span>
-    </li>
-    <li class="flex items-start gap-4">
-    <span class="material-symbols-outlined text-primary text-lg">workspace_premium</span>
-    <span class="italic opacity-80">Overall Impact</span>
-    </li>
+          <ul class="font-body-md text-on-surface-variant space-y-4">
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-primary text-lg shrink-0">check_circle</span>
+              <span class="opacity-80 leading-normal">Ignite the stage</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-primary text-lg shrink-0">check_circle</span>
+              <span class="opacity-80 leading-normal">Voices Unheard</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-primary text-lg shrink-0">check_circle</span>
+              <span class="opacity-80 leading-normal">Vintage Vibes</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="p-5">
+          <h3 class="font-label-caps text-[10px] text-primary mb-4 uppercase tracking-[0.2em]">Judging Criteria</h3>
+          <ul class="font-body-md text-on-surface-variant space-y-3.5">
+            <li class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-primary text-lg shrink-0">workspace_premium</span>
+              <span class="italic opacity-80">Musical Coordination</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-primary text-lg shrink-0">workspace_premium</span>
+              <span class="italic opacity-80">Theme Relevance</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-primary text-lg shrink-0">workspace_premium</span>
+              <span class="italic opacity-80">Stage Presence</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-primary text-lg shrink-0">workspace_premium</span>
+              <span class="italic opacity-80">Creativity & Interpretation</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-primary text-lg shrink-0">workspace_premium</span>
+              <span class="italic opacity-80">Overall Impact</span>
+            </li>
           </ul>
         </div>
       </div>
+
     </div>
 
-  
-
-    <div class="p-6 border border-outline-variant bg-surface-container-lowest">
-      <h4 class="font-label-caps text-[11px] mb-6 text-primary border-b border-outline-variant pb-3 uppercase tracking-[0.2em]">Inquiries</h4>
-      <div class="space-y-6">
+    <div class="p-5 border border-outline-variant bg-surface-container-lowest">
+      <h4 class="font-label-caps text-[10px] mb-5 text-primary border-b border-outline-variant pb-2 uppercase tracking-[0.2em]">Inquiries</h4>
+      <div class="space-y-4">
         <div class="flex items-center gap-4">
-          <div class="w-11 h-11 border border-outline-variant flex items-center justify-center shrink-0">
+          <div class="w-10 h-10 border border-outline-variant flex items-center justify-center shrink-0">
             <span class="material-symbols-outlined text-base text-on-surface-variant">call</span>
           </div>
           <div>
-            <p class="font-label-caps text-[9px] text-outline uppercase tracking-widest mb-0.5">General</p>
-            <p class="font-body-md font-medium text-on-surface">+1 (800) 455-2026</p>
+            <p class="font-label-caps text-[8px] text-outline uppercase tracking-widest mb-0.5">General</p>
+            <p class="font-body-md font-medium text-on-surface text-sm">+1 (800) 455-2026</p>
           </div>
         </div>
         <div class="flex items-center gap-4">
-          <div class="w-11 h-11 border border-outline-variant flex items-center justify-center shrink-0">
+          <div class="w-10 h-10 border border-outline-variant flex items-center justify-center shrink-0">
             <span class="material-symbols-outlined text-base text-on-surface-variant">support_agent</span>
           </div>
           <div>
-            <p class="font-label-caps text-[9px] text-outline uppercase tracking-widest mb-0.5">Technical</p>
-            <p class="font-body-md font-medium text-on-surface">+1 (800) 455-9988</p>
+            <p class="font-label-caps text-[8px] text-outline uppercase tracking-widest mb-0.5">Technical</p>
+            <p class="font-body-md font-medium text-on-surface text-sm">+1 (800) 455-9988</p>
           </div>
         </div>
         <div class="flex items-center gap-4">
-          <div class="w-11 h-11 border border-outline-variant flex items-center justify-center shrink-0">
+          <div class="w-10 h-10 border border-outline-variant flex items-center justify-center shrink-0">
             <span class="material-symbols-outlined text-base text-on-surface-variant">mail</span>
           </div>
           <div>
-            <p class="font-label-caps text-[9px] text-outline uppercase tracking-widest mb-0.5">Email</p>
-            <p class="font-body-md font-medium text-on-surface">amplifire.tcis@gmail.com</p>
+            <p class="font-label-caps text-[8px] text-outline uppercase tracking-widest mb-0.5">Email</p>
+            <p class="font-body-md font-medium text-on-surface text-sm">amplifire.tcis@gmail.com</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="px-5 mb-16 border-t border-outline-variant pt-10">
-     <h2 class="font-headline-lg text-5xl italic text-on-surface leading-tight">Guidelines &amp; <br/>Constraints</h2>
-    </div>
-    <div class="md:col-span-8">
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-16 gap-y-20">
-    <div>
-    <span class="font-label-caps text-primary text-[14px] mb-6 block tracking-widest">01</span>
-    <h3 class="font-headline-md text-2xl text-on-surface mb-5">Eligibility</h3>
-    <p class="font-body-md text-on-surface-variant leading-relaxed opacity-70">Open to all students of grades 9-12</p>
-    </div>
-    <div>
-    <span class="font-label-caps text-primary text-[14px] mb-6 block tracking-widest">02</span>
-    <h3 class="font-headline-md text-2xl text-on-surface mb-5">Song</h3>
-    <p class="font-body-md text-on-surface-variant leading-relaxed opacity-70">No bollywood/movie industry songs are allowed</p>
-    </div>
-    <div>
-    <span class="font-label-caps text-primary text-[14px] mb-6 block tracking-widest">03</span>
-    <h3 class="font-headline-md text-2xl text-on-surface mb-5">Pendrives</h3>
-    <p class="font-body-md text-on-surface-variant leading-relaxed opacity-70">Backing tracks or other audio files desired must be brought by the participants on pendrives.</p>
-    </div>
-    <div>
-    <span class="font-label-caps text-primary text-[14px] mb-6 block tracking-widest">04</span>
-    <h3 class="font-headline-md text-2xl text-on-surface mb-5">Duration</h3>
-    <p class="font-body-md text-on-surface-variant leading-relaxed opacity-70">The maximum song duration is TBD minutes</p>
-    </div>
-    </div>
-    </div>
+  <section class="px-5 mb-16 border-t border-outline-variant pt-8">
+    <div class="flex flex-col gap-8">
+      <div>
+        <h2 class="font-headline-lg text-3xl italic text-on-surface leading-tight">Guidelines &<br/>Constraints</h2>
+      </div>
+      <div class="space-y-8">
+        <div class="border-l-2 border-primary/40 pl-4 py-1">
+          <span class="font-label-caps text-primary text-[12px] mb-1 block tracking-widest font-bold">01 / ELIGIBILITY</span>
+          <p class="font-body-md text-on-surface-variant leading-relaxed opacity-80">Open to all students of grades 9-12.</p>
+        </div>
+        <div class="border-l-2 border-primary/40 pl-4 py-1">
+          <span class="font-label-caps text-primary text-[12px] mb-1 block tracking-widest font-bold">02 / SONG STYLE</span>
+          <p class="font-body-md text-on-surface-variant leading-relaxed opacity-80">No Bollywood or commercial movie industry mainstream tracks are permitted.</p>
+        </div>
+        <div class="border-l-2 border-primary/40 pl-4 py-1">
+          <span class="font-label-caps text-primary text-[12px] mb-1 block tracking-widest font-bold">03 / PENDRIVES</span>
+          <p class="font-body-md text-on-surface-variant leading-relaxed opacity-80">Backing tracks or desired custom performance audio configurations must be provided directly by the team on standard USB storage devices.</p>
+        </div>
+        <div class="border-l-2 border-primary/40 pl-4 py-1">
+          <span class="font-label-caps text-primary text-[12px] mb-1 block tracking-widest font-bold">04 / DURATION LIMIT</span>
+          <p class="font-body-md text-on-surface-variant leading-relaxed opacity-80">The maximum track runtime calculation matrix remains TBD minutes.</p>
+        </div>
+      </div>
     </div>
   </section>
 
